@@ -1,15 +1,17 @@
 import { Picture } from "./styles";
+import cs from 'classnames'
 
 interface Props {
     src: string;
     alt: string;
+    isAboutPicture?: boolean;
 }
 
 const ImageComponent = (props: Props) => {
-    const { src, alt } = props;
+    const { src, alt, isAboutPicture } = props;
     return (
         <>
-            <Picture src={src} alt={alt} />
+            <Picture className={cs({ aboutPicture: isAboutPicture})} src={src} alt={alt} />
         </>
     );
 };

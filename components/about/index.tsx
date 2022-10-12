@@ -15,7 +15,7 @@ const AboutComponent = () => {
         <>
                 <Title content="My Skills"/>
             <MainDiv>
-                    <Image src="https://picsum.photos/400/400" alt="sdf" />
+                    <Image isAboutPicture src="https://picsum.photos/400/400" alt="sdf" />
                 <ContentDiv>
                     <BoxLabels labelArray={['React','Typescript','Firebase','styled-components','Next.js','More']} />
                     <Title isAboutSubtitle content="I love building stuff"/>
