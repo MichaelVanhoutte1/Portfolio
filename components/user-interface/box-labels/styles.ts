@@ -15,8 +15,9 @@ display: flex;
 width: clamp(300px, 100%, 700px);
 flex-wrap: wrap;
 justify-content: center;
+margin-top: 2rem;
     &.projectLabelDiv{
         justify-content: flex-start;
-        margin-bottom: 1rem;
+        margin: 0 0 1rem 0;
     }
 `;

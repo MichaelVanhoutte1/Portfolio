@@ -8,9 +8,6 @@ export const MainDiv = styled.div`
     margin-bottom: 8rem;
 `;
 
-export const PictureDiv = styled.div`
-    display: flex;
-`;
 export const ContentDiv = styled.div`
     margin-right: 2rem;
 `;

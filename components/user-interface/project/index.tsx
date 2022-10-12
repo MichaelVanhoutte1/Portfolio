@@ -3,7 +3,7 @@ import Button from "../button";
 import Paragraph from "../paragraph";
 import Title from "../title";
 import Image from "../image";
-import { ContentDiv, MainDiv, PictureDiv } from "./styles";
+import { ContentDiv, MainDiv } from "./styles";
 
 interface Props {}
 
@@ -30,9 +30,7 @@ const ProjectComponent = (props: Props) => {
                         neque quasi?' />                      
                         <Button isProjectButton content="View project" />
                 </ContentDiv>
-                <PictureDiv>
-                    <Image src="https://picsum.photos/200/300" alt="sdf" />
-                </PictureDiv>
+                    <Image src="https://picsum.photos/400/400" alt="sdf" />
                 </MainDiv>
         </>
     );
