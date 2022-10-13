@@ -7,6 +7,6 @@ export const Paragraph = styled.p`
         margin: 0 0 2rem 0;
     }
     @media (min-width: ${breakpoints.md}) {
-        width: clamp(500px, 100%, 800px);
+        width: clamp(450px, 100%, 800px);
     }
 `;

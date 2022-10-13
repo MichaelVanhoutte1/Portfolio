@@ -11,8 +11,8 @@ interface Props {}
 const ProjectsComponent = (props: Props) => {
     return (
         <>
-            <Title content='Projects' />
             <MainDiv>
+            <Title content='Projects' />
                 <Project/>
                 <Project/>
             </MainDiv>

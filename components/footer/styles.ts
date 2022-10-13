@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../styles/variables.styled";
 
 export const CopyrightDiv = styled.div``;
 export const Name = styled.h2`
@@ -26,9 +27,13 @@ export const SocialIconsDiv = styled.div`
 export const FooterDiv = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     background-color: #252525;
     height: 18rem;
     color: white;
     padding-left: 1.5rem;
+    @media (min-width: ${breakpoints.sm}) {
+        flex-direction: row;
+        height: 11rem;
+    }
 `;
