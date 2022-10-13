@@ -1,14 +1,22 @@
 import { Paragraph } from "./styles";
+import cs from 'classnames'
 
 interface Props {
     content: string;
+    isWithMargin?: boolean;
 }
 
 const ParagraphComponent = (props: Props) => {
-    const { content } = props;
+    const { content, isWithMargin } = props;
     return (
         <>
-            <Paragraph>{content}</Paragraph>
+            <Paragraph
+                className={cs({
+                    withMargin: isWithMargin,
+                })}
+            >
+                {content}
+            </Paragraph>
         </>
     );
 };

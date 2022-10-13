@@ -20,4 +20,9 @@ export const Title = styled.h1`
         margin-top: 1.5rem;
         font-weight: 500;
     }
+    &.stackInfoTitle {
+        font-size: 1.5rem;
+        margin: 1rem 0 ;
+        font-weight: 500;
+    }
 `;

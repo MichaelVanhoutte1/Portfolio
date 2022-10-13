@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
+import Button from "../components/user-interface/button";
 import Paragraph from "../components/user-interface/paragraph";
 import SocialIcon from "../components/user-interface/social-icon";
 import Title from "../components/user-interface/title";
-import { ContentDiv, MainDiv, PageTitle, SocialIconsDiv, Text } from "../styles/about.styled";
+import { ContentDiv, MainDiv, PageTitle, SocialIconsDiv, Text } from "../styles/pages/about.styled";
 
 const Home: NextPage = () => {
     const text: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatibus
@@ -33,10 +34,11 @@ Mollitia, eaque fuga.`;
                 <Title content="Let's have a chat" />
                 <Text>I'd love to hear from you</Text>
                 <SocialIconsDiv>
-                    <SocialIcon link="#" src="/icons/github.svg" alt="github" />
-                    <SocialIcon link="#" src="/icons/linkedin.svg" alt="linkedin" />
-                    <SocialIcon isMailIcon link="#" src="/icons/email.svg" alt="email" />
+                    <SocialIcon link="#" src="/icons/github-black.svg" alt="github" />
+                    <SocialIcon link="#" src="/icons/linkedin-black.svg" alt="linkedin" />
+                    <SocialIcon isMailIcon link="#" src="/icons/email-black.svg" alt="email" />
                 </SocialIconsDiv>
+                <Button content="Get in touch" />
             </MainDiv>
         </>
     );

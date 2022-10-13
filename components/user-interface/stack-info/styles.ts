@@ -2,14 +2,16 @@ import styled from "styled-components";
 
 export const StackInfoDiv = styled.div`
     display: flex;
+    flex-direction: column;
+    margin: 0 0 3rem 0
 `;
 
 export const TypeDiv = styled.div`
-    margin: 0 2rem;
+    margin: 0;
 `;
 
 export const StackDiv = styled.div`
-    margin: 0 2rem;
+    margin: 0;
     ul {
         margin: 0;
         padding: 0;
@@ -18,9 +20,5 @@ export const StackDiv = styled.div`
 `;
 
 export const LiveDiv = styled.div`
-    margin: 0 2rem;
-`;
-
-export const Title = styled.h3`
-    font-size: 1.5rem;
+    margin: 0;
 `;

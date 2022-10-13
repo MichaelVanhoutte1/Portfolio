@@ -23,4 +23,5 @@ export const ContactTitle = styled.h2`
 export const SocialIconsDiv = styled.div`
     display: flex;
     align-items: center;
+    margin: 2rem 0 1rem 0
 `;

@@ -7,8 +7,8 @@ const Home: NextPage = () => {
     return (
         <>
             <About />
-            <Projects />
-            <Contact />
+            <Projects /> 
+            <Contact /> 
         </>
     );
 };
