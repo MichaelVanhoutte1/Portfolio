@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button, NavbarDiv } from "./styles";
+import { Link as ScrollLink } from "react-scroll";
 
 const NavbarComponent = () => {
     return (
@@ -17,12 +18,16 @@ const NavbarComponent = () => {
                 </Link>
                 <Link href="/">
                     <Button>
-                        <a>Portfolio</a>
+                        <ScrollLink to="projects" smooth duration={1000}>
+                            Projects
+                        </ScrollLink>
                     </Button>
                 </Link>
                 <Link href="/">
                     <Button>
-                        <a>Contact</a>
+                        <ScrollLink to="contact" smooth duration={1000}>
+                            Contact
+                        </ScrollLink>
                     </Button>
                 </Link>
             </NavbarDiv>

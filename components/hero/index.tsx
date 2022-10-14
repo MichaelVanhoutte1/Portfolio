@@ -27,10 +27,7 @@ const Header = () => {
                     delay={500}
                 >
                     <h1 className="hero-title">
-                        {"Hi, my name is"}{" "}
-                        <span className="text-color-main">{ "Your Name"}</span>
-                        <br />
-                        { "I'm the Unknown Developer."}
+                        {"Hi, I'm Michael | Software Engineer"}
                     </h1>
                 </Fade>
                 <Fade
@@ -40,7 +37,7 @@ const Header = () => {
                 >
                     <p className="hero-cta">
                         <span className="cta-btn cta-btn--hero">
-                            <Link to="about" smooth duration={1000}>
+                            <Link to="about" offset={-59} smooth duration={1000}>
                                 { "Know more"}
                             </Link>
                         </span>
