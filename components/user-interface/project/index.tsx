@@ -20,16 +20,14 @@ const ProjectComponent = (props: Props) => {
                             "React",
                             "Typescript",
                             "Firebase",
-                            "styled-components",
+                            "Styled-Components",
                             "Next.js",
-                            "More",
+                            "Redux",
+                            "SASS",
                         ]}
                     />
                     <Paragraph
-                        content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-                        exercitationem, ducimus at iure facere eius! Amet consectetur possimus
-                        repellat earum? Porro optio quibusdam perspiciatis non deleniti, iure dolor
-                        neque quasi?"
+                        content="I built this website to showcase my work and skills, and to allow people to have a better insight into who I am."
                     />
                     <Button isProjectButton content="View project" />
                 </ContentDiv>

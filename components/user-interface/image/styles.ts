@@ -4,6 +4,7 @@ export const Picture = styled.img`
     max-width: clamp(200px, 100%, 400px);
     max-height: 400px;
     margin-right: auto;
+    border-radius: 2rem;
     &.aboutPicture {
         margin-right: 0;
         display: flex; 

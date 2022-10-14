@@ -6,3 +6,10 @@ export const breakpoints = {
     xl: `1200px;`,
     xxl: `1400px;`,
 };
+
+export const colors = {
+    primary: `#252525`,
+    white: `#fff`,
+    lightgray: `#f5f5f5`,
+    secondary: `red`,
+}

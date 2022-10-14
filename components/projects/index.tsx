@@ -1,5 +1,3 @@
-import BoxLabels from "../user-interface/box-labels";
-import Button from "../user-interface/button";
 import Title from "../user-interface/title";
 import Project from "../user-interface/project";
 import { MainDiv } from "./styles";
@@ -11,7 +9,7 @@ const ProjectsComponent = (props: Props) => {
     return (
         <>
             <Element name="projects">
-                <MainDiv>
+                <MainDiv id={"Projects"}>
                     <Title content="Projects" />
                     <Project />
                     <Project />

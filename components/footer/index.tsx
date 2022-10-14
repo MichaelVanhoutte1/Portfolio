@@ -23,9 +23,14 @@ const FooterComponent = () => {
                     <SocialsDiv>
                         <Text>Follow me on</Text>
                         <SocialIconsDiv>
-                            <SocialIcon link="#" src="/icons/github.svg" alt="github" />
-                            <SocialIcon link="#" src="/icons/linkedin.svg" alt="linkedin" />
-                            <SocialIcon isMailIcon link="#" src="/icons/email.svg" alt="email" />
+                            <SocialIcon link="#" src="/images/icons/github.svg" alt="github" />
+                            <SocialIcon link="#" src="/images/icons/linkedin.svg" alt="linkedin" />
+                            <SocialIcon
+                                isMailIcon
+                                link="#"
+                                src="/images/icons/email.svg"
+                                alt="email"
+                            />
                         </SocialIconsDiv>
                     </SocialsDiv>
                 </ContentDiv>

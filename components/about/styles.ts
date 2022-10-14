@@ -33,4 +33,6 @@ export const ContentDiv = styled.div`
 
 export const ButtonDiv = styled.div`
     margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
 `;

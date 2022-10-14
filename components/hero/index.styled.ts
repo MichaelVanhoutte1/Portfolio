@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { breakpoints } from "../../styles/variables.styled";
+import { breakpoints, colors } from "../../styles/variables.styled";
 export const HeroSection = styled.section`
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: ${colors.primary};
     font-weight: 400;
-    color: black;
+    color: ${colors.white};
     @media (max-width: 1125px) {
         align-items: flex-start;
     }

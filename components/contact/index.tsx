@@ -7,7 +7,7 @@ import { ContactDiv } from "./styles";
 const ContactComponent = () => {
     return (
         <Element name="contact">
-            <ContactDiv>
+            <ContactDiv id={'contact'}>
                 <Title content="Let's have a chat" />
                 <EnveloppeAnimation />
                 <Title isEmailTitle content="contact@mvanhoutte.com" />

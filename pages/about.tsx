@@ -38,9 +38,14 @@ Mollitia, eaque fuga.`;
                 <Title content="Let's have a chat" />
                 <Text>I'd love to hear from you</Text>
                 <SocialIconsDiv>
-                    <SocialIcon link="#" src="/icons/github-black.svg" alt="github" />
-                    <SocialIcon link="#" src="/icons/linkedin-black.svg" alt="linkedin" />
-                    <SocialIcon isMailIcon link="#" src="/icons/email-black.svg" alt="email" />
+                    <SocialIcon link="#" src="/images/icons/github-black.svg" alt="github" />
+                    <SocialIcon link="#" src="/images/icons/linkedin-black.svg" alt="linkedin" />
+                    <SocialIcon
+                        isMailIcon
+                        link="#"
+                        src="/images/icons/email-black.svg"
+                        alt="email"
+                    />
                 </SocialIconsDiv>
                 <Button content="Get in touch" />
             </MainDiv>
