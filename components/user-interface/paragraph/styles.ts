@@ -8,5 +8,8 @@ export const Paragraph = styled.p`
     }
     @media (min-width: ${breakpoints.md}) {
         width: clamp(450px, 100%, 800px);
+        &.largeParagraph {
+            width: clamp(450px, 100%, 1000px);
+        }
     }
 `;

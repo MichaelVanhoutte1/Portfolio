@@ -5,13 +5,14 @@ interface Props {
     src: string;
     alt: string;
     isAboutPicture?: boolean;
+    isProjectPicture?: boolean;
 }
 
 const ImageComponent = (props: Props) => {
-    const { src, alt, isAboutPicture } = props;
+    const { src, alt, isAboutPicture, isProjectPicture } = props;
     return (
         <>
-            <Picture className={cs({ aboutPicture: isAboutPicture})} src={src} alt={alt} />
+            <Picture className={cs({ aboutPicture: isAboutPicture, projectPicture: isProjectPicture})} src={src} alt={alt} />
         </>
     );
 };

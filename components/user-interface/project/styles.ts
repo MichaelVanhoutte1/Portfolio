@@ -6,6 +6,7 @@ export const MainDiv = styled.div`
     flex-wrap: wrap-reverse;
     flex-direction: column;
     margin-bottom: 8rem;
+    max-width: 1000px;
     @media (min-width: ${breakpoints.lg}) {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -14,7 +15,6 @@ export const MainDiv = styled.div`
 
 export const ContentDiv = styled.div`
     margin-right: 2rem;
-    max-width: 800px;
 `;
 
 export const ButtonDiv = styled.div``;

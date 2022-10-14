@@ -25,13 +25,24 @@ export const SocialIconsDiv = styled.div`
 `;
 
 export const FooterDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     background-color: #252525;
     height: 18rem;
     color: white;
     padding-left: 1.5rem;
+    @media (min-width: ${breakpoints.sm}) {
+        height: 11rem;
+    }
+`;
+export const ContentDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #252525;
+    height: 18rem;
+    color: white;
+    padding-left: 1.5rem;
+    max-width: clamp(300px, 100%, 1000px);
+    margin: 0 auto;
     @media (min-width: ${breakpoints.sm}) {
         flex-direction: row;
         height: 11rem;

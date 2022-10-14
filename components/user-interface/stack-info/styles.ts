@@ -1,9 +1,15 @@
 import styled from "styled-components";
+import { breakpoints } from "../../../styles/variables.styled";
 
 export const StackInfoDiv = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 0 3rem 0
+    margin: 0 0 3rem 0;
+    @media (min-width: ${breakpoints.sm}) {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 800px;
+    }
 `;
 
 export const TypeDiv = styled.div`

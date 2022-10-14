@@ -10,8 +10,15 @@ export const Picture = styled.img`
         align-self: center;
         @media (min-width: ${breakpoints.md}) {
             margin: 0 2rem 0 0;
-            width: 28vw
+            width: 28vw;
         }
+    }
+    &.projectPicture {
+        max-width: clamp(300px, 100%, 1000px);
+        max-height: 550px;
+        align-self: center;
+        padding:0;
+        margin:0;
     }
     @media (min-width: ${breakpoints.lg}) {
         margin-left: 2rem;

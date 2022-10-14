@@ -17,19 +17,23 @@ Mollitia, eaque fuga.`;
     return (
         <>
             <MainDiv>
-                <PageTitle>Sup</PageTitle>
+                <PageTitle>I have always loved tech</PageTitle>
                 <Text>Looking for my CV?</Text>
                 <ContentDiv>
-                    <Title content="Example title" />
-                    <Paragraph content={text} />
+                    <Title isAboutSubtitle content="My quick story" />
+                    <Paragraph isLargeParagraph content={text} />
                 </ContentDiv>
                 <ContentDiv>
-                    <Title content="Example title" />
-                    <Paragraph content={text} />
+                    <Title isAboutSubtitle content="As a developer" />
+                    <Paragraph isLargeParagraph content={text} />
                 </ContentDiv>
                 <ContentDiv>
-                    <Title content="Example title" />
-                    <Paragraph content={text} />
+                    <Title isAboutSubtitle content="As a person" />
+                    <Paragraph isLargeParagraph content={text} />
+                </ContentDiv>
+                <ContentDiv>
+                    <Title isAboutSubtitle content="As a colleague" />
+                    <Paragraph isLargeParagraph content={text} />
                 </ContentDiv>
                 <Title content="Let's have a chat" />
                 <Text>I'd love to hear from you</Text>
