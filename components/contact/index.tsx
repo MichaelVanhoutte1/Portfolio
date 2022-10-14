@@ -8,7 +8,7 @@ const ContactComponent = () => {
     return (
         <Element name="contact">
             <ContactDiv id={'contact'}>
-                <Title content="Let's have a chat" />
+                <Title isMainTitle content="Let's have a chat" />
                 <EnveloppeAnimation />
                 <Title isEmailTitle content="contact@mvanhoutte.com" />
                 <Button isProjectButton content="Get in touch" />

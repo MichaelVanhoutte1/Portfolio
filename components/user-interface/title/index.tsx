@@ -1,4 +1,4 @@
-import { Title } from "./styles";
+import { MainTitle, Title } from "./styles";
 import cs from "classnames";
 
 interface Props {
@@ -8,23 +8,36 @@ interface Props {
     isProjectSubtitle?: boolean;
     isEmailTitle?: boolean;
     isStackInfoTitle?: boolean;
+    isMainTitle?: boolean;
 }
 
 const TitleComponent = (props: Props) => {
-    const { content, isAboutSubtitle, isProjectTitle, isProjectSubtitle, isEmailTitle, isStackInfoTitle } = props;
+    const {
+        content,
+        isAboutSubtitle,
+        isProjectTitle,
+        isProjectSubtitle,
+        isEmailTitle,
+        isStackInfoTitle,
+        isMainTitle,
+    } = props;
     return (
         <>
-            <Title
-                className={cs({
-                    aboutSubtitle: isAboutSubtitle,
-                    projectTitle: isProjectTitle,
-                    projectSubtitle: isProjectSubtitle,
-                    emailTitle: isEmailTitle,
-                    stackInfoTitle: isStackInfoTitle,
-                })}
-            >
-                {content}
-            </Title>
+            {isMainTitle ? (
+                <MainTitle>{content}</MainTitle>
+            ) : (
+                <Title
+                    className={cs({
+                        aboutSubtitle: isAboutSubtitle,
+                        projectTitle: isProjectTitle,
+                        projectSubtitle: isProjectSubtitle,
+                        emailTitle: isEmailTitle,
+                        stackInfoTitle: isStackInfoTitle,
+                    })}
+                >
+                    {content}
+                </Title>
+            )}
         </>
     );
 };

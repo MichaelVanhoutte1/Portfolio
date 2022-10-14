@@ -9,9 +9,9 @@ import { Element } from "react-scroll";
 const AboutComponent = () => {
     return (
         <>
-            <Element name="about">
+            <Element  name="about">
                 <MainDiv>
-                    <Title content="My Skills" />
+                    <Title isMainTitle content="My Skills" />
                     <AboutDiv>
                         <Image isAboutPicture src="images/about.jpg" alt="sdf" />
                         <ContentDiv>

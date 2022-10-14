@@ -9,7 +9,7 @@ export const Button = styled.button`
     outline: 0;
     margin: 2rem 2rem 2rem 0 ;
     color: ${colors.white};
-    border: 1px solid black;
+    border: 2px solid ${colors.primary};
     cursor: pointer;
     position: relative;
     background-color: rgba(0, 0, 0, 0);

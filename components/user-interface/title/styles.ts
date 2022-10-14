@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../../styles/variables.styled";
 export const Title = styled.h1`
     font-size: 2.5rem;
     font-weight: 400;
@@ -23,7 +24,26 @@ export const Title = styled.h1`
     }
     &.stackInfoTitle {
         font-size: 1.5rem;
-        margin: 1rem 0 ;
+        margin: 1rem 0;
         font-weight: 500;
+    }
+`;
+
+export const MainTitle = styled.p`
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    width: fit-content;
+    margin: 3rem 0;
+    -webkit-text-stroke-width: 2px;
+    -moz-text-stroke-width: 2px;
+    -webkit-text-stroke-color: ${colors.primary};
+    -moz-text-stroke-color: ${colors.primary};
+    color: transparent;
+    transition: .3s;
+    text-shadow: -3px -3px ${colors.secondary};
+    &:hover {
+        text-shadow: 0px 0px ${colors.secondary};
+        transition: .3s;
     }
 `;

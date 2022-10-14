@@ -9,8 +9,8 @@ const ProjectsComponent = (props: Props) => {
     return (
         <>
             <Element name="projects">
-                <MainDiv id={"Projects"}>
-                    <Title content="Projects" />
+                <MainDiv  id={"Projects"}>
+                    <Title isMainTitle content="Projects" />
                     <Project />
                     <Project />
                 </MainDiv>
