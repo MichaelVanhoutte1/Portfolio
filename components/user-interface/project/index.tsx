@@ -12,7 +12,7 @@ const ProjectComponent = (props: Props) => {
         <>
             <MainDiv>
                 <ContentDiv>
-                    <Title isProjectSubtitle content="Personal project" />
+                    <Title isProjectSubtitle content="PERSONAL PROJECT" />
                     <Title isProjectTitle content="Portfolio website" />
                     <BoxLabels
                         isProjectLabelDiv
@@ -29,7 +29,7 @@ const ProjectComponent = (props: Props) => {
                     <Paragraph
                         content="I built this website to showcase my work and skills, and to allow people to have a better insight into who I am."
                     />
-                    <Button isProjectButton content="View project" />
+                    <Button href="/project" isProjectButton content="View project" />
                 </ContentDiv>
                 <Image src="https://picsum.photos/400/400" alt="sdf" />
             </MainDiv>

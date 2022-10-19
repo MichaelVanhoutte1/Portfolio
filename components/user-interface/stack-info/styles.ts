@@ -28,3 +28,7 @@ export const StackDiv = styled.div`
 export const LiveDiv = styled.div`
     margin: 0;
 `;
+
+export const ListItem = styled.li`
+    line-height: 1.75;
+`;

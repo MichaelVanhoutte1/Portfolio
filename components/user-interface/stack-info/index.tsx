@@ -1,5 +1,5 @@
 import Title from "../title";
-import { LiveDiv, StackDiv, StackInfoDiv, TypeDiv } from "./styles";
+import { LiveDiv, StackDiv, StackInfoDiv, TypeDiv, ListItem } from "./styles";
 
 interface Props {}
 
@@ -14,12 +14,12 @@ const StackInfoComponent = (props: Props) => {
                 <StackDiv>
                     <Title isStackInfoTitle content="Stack" />
                     <ul>
-                        <li>Typescript</li>
-                        <li>Typescript</li>
-                        <li>Typescript</li>
-                        <li>Typescript</li>
-                        <li>Typescript</li>
-                        <li>Typescript</li>
+                        <ListItem>Typescript</ListItem>
+                        <ListItem>Typescript</ListItem>
+                        <ListItem>Typescript</ListItem>
+                        <ListItem>Typescript</ListItem>
+                        <ListItem>Typescript</ListItem>
+                        <ListItem>Typescript</ListItem>
                     </ul>
                 </StackDiv>
                 <LiveDiv>

@@ -23,11 +23,11 @@ const FooterComponent = () => {
                     <SocialsDiv>
                         <Text>Follow me on</Text>
                         <SocialIconsDiv>
-                            <SocialIcon link="#" src="/images/icons/github.svg" alt="github" />
-                            <SocialIcon link="#" src="/images/icons/linkedin.svg" alt="linkedin" />
+                            <SocialIcon link="https://github.com/MichaelVanhoutte1" src="/images/icons/github.svg" alt="github" />
+                            <SocialIcon link="https://www.linkedin.com/in/michael-vanhoutte/" src="/images/icons/linkedin.svg" alt="linkedin" />
                             <SocialIcon
                                 isMailIcon
-                                link="#"
+                                link="mailto:contact@mvanhoutte.com"
                                 src="/images/icons/email.svg"
                                 alt="email"
                             />

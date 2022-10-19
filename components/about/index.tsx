@@ -9,7 +9,7 @@ import { Element } from "react-scroll";
 const AboutComponent = () => {
     return (
         <>
-            <Element  name="about">
+            <Element name="about">
                 <MainDiv>
                     <Title isMainTitle content="My Skills" />
                     <AboutDiv>
@@ -37,14 +37,17 @@ const AboutComponent = () => {
                                 ]}
                             />
                             <Title isAboutSubtitle content="I love building stuff" />
-                            <Paragraph isAboutMe content="I started playing with computers from a young age. 
+                            <Paragraph
+                                isAboutMe
+                                content="I started playing with computers from a young age. 
                             I was always fascinated by the way they worked and how they could be used to create things. 
                             I started with simple games and animations, and then moved on to building websites. 
                             I love the feeling of creating something from scratch and seeing it come to life. 
-                            I am always looking for new challenges and ways to improve my skills." />
+                            I am always looking for new challenges and ways to improve my skills."
+                            />
                             <ButtonDiv>
-                                <Button content="Read more" />
-                                <Button content="Resume" />
+                                <Button href="/about" content="Read more" />
+                                <Button href="/about" content="Resume" />
                             </ButtonDiv>
                         </ContentDiv>
                     </AboutDiv>

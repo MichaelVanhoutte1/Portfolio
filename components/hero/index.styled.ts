@@ -5,7 +5,8 @@ export const HeroSection = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+    margin-bottom: 59px;
     background: ${colors.primary};
     font-weight: 400;
     color: ${colors.white};
@@ -40,7 +41,10 @@ export const HeroSection = styled.section`
     }
 
     .hero-cta {
+        cursor: pointer;
         display: flex;
+        border: 2px solid ${colors.white};
+        padding: 1.2rem 2.4rem;
         @media (min-width: ${breakpoints.md}) {
             justify-content: center;
         }

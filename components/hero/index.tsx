@@ -1,6 +1,7 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-scroll";
+import SocialIcon from "../user-interface/social-icon";
 import { HeroSection } from "./index.styled";
 
 const Header = () => {
@@ -27,7 +28,7 @@ const Header = () => {
                     delay={500}
                 >
                     <h1 className="hero-title">
-                        {"Hi, I'm Michael | Software Engineer"}
+                        Hi, I'm Michael | Software Engineer
                     </h1>
                 </Fade>
                 <Fade

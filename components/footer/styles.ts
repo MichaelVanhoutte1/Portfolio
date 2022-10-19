@@ -28,7 +28,7 @@ export const FooterDiv = styled.div`
     background-color: ${colors.primary};
     height: 18rem;w
     color: ${colors.white};
-    padding-left: 1.5rem;
+    padding: 0 2rem;
     @media (min-width: ${breakpoints.sm}) {
         height: 11rem;
     }
@@ -40,7 +40,6 @@ export const ContentDiv = styled.div`
     background-color: ${colors.primary};
     height: 18rem;
     color: ${colors.white};
-    padding-left: 1.5rem;
     max-width: clamp(300px, 100%, 1000px);
     margin: 0 auto;
     @media (min-width: ${breakpoints.sm}) {

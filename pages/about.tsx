@@ -38,16 +38,27 @@ Mollitia, eaque fuga.`;
                 <Title content="Let's have a chat" />
                 <Text>I'd love to hear from you</Text>
                 <SocialIconsDiv>
-                    <SocialIcon link="#" src="/images/icons/github-black.svg" alt="github" />
-                    <SocialIcon link="#" src="/images/icons/linkedin-black.svg" alt="linkedin" />
                     <SocialIcon
+                        fillOnHover
+                        link="https://github.com/MichaelVanhoutte1"
+                        src="/images/icons/github.svg"
+                        alt="github"
+                    />
+                    <SocialIcon
+                        fillOnHover
+                        link="https://www.linkedin.com/in/michael-vanhoutte/"
+                        src="/images/icons/linkedin.svg"
+                        alt="linkedin"
+                    />
+                    <SocialIcon
+                        fillOnHover
                         isMailIcon
-                        link="#"
-                        src="/images/icons/email-black.svg"
+                        link="mailto:contact@mvanhoutte.com"
+                        src="/images/icons/email.svg"
                         alt="email"
                     />
                 </SocialIconsDiv>
-                <Button content="Get in touch" />
+                <Button href="mailto:contact@mvanhoutte.com" content="Get in touch" />
             </MainDiv>
         </>
     );

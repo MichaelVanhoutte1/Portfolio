@@ -11,7 +11,7 @@ const ContactComponent = () => {
                 <Title isMainTitle content="Let's have a chat" />
                 <EnveloppeAnimation />
                 <Title isEmailTitle content="contact@mvanhoutte.com" />
-                <Button isProjectButton content="Get in touch" />
+                <Button href="mailto:contact@mvanhoutte.com" isProjectButton content="Get in touch" />
             </ContactDiv>
         </Element>
     );

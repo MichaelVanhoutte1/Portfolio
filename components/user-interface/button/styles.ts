@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/variables.styled";
+import { breakpoints, colors } from "../../../styles/variables.styled";
 
 export const Button = styled.button`
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
-    padding: 13px 50px 13px;
+    width: 15rem;
+    padding: 20px 40px 20px;
     outline: 0;
     margin: 2rem 2rem 2rem 0 ;
     color: ${colors.white};
@@ -20,8 +21,8 @@ export const Button = styled.button`
         position: absolute;
         z-index: -1;
         height: 100%;
-        top: -7px;
-        left: -7px;
+        top: -10px;
+        left: -10px;
         transition: 0.3s;
     }
     &:hover::after {

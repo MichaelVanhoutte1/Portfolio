@@ -2,14 +2,15 @@ import Link from "next/link";
 import { Button, NavbarDiv } from "./styles";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/router";
+import cs from "classnames";
 
 const NavbarComponent = () => {
     const router = useRouter();
-    let isHomepage = router.pathname === "/";
+    let isHomepage: boolean = router.pathname === "/";
 
     return (
         <>
-            <NavbarDiv>
+            <NavbarDiv className={cs({ homepage: isHomepage })} >
                 <Link href="/">
                     <Button>
                         <a>Home</a>

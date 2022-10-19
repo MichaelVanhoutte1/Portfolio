@@ -14,8 +14,10 @@ export const Title = styled.h1`
         font-weight: 400;
     }
     &.projectSubtitle {
-        font-size: 1.5rem;
+        font-size: .95rem;
+        letter-spacing: .1rem;
         margin: 0;
+        font-family: 'Merriweather',sans-serif;
     }
     &.emailTitle {
         font-size: 1.5rem;
@@ -25,7 +27,7 @@ export const Title = styled.h1`
     &.stackInfoTitle {
         font-size: 1.5rem;
         margin: 1rem 0;
-        font-weight: 500;
+        font-weight: 700;
     }
 `;
 
