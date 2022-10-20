@@ -13,13 +13,13 @@ const ParagraphComponent = (props: Props) => {
     return (
         <>
             <Paragraph
+                dangerouslySetInnerHTML={{ __html: content }}
                 className={cs({
                     withMargin: isWithMargin,
                     largeParagraph: isLargeParagraph,
                     aboutMe: isAboutMe,
                 })}
             >
-                {content}
             </Paragraph>
         </>
     );

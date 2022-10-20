@@ -17,4 +17,7 @@ export const Paragraph = styled.p`
             width: clamp(450px, 100%, 1000px);
         }
     }
+    span {
+        font-weight: 500;
+    }
 `;

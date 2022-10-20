@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../variables.styled";
 
 export const MainDiv = styled.div`
     margin: auto;
@@ -7,6 +8,10 @@ export const MainDiv = styled.div`
 
 export const Text = styled.p`
     font-size: 1.5rem;
+    font-weight: 500;
+    span{w
+        color: ${colors.secondary}
+    }
 `;
 
 export const PageTitle = styled.h1`
