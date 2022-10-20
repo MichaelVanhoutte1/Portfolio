@@ -25,7 +25,7 @@ const Header = () => {
                 <Fade
                     direction={isDesktop ? "left" : "up"}
                     duration={1000}
-                    delay={500}
+                    delay={250}
                 >
                     <h1 className="hero-title">
                         Hi, I'm Michael | Software Engineer
@@ -34,7 +34,7 @@ const Header = () => {
                 <Fade
                     direction={isDesktop ? "left" : "up"}
                     duration={1000}
-                    delay={1000}
+                    delay={750}
                 >
                     <p className="hero-cta">
                         <span className="cta-btn cta-btn--hero">
