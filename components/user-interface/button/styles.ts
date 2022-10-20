@@ -29,4 +29,8 @@ export const Button = styled.button`
         top: 0px;
         left: 0px;
     }
+    a{
+        text-decoration: none;
+        color: ${colors.white};
+    }
 `;

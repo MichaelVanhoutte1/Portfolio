@@ -47,7 +47,7 @@ const AboutComponent = () => {
                             />
                             <ButtonDiv>
                                 <Button href="/about" content="Read more" />
-                                <Button href="/about" content="Resume" />
+                                <Button isResumeButton content="Resume" />
                             </ButtonDiv>
                         </ContentDiv>
                     </AboutDiv>

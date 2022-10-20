@@ -12,9 +12,20 @@ export const NavbarDiv = styled.div`
     }
 `;
 
+export const ContentDiv = styled.div`
+    display: flex;
+    background-color: ${colors.primary};
+    width: 1028px;
+    justify-content: space-between;
+    &.homepage {
+        position: absolute;
+        top: 100vh;
+    }
+`;
+
 export const Button = styled.button`
     display: block;
-    margin: 10px 10px 10px;
+    margin: 10px 0 10px;
     width: 80px;
     font-size: 1.1rem;
     font-weight: 700;
