@@ -48,4 +48,7 @@ export const MainTitle = styled.p`
         text-shadow: 0px 0px ${colors.secondary};
         transition: .3s;
     }
+    &.noBottomMargin {
+        margin: 3rem 0 0 0;
+    }
 `;

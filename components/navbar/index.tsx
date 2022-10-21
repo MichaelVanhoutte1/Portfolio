@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button, NavbarDiv, ContentDiv } from "./styles";
+import { Button, NavbarDiv, ContentDiv, Name, NameDiv } from "./styles";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/router";
 import cs from "classnames";
@@ -11,33 +11,37 @@ const NavbarComponent = () => {
     return (
         <>
             <NavbarDiv className={cs({ homepage: isHomepage })}>
-                <ContentDiv>
+                <NameDiv>
                     <Link href="/">
-                        <Button>
-                            <a>Home</a>
-                        </Button>
+                        <Name>Michael Vanhoutte</Name>
                     </Link>
+                </NameDiv>
+                <ContentDiv>
                     <Link href="/about">
-                        <Button>
-                            <a>About</a>
-                        </Button>
+                        <Button>about</Button>
                     </Link>
                     {isHomepage ? (
                         <>
+                            <ScrollLink to="blog" smooth duration={1000}>
+                                <Button>blog</Button>
+                            </ScrollLink>
                             <ScrollLink to="projects" smooth duration={1000}>
-                                <Button>Projects</Button>
+                                <Button>projects</Button>
                             </ScrollLink>
                             <ScrollLink to="contact" smooth duration={1000}>
-                                <Button>Contact</Button>
+                                <Button>contact</Button>
                             </ScrollLink>
                         </>
                     ) : (
                         <>
+                            <Link href="/#blog">
+                                <Button>blog</Button>
+                            </Link>
                             <Link href="/#projects">
-                                <Button>Projects</Button>
+                                <Button>projects</Button>
                             </Link>
                             <Link href="/#contact">
-                                <Button>Contact</Button>
+                                <Button>contact</Button>
                             </Link>
                         </>
                     )}

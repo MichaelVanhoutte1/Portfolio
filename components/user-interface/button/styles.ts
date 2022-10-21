@@ -8,8 +8,8 @@ export const Button = styled.button`
     width: 15rem;
     padding: 20px 40px 20px;
     outline: 0;
-    margin: 2rem 2rem 2rem 0 ;
-    color: ${colors.white};
+    margin: 2rem 2rem 2rem 0;
+    color: ${colors.primaryText};
     border: 2px solid ${colors.primary};
     cursor: pointer;
     position: relative;
@@ -29,8 +29,8 @@ export const Button = styled.button`
         top: 0px;
         left: 0px;
     }
-    a{
+    a {
         text-decoration: none;
-        color: ${colors.white};
+        color: ${colors.primaryText};
     }
 `;

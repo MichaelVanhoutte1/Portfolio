@@ -11,7 +11,7 @@ const AboutComponent = () => {
         <>
             <Element name="about">
                 <MainDiv>
-                    <Title isMainTitle content="My Skills" />
+                    <Title noBottomMargin isMainTitle content="My Skills" />
                     <AboutDiv>
                         <Image isAboutPicture src="images/about.jpg" alt="sdf" />
                         <ContentDiv>

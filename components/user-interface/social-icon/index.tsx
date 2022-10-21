@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Image } from "./styles";
 import cs from 'classnames';
 
@@ -15,7 +14,7 @@ const { src, alt, link, isMailIcon, fillOnHover } = props;
 
     return (
         <>
-            <Link href={link}><Image className={cs({ mailIcon: isMailIcon, fillOnHover: fillOnHover })} src={src} alt={alt} width='30px' height='30px'/></Link>
+            <a target={"_blank"} rel="noreferrer" href={link}><Image className={cs({ mailIcon: isMailIcon, fillOnHover: fillOnHover })} src={src} alt={alt} width='30px' height='30px'/></a>
         </>
     );
 };

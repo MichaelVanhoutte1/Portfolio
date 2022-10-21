@@ -9,6 +9,7 @@ interface Props {
     isEmailTitle?: boolean;
     isStackInfoTitle?: boolean;
     isMainTitle?: boolean;
+    noBottomMargin?: boolean;
 }
 
 const TitleComponent = (props: Props) => {
@@ -20,11 +21,12 @@ const TitleComponent = (props: Props) => {
         isEmailTitle,
         isStackInfoTitle,
         isMainTitle,
+        noBottomMargin,
     } = props;
     return (
         <>
             {isMainTitle ? (
-                <MainTitle>{content}</MainTitle>
+                <MainTitle className={cs({ noBottomMargin: noBottomMargin })}>{content}</MainTitle>
             ) : (
                 <Title
                     className={cs({

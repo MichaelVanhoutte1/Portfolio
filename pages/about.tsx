@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         <>
             <MainDiv>
                 <PageTitle>I have always loved tech</PageTitle>
-                <Text>Looking for my <span>CV</span>?</Text>
+                <Text>Looking for my <a target="_blank" rel="noreferrer" href="CV-Michael-Vanhoutte.pdf" >CV</a>?</Text>
                 <ContentDiv>
                     <Title isAboutSubtitle content="My quick story" />
                     <Paragraph isAboutMe isLargeParagraph content={quickStory} />

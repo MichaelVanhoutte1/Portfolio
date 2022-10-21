@@ -9,8 +9,9 @@ export const MainDiv = styled.div`
 export const Text = styled.p`
     font-size: 1.5rem;
     font-weight: 500;
-    span{w
-        color: ${colors.secondary}
+    a{
+        color: ${colors.secondary};
+        text-decoration: none;
     }
 `;
 
