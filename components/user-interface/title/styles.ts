@@ -38,7 +38,10 @@ export const Title = styled.h1`
     &.featuredBlogPostTitle{
         font-size: 1.5rem;
         font-weight: bold;
-        margin: 0 0 3rem 0 ;
+        margin-top: 1rem;
+        @media (min-width: ${breakpoints.lg}) {
+            margin: 0 0 3rem 0 ;
+        }
     }
 `;
 

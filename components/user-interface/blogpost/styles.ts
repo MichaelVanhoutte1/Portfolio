@@ -5,19 +5,17 @@ export const MainDiv = styled.div`
 `;
 
 export const ContentDiv = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `;
 
 export const ButtonDiv = styled.div``;
-
 
 export const BlogLink = styled.p`
     font-size: 1.2rem;
     font-weight: 500;
     color: ${colors.secondary};
-    margin-top: 3rem;
+    margin: 3rem 0;
     cursor: pointer;
 `;
-

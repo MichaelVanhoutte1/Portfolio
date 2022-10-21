@@ -1,18 +1,22 @@
 import styled from "styled-components";
-import { colors } from "../../styles/variables.styled";
+import { breakpoints, colors } from "../../styles/variables.styled";
 
 export const MainDiv = styled.div`
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    max-width: clamp(300px, 100%, 1000px);
     margin: 0 auto;
 `;
 
 export const BlogPostDiv = styled.div`
     display: flex;
-    flex-direction: row;
-    width: 1000px;
+    max-width: clamp(300px, 100%, 1000px);
+    flex-wrap: wrap;
     justify-content: space-between;
+    @media (min-width: ${breakpoints.lg}) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 `;
 
 export const BlogCTA = styled.div`
@@ -20,5 +24,8 @@ export const BlogCTA = styled.div`
     font-weight: 500;
     cursor: pointer;
     color: ${colors.secondary};
-    margin: 3.5rem 0 0 auto;
+    margin: 0 auto 3rem 0;
+    @media (min-width: ${breakpoints.lg}) {
+        margin: 3.5rem 0 0 auto;
+    }
 `;
