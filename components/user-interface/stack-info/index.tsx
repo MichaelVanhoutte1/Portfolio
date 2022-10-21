@@ -9,22 +9,22 @@ const StackInfoComponent = (props: Props) => {
             <StackInfoDiv>
                 <TypeDiv>
                     <Title isStackInfoTitle content="Type" />
-                    <p>Typescript</p>
+                    <p>Personal project</p>
                 </TypeDiv>
                 <StackDiv>
                     <Title isStackInfoTitle content="Stack" />
                     <ul>
                         <ListItem>Typescript</ListItem>
-                        <ListItem>Typescript</ListItem>
-                        <ListItem>Typescript</ListItem>
-                        <ListItem>Typescript</ListItem>
-                        <ListItem>Typescript</ListItem>
-                        <ListItem>Typescript</ListItem>
+                        <ListItem>React</ListItem>
+                        <ListItem>Nextjs</ListItem>
+                        <ListItem>styled-components</ListItem>
+                        <ListItem>SASS</ListItem>
+                        <ListItem>Netlify</ListItem>
                     </ul>
                 </StackDiv>
                 <LiveDiv>
                     <Title isStackInfoTitle content="Live" />
-                    <p>Typescript</p>
+                    <p>Site</p>
                 </LiveDiv>
             </StackInfoDiv>
         </>
