@@ -9,4 +9,7 @@ export const BurgerMenu = styled.img`
     @media (min-width: ${breakpoints.md}) {
         display: none;
     }
+    &.notHomepage{
+        right: -2rem;
+    }
 `;

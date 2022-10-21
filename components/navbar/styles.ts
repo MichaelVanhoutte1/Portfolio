@@ -9,19 +9,36 @@ export const NavbarDiv = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    &.notHomepage{
+        width: 100%;
+    }
 `;
 
 export const ContentDiv = styled.div`
     background-color: ${colors.primary};
     max-width: 1028px;
     visibility:hidden;
+    padding-bottom: 1rem;
     @media (min-width: ${breakpoints.md}) {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        visibility: visible;
     }
     &.menuActivated{
         visibility: visible;
+    }
+    &.notHomepage{
+        height: 0;
+        @media (min-width: ${breakpoints.md}) {
+            height: auto;
+        }
+        &.menuActivated{
+            height: 12.5rem;
+            @media (min-width: ${breakpoints.md}) {
+                height: auto;
+            }
+        }
     }
 `;
 

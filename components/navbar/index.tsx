@@ -4,23 +4,27 @@ import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/router";
 import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NavbarComponent = () => {
     const router = useRouter();
-    let isHomepage: boolean = router.pathname === "/";
-    const [ isMenuActive , setIsMenuActive ] = useState(false)
+    const [ isMenuActive , setIsMenuActive ] = useState<boolean>(false)
+    const [ isHomepage , setIsHomepage ] = useState<boolean>(router.pathname === "/" ? true : false)
+
+    useEffect(() => {
+        setIsHomepage(router.pathname === "/" ? true : false)
+    })
 
     return (
         <>
-            <NavbarDiv className={cs({ homepage: isHomepage })}>
+            <NavbarDiv className={cs({ notHomepage: !isHomepage })}>
                 <NameDiv>
                     <Link href="/">
                         <Name>Michael Vanhoutte</Name>
                     </Link>
                 </NameDiv>
-                <BurgerMenu isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive}/>
-                <ContentDiv className={cs({ menuActivated: isMenuActive })}>
+                <BurgerMenu isHomepage={isHomepage} isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive}/>
+                <ContentDiv className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}>
                     <Link href="/about">
                         <Button>about</Button>
                     </Link>

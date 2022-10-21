@@ -32,6 +32,9 @@ export const FooterDiv = styled.div`
     @media (min-width: ${breakpoints.sm}) {
         height: 11rem;
     }
+    &.notHomepage{
+        width: 100%;
+    }
 `;
 export const ContentDiv = styled.div`
     display: flex;

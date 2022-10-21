@@ -1,4 +1,7 @@
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import SocialIcon from "../user-interface/social-icon";
+import cs from 'classnames'
 import {
     Text,
     Copyright,
@@ -11,9 +14,15 @@ import {
 } from "./styles";
 
 const FooterComponent = () => {
+    const router = useRouter();
+    const [ isHomepage , setIsHomepage ] = useState<boolean>(router.pathname === "/" ? true : false)
+
+    useEffect(() => {
+        setIsHomepage(router.pathname === "/" ? true : false)
+    })
     return (
         <>
-            <FooterDiv>
+            <FooterDiv className={cs({ notHomepage: !isHomepage })}>
                 <ContentDiv>
                     <CopyrightDiv>
                         <Name>Michael</Name>
