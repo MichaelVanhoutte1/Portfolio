@@ -12,11 +12,11 @@ const BlogPost = (props: Props) => {
             <MainDiv>
                 <ContentDiv>
                     <Title isFeaturedBlogPostTitle content="Spinaker Project Katowice" />
-                    <Image isBlogPostPicture src="https://picsum.photos/400/400" alt="sdf" />
+                    <Image isBlogPostPicture src="/images/katowiceUniversityLogo.jpg" alt="University Katowice Logo" />
                     <Paragraph isSmallParagraph
                         content="A recap about an international project hosted in the economical heart of Poland, Katowice."
                     />
-                    <Link href="/blog">
+                    <Link href="/blogpost">
                         <BlogLink>Read the full post</BlogLink>
                     </Link>
                 </ContentDiv>

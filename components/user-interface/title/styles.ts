@@ -3,7 +3,7 @@ import { breakpoints, colors } from "../../../styles/variables.styled";
 export const Title = styled.h1`
     font-size: 2.5rem;
     font-weight: 400;
-    margin: 5rem 0 2rem 0;
+    margin: 3rem 0 2rem 0;
     &.aboutSubtitle {
         font-size: 1.5rem;
         font-weight: bold;

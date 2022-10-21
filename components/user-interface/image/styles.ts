@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../../../styles/variables.styled";
+import { breakpoints, colors } from "../../../styles/variables.styled";
 export const Picture = styled.img`
     max-width: clamp(200px, 100%, 400px);
     max-height: 400px;
@@ -25,6 +25,7 @@ export const Picture = styled.img`
         width: 230px;
         padding:0;
         margin:0;
+        border: 1px solid ${colors.primary};
     }
     @media (min-width: ${breakpoints.lg}) {
         margin-left: 2rem;
