@@ -6,7 +6,7 @@ import { MainDiv } from "../styles/pages/project.styled";
 import Title from "../components/user-interface/title";
 import SEO from "../components/seo";
 
-const Home: NextPage = () => {
+const Project: NextPage = () => {
     const text: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatibus
     veritatis. Animi, inventore? Aut vel non ullam consequatur aspernatur
     quibusdam dolores neque laborum autem expedita vero, illo excepturi
@@ -40,4 +40,4 @@ const Home: NextPage = () => {
     );
 };
 
-export default Home;
+export default Project;

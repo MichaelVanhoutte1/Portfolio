@@ -4,6 +4,12 @@ $secondary: #ff6625;
 
 body {
     font-family: system-ui;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 main {

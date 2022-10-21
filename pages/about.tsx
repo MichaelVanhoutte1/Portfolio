@@ -6,7 +6,7 @@ import SocialIcon from "../components/user-interface/social-icon";
 import Title from "../components/user-interface/title";
 import { ContentDiv, MainDiv, PageTitle, SocialIconsDiv, Text } from "../styles/pages/about.styled";
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
     const quickStory: string = `<span>I was introduced to computers at 6 years old.</span> Back then I only played videogames, 
     but as I grew older I started to get interested in how they worked. I started with making simple games and animations,
     and then moved on to building simple websites. When I went to secondary school <span>I started to learn how to properly code</span>. Coming from that background,
@@ -104,4 +104,4 @@ const Home: NextPage = () => {
     );
 };
 
-export default Home;
+export default About;

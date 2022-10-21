@@ -8,12 +8,12 @@ import { useEffect, useState } from "react";
 
 const NavbarComponent = () => {
     const router = useRouter();
-    const [ isMenuActive , setIsMenuActive ] = useState<boolean>(false)
-    const [ isHomepage , setIsHomepage ] = useState<boolean>(router.pathname === "/" ? true : false)
+    const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
+    const [isHomepage, setIsHomepage] = useState<boolean>(router.pathname === "/" ? true : false);
 
     useEffect(() => {
-        setIsHomepage(router.pathname === "/" ? true : false)
-    })
+        setIsHomepage(router.pathname === "/" ? true : false);
+    });
 
     return (
         <>
@@ -23,16 +23,18 @@ const NavbarComponent = () => {
                         <Name>Michael Vanhoutte</Name>
                     </Link>
                 </NameDiv>
-                <BurgerMenu isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive}/>
-                <ContentDiv className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}>
+                <BurgerMenu isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive} />
+                <ContentDiv
+                    className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}
+                >
                     <Link href="/about">
                         <Button>about</Button>
                     </Link>
+                    <Link href="/blog">
+                        <Button>blog</Button>
+                    </Link>
                     {isHomepage ? (
                         <>
-                            <ScrollLink to="blog" smooth duration={1000}>
-                                <Button>blog</Button>
-                            </ScrollLink>
                             <ScrollLink to="projects" smooth duration={1000}>
                                 <Button>projects</Button>
                             </ScrollLink>
@@ -42,9 +44,6 @@ const NavbarComponent = () => {
                         </>
                     ) : (
                         <>
-                            <Link href="/#blog">
-                                <Button>blog</Button>
-                            </Link>
                             <Link href="/#projects">
                                 <Button>projects</Button>
                             </Link>

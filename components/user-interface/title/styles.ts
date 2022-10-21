@@ -29,6 +29,12 @@ export const Title = styled.h1`
         margin: 1rem 0;
         font-weight: 700;
     }
+    &.blogPostDate{
+        font-size: .9rem;
+        font-weight: 400;
+        letter-spacing: .1rem;
+        margin: 0 0 1rem 0;
+    }
 `;
 
 export const MainTitle = styled.p`
