@@ -4,7 +4,6 @@ import { Link } from "react-scroll";
 import { HeroSection } from "./styled";
 
 const Header = () => {
-
     const [isDesktop, setIsDesktop] = useState(false);
 
     useEffect(() => {

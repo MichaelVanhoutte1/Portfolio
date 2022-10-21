@@ -3,6 +3,7 @@ import { breakpoints, colors } from "../../styles/variables.styled";
 export const HeroSection = styled.section`
     height: 100vh;
     display: flex;
+    padding: 0 2rem;
     flex-direction: column;
     align-items: center;
     background: ${colors.primary};

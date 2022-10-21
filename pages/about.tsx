@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import SEO from "../components/seo";
 import Button from "../components/user-interface/button";
 import Paragraph from "../components/user-interface/paragraph";
 import SocialIcon from "../components/user-interface/social-icon";
@@ -43,9 +44,21 @@ const Home: NextPage = () => {
 
     return (
         <>
+            <SEO
+                title="About Michael Vanhoutte"
+                description="I am a software engineer specialized in web development. My toolset includes javascript, typescript, react, html, css and a whole lot of creativity."
+                name="Michael Vanhoutte"
+                type="website"
+            />
             <MainDiv>
                 <PageTitle>I have always loved tech</PageTitle>
-                <Text>Looking for my <a target="_blank" rel="noreferrer" href="CV-Michael-Vanhoutte.pdf" >CV</a>?</Text>
+                <Text>
+                    Looking for my{" "}
+                    <a target="_blank" rel="noreferrer" href="CV-Michael-Vanhoutte.pdf">
+                        CV
+                    </a>
+                    ?
+                </Text>
                 <ContentDiv>
                     <Title isAboutSubtitle content="My quick story" />
                     <Paragraph isAboutMe isLargeParagraph content={quickStory} />

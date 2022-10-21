@@ -23,7 +23,7 @@ const NavbarComponent = () => {
                         <Name>Michael Vanhoutte</Name>
                     </Link>
                 </NameDiv>
-                <BurgerMenu isHomepage={isHomepage} isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive}/>
+                <BurgerMenu isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive}/>
                 <ContentDiv className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}>
                     <Link href="/about">
                         <Button>about</Button>

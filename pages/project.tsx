@@ -4,6 +4,7 @@ import Image from "../components/user-interface/image";
 import Paragraph from "../components/user-interface/paragraph";
 import { MainDiv } from "../styles/pages/project.styled";
 import Title from "../components/user-interface/title";
+import SEO from "../components/seo";
 
 const Home: NextPage = () => {
     const text: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatibus
@@ -16,6 +17,12 @@ const Home: NextPage = () => {
 
     return (
         <>
+        <SEO
+                title="Portfolio Website | Michael Vanhoutte"
+                description="Personal project to display my work and skills."
+                name="Michael Vanhoutte"
+                type="website"
+            />
             <MainDiv>
                 <Title content="Personal website" />
                 <Paragraph isLargeParagraph content={text} />
