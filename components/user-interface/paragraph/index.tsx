@@ -5,11 +5,12 @@ interface Props {
     content: string;
     isWithMargin?: boolean;
     isLargeParagraph?: boolean;
+    isSmallParagraph?: boolean;
     isAboutMe?: boolean;
 }
 
 const ParagraphComponent = (props: Props) => {
-    const { content, isWithMargin, isLargeParagraph, isAboutMe } = props;
+    const { content, isWithMargin, isLargeParagraph, isSmallParagraph, isAboutMe } = props;
     return (
         <>
             <Paragraph
@@ -17,6 +18,7 @@ const ParagraphComponent = (props: Props) => {
                 className={cs({
                     withMargin: isWithMargin,
                     largeParagraph: isLargeParagraph,
+                    smallParagraph: isSmallParagraph,
                     aboutMe: isAboutMe,
                 })}
             >

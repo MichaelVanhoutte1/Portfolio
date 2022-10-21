@@ -6,13 +6,14 @@ interface Props {
     alt: string;
     isAboutPicture?: boolean;
     isProjectPicture?: boolean;
+    isBlogPostPicture?: boolean;
 }
 
 const ImageComponent = (props: Props) => {
-    const { src, alt, isAboutPicture, isProjectPicture } = props;
+    const { src, alt, isAboutPicture, isProjectPicture, isBlogPostPicture } = props;
     return (
         <>
-            <Picture loading="lazy" className={cs({ aboutPicture: isAboutPicture, projectPicture: isProjectPicture})} src={src} alt={alt} />
+            <Picture loading="lazy" className={cs({ aboutPicture: isAboutPicture, projectPicture: isProjectPicture, blogPostPicture: isBlogPostPicture })} src={src} alt={alt} />
         </>
     );
 };

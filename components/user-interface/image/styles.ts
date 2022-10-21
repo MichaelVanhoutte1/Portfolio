@@ -21,6 +21,11 @@ export const Picture = styled.img`
         padding:0;
         margin:0;
     }
+    &.blogPostPicture {
+        width: 230px;
+        padding:0;
+        margin:0;
+    }
     @media (min-width: ${breakpoints.lg}) {
         margin-left: 2rem;
     }

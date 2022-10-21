@@ -11,6 +11,12 @@ export const Paragraph = styled.p`
     &.withMargin {
         margin: 0 0 2rem 0;
     }
+    &.smallParagraph {
+        width: 230px;
+        font-weight: 300;
+        font-size: 1.3rem;
+        margin: 2rem 0 0 0;
+    }
     @media (min-width: ${breakpoints.md}) {
         width: clamp(450px, 100%, 800px);
         &.largeParagraph {

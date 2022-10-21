@@ -15,15 +15,13 @@ const EnveloppeAnimationComponent = () => {
     } else {
         return (
             <>
-                <body>
-                    <div id="card">
-                        <div className="heart"></div>
-                        <div className="heart1"></div>
-                        <div className="heart2"></div>
-                        <div className="heart3"></div>
-                        <div className="heart4"></div>
-                    </div>
-                </body>
+                <div id="card">
+                    <div className="heart"></div>
+                    <div className="heart1"></div>
+                    <div className="heart2"></div>
+                    <div className="heart3"></div>
+                    <div className="heart4"></div>
+                </div>
             </>
         );
     }

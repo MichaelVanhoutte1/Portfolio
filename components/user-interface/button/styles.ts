@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints, colors } from "../../../styles/variables.styled";
+import { colors } from "../../../styles/variables.styled";
 
 export const Button = styled.button`
     font-size: 20px;

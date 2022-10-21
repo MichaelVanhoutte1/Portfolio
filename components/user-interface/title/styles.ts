@@ -35,6 +35,11 @@ export const Title = styled.h1`
         letter-spacing: .1rem;
         margin: 0 0 1rem 0;
     }
+    &.featuredBlogPostTitle{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 0 3rem 0 ;
+    }
 `;
 
 export const MainTitle = styled.p`
