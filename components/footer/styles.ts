@@ -5,6 +5,8 @@ export const CopyrightDiv = styled.div``;
 export const Name = styled.h2`
     font-size: 1.5rem;
     font-weight: 700;
+    cursor: pointer;
+    width: fit-content;
     :first-of-type {
         margin-top: 2.5rem;
     }
@@ -17,16 +19,46 @@ export const Copyright = styled.p`
 export const SocialsDiv = styled.div`
     margin: 2rem 0;
 `;
-export const Text = styled.p``;
+export const Text = styled.p`
+    color: ${colors.lightgray};
+    font-weight: 500;
+`;
 export const SocialIconsDiv = styled.div`
     display: flex;
     align-items: center;
     margin-top: 1rem;
 `;
 
+export const LinksDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0; 
+`;
+
+export const LinkColumn = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+`;
+
+export const LinkContent = styled.div`
+    display: flex;
+    align-items: left;
+    margin-top: .5rem;
+    flex-direction: row;
+`;
+
+export const LinkText = styled.p`
+    color: ${colors.secondary};
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0 0;
+    cursor: pointer;
+`;
+
 export const FooterDiv = styled.div`
     background-color: ${colors.primary};
-    height: 18rem;
+    height: 27rem;
     color: ${colors.primaryText};
     padding: 0 2rem;
     @media (min-width: ${breakpoints.sm}) {

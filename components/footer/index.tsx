@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SocialIcon from "../user-interface/social-icon";
 import {
     Text,
@@ -8,6 +9,10 @@ import {
     SocialsDiv,
     FooterDiv,
     ContentDiv,
+    LinksDiv,
+    LinkColumn,
+    LinkText,
+    LinkContent
 } from "./styles";
 
 const FooterComponent = () => {
@@ -16,10 +21,31 @@ const FooterComponent = () => {
             <FooterDiv>
                 <ContentDiv>
                     <CopyrightDiv>
-                        <Name>Michael</Name>
-                        <Name>Vanhoutte</Name>
-                        <Copyright>© 2022, Built and designed by Michael Vanhoutte</Copyright>
+                    <Link href="/#about"><Name>Michael</Name></Link>
+                    <Link href="/#about"><Name>Vanhoutte</Name></Link>
+                        <Copyright>© 2022, Built by Michael Vanhoutte</Copyright>
                     </CopyrightDiv>
+                    <LinksDiv>
+                        <Text>Links</Text>
+                        <LinkContent>
+                            <LinkColumn>
+                                <Link href="/about">
+                                    <LinkText>About</LinkText>
+                                </Link>
+                                <Link href="/#projects">
+                                    <LinkText>Projects</LinkText>
+                                </Link>
+                            </LinkColumn>
+                            <LinkColumn>
+                                <Link href="/blog">
+                                    <LinkText>Blog</LinkText>
+                                </Link>
+                                <Link href="/#contact">
+                                    <LinkText>Contact</LinkText>
+                                </Link>
+                            </LinkColumn>
+                        </LinkContent>
+                    </LinksDiv>
                     <SocialsDiv>
                         <Text>Follow me on</Text>
                         <SocialIconsDiv>

@@ -7,16 +7,9 @@ export const breakpoints = {
     xxl: `1400px;`,
 };
 
-export const colors1 = {
-    primary: `#06283D`,
-    primaryText: `#DFF6FF`,
-    lightgray: `#f5f5f5`,
-    secondary: `#47B5FF`,
-}
-
 export const colors = {
     primary: `#082032`,
     primaryText: `#fff`,
-    lightgray: `#f5f5f5`,
+    lightgray: `rgb(199, 199, 199)`,
     secondary: `#FF6625`,
 }

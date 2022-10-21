@@ -4,14 +4,14 @@ import { colors } from "../../styles/variables.styled";
 export const MainDiv = styled.div`
     display: flex;
     flex-direction: column;
-    width: 1028px;
+    width: 1000px;
     margin: 0 auto;
 `;
 
 export const BlogPostDiv = styled.div`
     display: flex;
     flex-direction: row;
-    width: 1028px;
+    width: 1000px;
     justify-content: space-between;
 `;
 
