@@ -1,26 +1,34 @@
 import styled from "styled-components";
-import { colors } from "../../styles/variables.styled";
+import { breakpoints, colors } from "../../styles/variables.styled";
 
 export const NavbarDiv = styled.div`
     display: flex;
     background-color: ${colors.primary};
-    width: 100%;
+    margin: 0;
+    padding: 0 2rem;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 `;
 
 export const ContentDiv = styled.div`
-    display: flex;
     background-color: ${colors.primary};
-    width: 1028px;
-    justify-content: space-between;
+    max-width: 1028px;
+    visibility:hidden;
+    @media (min-width: ${breakpoints.md}) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &.menuActivated{
+        visibility: visible;
+    }
 `;
 
 export const NameDiv = styled.div`
     display: flex;
     background-color: ${colors.primary};
-    width: 1028px;
+    max-width: (300px, 100%, 1028px);
     justify-content: center;
     padding-top: 1.3rem;
 `;
@@ -39,7 +47,7 @@ export const Name = styled.p`
 
 export const Button = styled.button`
     display: block;
-    margin: 10px 0 10px;
+    margin: 10px auto 10px;
     width: fit-content;
     font-size: 1rem;
     font-family: "Merriweather", sans-serif;
@@ -53,7 +61,9 @@ export const Button = styled.button`
     border-bottom: 5px solid ${colors.secondary};
     position: relative;
     z-index: 1;
-    transition: all 0.5s;
+    @media (min-width: ${breakpoints.md}) {
+        margin: 10px 0 10px;
+    }
     &:hover {
         color: ${colors.primaryText};
     }
@@ -68,7 +78,6 @@ export const Button = styled.button`
         margin-top: auto;
         width: 100%;
         height: 1px;
-
         content: ".";
         color: transparent;
         background: ${colors.secondary};

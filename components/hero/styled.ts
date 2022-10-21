@@ -5,8 +5,6 @@ export const HeroSection = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 59px;
     background: ${colors.primary};
     font-weight: 400;
     color: ${colors.primaryText};
@@ -24,6 +22,7 @@ export const HeroSection = styled.section`
         font-size: 2.8rem;
         font-weight: 700;
         margin-bottom: 3.2rem;
+        margin-top: 10vh;
         text-align: left;
         @media (min-width: ${breakpoints.sm}) {
             font-size: 3.5rem;
@@ -31,6 +30,7 @@ export const HeroSection = styled.section`
         }
         @media (min-width: ${breakpoints.md}) {
             font-size: 3.6rem;
+            margin-top: 30vh;
         }
         @media (min-width: ${breakpoints.lg}) {
             font-size: 4rem;
@@ -43,8 +43,9 @@ export const HeroSection = styled.section`
     .hero-cta {
         cursor: pointer;
         display: flex;
-        border: 2px solid ${colors.primaryText};
+        border: 3px solid ${colors.primaryText};
         padding: 1.2rem 2.4rem;
+        transition: all 0.5s;
         @media (min-width: ${breakpoints.md}) {
             justify-content: center;
         }
@@ -53,6 +54,10 @@ export const HeroSection = styled.section`
             @media (max-width: ${breakpoints.sm}) {
                 font-size: 2rem;
             }
+        }
+        &:hover {
+            color: ${colors.secondary};
+            border: 3px solid ${colors.secondary};
         }
     }
 `;

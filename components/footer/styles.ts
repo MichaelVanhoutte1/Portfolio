@@ -26,7 +26,7 @@ export const SocialIconsDiv = styled.div`
 
 export const FooterDiv = styled.div`
     background-color: ${colors.primary};
-    height: 18rem;w
+    height: 18rem;
     color: ${colors.primaryText};
     padding: 0 2rem;
     @media (min-width: ${breakpoints.sm}) {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/variables.styled";
+import { breakpoints, colors } from "../../../styles/variables.styled";
 export const Title = styled.h1`
     font-size: 2.5rem;
     font-weight: 400;
@@ -49,6 +49,9 @@ export const MainTitle = styled.p`
         transition: .3s;
     }
     &.noBottomMargin {
-        margin: 3rem 0 0 0;
+        margin: 3rem 0;
+        @media (min-width: ${breakpoints.md}) {
+            margin: 3rem 0 0 0;
+        }
     }
 `;

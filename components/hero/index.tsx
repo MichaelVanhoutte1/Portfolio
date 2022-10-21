@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-scroll";
-import SocialIcon from "../user-interface/social-icon";
-import { HeroSection } from "./index.styled";
+import { HeroSection } from "./styled";
 
 const Header = () => {
 
     const [isDesktop, setIsDesktop] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         if (window.innerWidth > 769) {
             setIsDesktop(true);
-            setIsMobile(false);
         } else {
-            setIsMobile(true);
             setIsDesktop(false);
         }
     }, []);
@@ -38,7 +34,7 @@ const Header = () => {
                 >
                     <p className="hero-cta">
                         <span className="cta-btn cta-btn--hero">
-                            <Link to="about" offset={-59} smooth duration={1000}>
+                            <Link to="about" smooth duration={1000}>
                                 { "Know more"}
                             </Link>
                         </span>

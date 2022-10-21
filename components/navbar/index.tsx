@@ -3,10 +3,13 @@ import { Button, NavbarDiv, ContentDiv, Name, NameDiv } from "./styles";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/router";
 import cs from "classnames";
+import BurgerMenu from "../user-interface/burger-menu";
+import { useState } from "react";
 
 const NavbarComponent = () => {
     const router = useRouter();
     let isHomepage: boolean = router.pathname === "/";
+    const [ isMenuActive , setIsMenuActive ] = useState(false)
 
     return (
         <>
@@ -16,7 +19,8 @@ const NavbarComponent = () => {
                         <Name>Michael Vanhoutte</Name>
                     </Link>
                 </NameDiv>
-                <ContentDiv>
+                <BurgerMenu isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive}/>
+                <ContentDiv className={cs({ menuActivated: isMenuActive })}>
                     <Link href="/about">
                         <Button>about</Button>
                     </Link>
