@@ -90,6 +90,10 @@ export const englishTranslations = {
     spinakerSmallRecap: `A recap about an international project hosted in the economical heart of Poland, Katowice.`,
     spinakerLogoSrc: "/images/katowiceUniversityLogo.jpg",
     spinakerLogoAlt: "University Katowice Logo",
+    spinakerOutroSrc: "/images/katowiceUniversity.jpg",
+    spinakerOutroAlt: "All of the participating students together",
+    spinakerIntroSrc: "/images/spinaker.jpg",
+    spinakerIntroAlt: "The University of Economics in Katowice",
 
     //common europe blogpost
     commonEuropeTitle: `Common Europe Congress 2022`,
@@ -123,10 +127,17 @@ export const englishTranslations = {
     commonEuropeSmallRecap: `A recap about the Common Europe Congress 2022 hosted in Alicante, Spain.`,
     commonEuropeLogoSrc: "/images/commonEuropeLogo.jpg",
     commonEuropeLogoAlt: "Common Europe Logo",
+    commonEuropeOutroSrc: "/images/commonEuropeGroup.jpg",
+    commonEuropeOutroAlt: "All of the participating students together",
+    commonEuropeIntroSrc: "/images/commonEuropeEntrance.jpg",
+    commonEuropeIntroAlt: "The entrance of the congress",
 
     //projects
     projectsTitle: `Projects`,
     projectCTA: `View Project`,
+    projectGoal: `Introduction and Project Goal`,
+    projectsCourse: `Project course`,
+    projectResult: `Result`,
 
     //portfolio project
     portfolioTitle: `Portfolio website`,

@@ -25,14 +25,14 @@ const Blog: NextPage = () => {
             />
             <MainDiv>
                 <BlogPost>
-                    <Link href="/blogpost">
+                    <Link href="/blogpost/commonEurope">
                         <BlogTitle>{t('commonEuropeTitle')}</BlogTitle>
                     </Link>
                     <Title isBlogPostDate content="June 25, 2022" />
                     <Paragraph isAboutMe isLargeParagraph content={t('commonEuropeRecap')} />
                 </BlogPost>
                 <BlogPost>
-                    <Link href="/blogpost">
+                    <Link href="/blogpost/spinaker">
                         <BlogTitle>{t('spinakerTitle')}</BlogTitle>
                     </Link>
                     <Title isBlogPostDate content="April 27, 2022" />
