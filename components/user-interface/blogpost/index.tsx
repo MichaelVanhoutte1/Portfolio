@@ -3,21 +3,33 @@ import Title from "../title";
 import Image from "../image";
 import { ContentDiv, MainDiv, BlogLink } from "./styles";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import "../../../translations/i18n";
 
-interface Props {}
+interface Props {
+    blogpost: string;
+}
 
 const BlogPost = (props: Props) => {
+    const { t } = useTranslation();
+    const { blogpost } = props;
+
     return (
         <>
             <MainDiv>
                 <ContentDiv>
-                    <Title isFeaturedBlogPostTitle content="Spinaker Project Katowice" />
-                    <Image isBlogPostPicture src="/images/katowiceUniversityLogo.jpg" alt="University Katowice Logo" />
-                    <Paragraph isSmallParagraph
-                        content="A recap about an international project hosted in the economical heart of Poland, Katowice."
+                    <Title isFeaturedBlogPostTitle content={t(blogpost + 'Title')} />
+                    <Image
+                        isBlogPostPicture
+                        src={t(blogpost + 'LogoSrc')}
+                        alt={t(blogpost + 'LogoAlt')}
+                    />
+                    <Paragraph
+                        isSmallParagraph
+                        content={t(blogpost + 'SmallRecap')}
                     />
                     <Link href="/blogpost">
-                        <BlogLink>Read the full post</BlogLink>
+                        <BlogLink>{t('featuredBlogpostsCTA')}</BlogLink>
                     </Link>
                 </ContentDiv>
             </MainDiv>

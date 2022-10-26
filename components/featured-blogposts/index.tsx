@@ -3,27 +3,30 @@ import BlogPost from "../user-interface/blogpost";
 import { MainDiv, BlogPostDiv, BlogCTA } from "./styles";
 import SocialIconComponent from "../user-interface/social-icon";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import "../../translations/i18n";
 
 interface Props {}
 
 const FeaturedBlogposts = (props: Props) => {
-    const [ isDesktop, setisDesktop ] = useState(false);
+    const { t } = useTranslation();
+    const [ isDesktopw, setisDesktopw ] = useState(false);
     if (typeof window !== "undefined") {
         useEffect(() => {
-            setisDesktop(window.innerWidth > 992);
+            setisDesktopw(window.innerWidth > 992);
         });
     }
     return (
         <>
             <MainDiv>
-                <Title isMainTitle content="Featured" />
+                <Title isMainTitle content={t('featuredBlogpostsTitle')} />
                 <BlogPostDiv>
-                    <BlogPost />
-                    <BlogPost />
-                    {isDesktop && <BlogPost />}
+                    <BlogPost blogpost='spinaker' />
+                    <BlogPost blogpost='commonEurope' />
+                    {isDesktopw && <BlogPost blogpost='spinaker'/>}
                 </BlogPostDiv>
                 <BlogCTA>
-                    More blog posts{" "}
+                {t('featuredBlogpostsMore')}
                     <SocialIconComponent
                         isArrowIcon
                         link="/blog"

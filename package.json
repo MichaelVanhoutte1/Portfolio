@@ -11,6 +11,8 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "classnames": "^2.3.2",
+    "i18next": "^22.0.2",
+    "i18next-browser-languagedetector": "^6.1.8",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-awesome-reveal": "^4.1.0",

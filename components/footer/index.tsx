@@ -14,8 +14,11 @@ import {
     LinkText,
     LinkContent
 } from "./styles";
+import { useTranslation } from "react-i18next";
+import "../../translations/i18n";
 
 const FooterComponent = () => {
+    const { t } = useTranslation();
     return (
         <>
             <FooterDiv>
@@ -23,31 +26,31 @@ const FooterComponent = () => {
                     <CopyrightDiv>
                     <Link href="/#about"><Name>Michael</Name></Link>
                     <Link href="/#about"><Name>Vanhoutte</Name></Link>
-                        <Copyright>© 2022, Built by Michael Vanhoutte</Copyright>
+                        <Copyright>{t('footerBuiltBy')}</Copyright>
                     </CopyrightDiv>
                     <LinksDiv>
-                        <Text>Links</Text>
+                        <Text>{t('footerLinks')}</Text>
                         <LinkContent>
                             <LinkColumn>
                                 <Link href="/about">
-                                    <LinkText>About</LinkText>
+                                    <LinkText>{t('footerAbout')}</LinkText>
                                 </Link>
                                 <Link href="/#projects">
-                                    <LinkText>Projects</LinkText>
+                                    <LinkText>{t('footerProjects')}</LinkText>
                                 </Link>
                             </LinkColumn>
                             <LinkColumn>
                                 <Link href="/blog">
-                                    <LinkText>Blog</LinkText>
+                                    <LinkText>{t('footerBlog')}</LinkText>
                                 </Link>
                                 <Link href="/#contact">
-                                    <LinkText>Contact</LinkText>
+                                    <LinkText>{t('footerContact')}</LinkText>
                                 </Link>
                             </LinkColumn>
                         </LinkContent>
                     </LinksDiv>
                     <SocialsDiv>
-                        <Text>Follow me on</Text>
+                        <Text>{t('footerFollowMe')}</Text>
                         <SocialIconsDiv>
                             <SocialIcon
                                 link="https://github.com/MichaelVanhoutte1"

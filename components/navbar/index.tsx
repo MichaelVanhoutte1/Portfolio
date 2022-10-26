@@ -5,8 +5,11 @@ import { useRouter } from "next/router";
 import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import "../../translations/i18n";
 
 const NavbarComponent = () => {
+    const { t } = useTranslation();
     const router = useRouter();
     const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
     const [isHomepage, setIsHomepage] = useState<boolean>(router.pathname === "/" ? true : false);
@@ -28,27 +31,27 @@ const NavbarComponent = () => {
                     className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}
                 >
                     <Link href="/about">
-                        <Button>about</Button>
+                        <Button>{t("navAbout")}</Button>
                     </Link>
                     <Link href="/blog">
-                        <Button>blog</Button>
+                        <Button>{t("navBlog")}</Button>
                     </Link>
                     {isHomepage ? (
                         <>
                             <ScrollLink to="projects" smooth duration={1000}>
-                                <Button>projects</Button>
+                                <Button>{t("navProjects")}</Button>
                             </ScrollLink>
                             <ScrollLink to="contact" smooth duration={1000}>
-                                <Button>contact</Button>
+                                <Button>{t("navContact")}</Button>
                             </ScrollLink>
                         </>
                     ) : (
                         <>
                             <Link href="/#projects">
-                                <Button>projects</Button>
+                                <Button>{t("navProjects")}</Button>
                             </Link>
                             <Link href="/#contact">
-                                <Button>contact</Button>
+                                <Button>{t("navContact")}</Button>
                             </Link>
                         </>
                     )}

@@ -4,16 +4,22 @@ import Paragraph from "../paragraph";
 import Title from "../title";
 import Image from "../image";
 import { ContentDiv, MainDiv } from "./styles";
+import { useTranslation } from "react-i18next";
+import "../../../translations/i18n";
 
-interface Props {}
+interface Props {
+    project: string;
+}
 
 const ProjectComponent = (props: Props) => {
+    const { t } = useTranslation();
+    const { project } = props;
     return (
         <>
             <MainDiv>
                 <ContentDiv>
-                    <Title isProjectSubtitle content="PERSONAL PROJECT" />
-                    <Title isProjectTitle content="Portfolio website" />
+                    <Title isProjectSubtitle content={t(project + "Type")} />
+                    <Title isProjectTitle content={t(project + "Title")} />
                     <BoxLabels
                         isProjectLabelDiv
                         labelArray={[
@@ -27,11 +33,11 @@ const ProjectComponent = (props: Props) => {
                         ]}
                     />
                     <Paragraph
-                        content="I built this website to showcase my work and skills, and to allow people to have a better insight into who I am."
+                        content={t(project + "Summary")}
                     />
-                    <Button href="/project" isProjectButton content="View project" />
+                    <Button href="/project" isProjectButton content={t("projectCTA")} />
                 </ContentDiv>
-                <Image src="https://picsum.photos/400/400" alt="sdf" />
+                <Image src={t(project + "Src")} alt={t(project + "Alt")} />
             </MainDiv>
         </>
     );

@@ -5,13 +5,17 @@ import Image from "../user-interface/image";
 import { ContentDiv, MainDiv, ButtonDiv, AboutDiv } from "./styles";
 import Paragraph from "../user-interface/paragraph";
 import { Element } from "react-scroll";
+import { useTranslation } from "react-i18next";
+import "../../translations/i18n";
 
 const AboutComponent = () => {
+    const { t } = useTranslation();
+
     return (
         <>
             <Element name="about">
                 <MainDiv>
-                    <Title noBottomMargin isMainTitle content="My Skills" />
+                    <Title noBottomMargin isMainTitle content={t("homepageAboutMeTitle")} />
                     <AboutDiv>
                         <Image isAboutPicture src="images/about.jpg" alt="sdf" />
                         <ContentDiv>
@@ -36,18 +40,14 @@ const AboutComponent = () => {
                                     "REST",
                                 ]}
                             />
-                            <Title isAboutSubtitle content="I love building stuff" />
-                            <Paragraph
-                                isAboutMe
-                                content="I started playing with computers from a young age. 
-                            I was always fascinated by the way they worked and how they could be used to create things. 
-                            I started with simple games and animations, and then moved on to building websites. 
-                            I love the feeling of creating something from scratch and seeing it come to life. 
-                            I am always looking for new challenges and ways to improve my skills."
-                            />
+                            <Title isAboutSubtitle content={t("homepageAboutMeSubtitle")} />
+                            <Paragraph isAboutMe content={t("homepageAboutMeSummary")} />
                             <ButtonDiv>
-                                <Button href="/about" content="Read more" />
-                                <Button isResumeButton content="Resume" />
+                                <Button
+                                    href="/about"
+                                    content={t("homepageAboutMeReadMoreButton")}
+                                />
+                                <Button isResumeButton content={t("homepageAboutMeResumeButton")} />
                             </ButtonDiv>
                         </ContentDiv>
                     </AboutDiv>

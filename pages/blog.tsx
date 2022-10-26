@@ -4,8 +4,11 @@ import { MainDiv, BlogPost, BlogTitle } from "../styles/pages/blog.styled";
 import Title from "../components/user-interface/title";
 import SEO from "../components/seo";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 const Blog: NextPage = () => {
+    const { t } = useTranslation();
     const text: string = `A recap about the Common Europe Congress 2022 hosted in Alicante, Spain. 
     Where I was selected with 20 other students from all over Europe to participate in the congress. The congress was held from the 13th to the 16th of June 2022.`;
 
@@ -23,17 +26,17 @@ const Blog: NextPage = () => {
             <MainDiv>
                 <BlogPost>
                     <Link href="/blogpost">
-                        <BlogTitle>Common Europe Congress 2022</BlogTitle>
+                        <BlogTitle>{t('commonEuropeTitle')}</BlogTitle>
                     </Link>
                     <Title isBlogPostDate content="June 25, 2022" />
-                    <Paragraph isAboutMe isLargeParagraph content={text} />
+                    <Paragraph isAboutMe isLargeParagraph content={t('commonEuropeRecap')} />
                 </BlogPost>
                 <BlogPost>
                     <Link href="/blogpost">
-                        <BlogTitle>Spinaker Project Katowice 2022</BlogTitle>
+                        <BlogTitle>{t('spinakerTitle')}</BlogTitle>
                     </Link>
                     <Title isBlogPostDate content="April 27, 2022" />
-                    <Paragraph isAboutMe isLargeParagraph content={text2} />
+                    <Paragraph isAboutMe isLargeParagraph content={t('spinakerRecap')} />
                 </BlogPost>
             </MainDiv>
         </>
