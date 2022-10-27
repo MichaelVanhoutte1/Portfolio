@@ -12,10 +12,33 @@ const ProjectsComponent = (props: Props) => {
     return (
         <>
             <Element name="projects">
-                <MainDiv  id={"Projects"}>
+                <MainDiv id={"Projects"}>
                     <Title isMainTitle content={t("projectsTitle")} />
-                    <Project project="portfolio" />
-                    <Project project="fitnessApp"/>
+                    <Project
+                        stackTags={[
+                            "React",
+                            "Typescript",
+                            "Firebase",
+                            "Styled-Components",
+                            "Next.js",
+                            "Redux",
+                            "SASS",
+                            "Netlify",
+                        ]}
+                        project="portfolio"
+                    />
+                    <Project
+                        stackTags={[
+                            "React",
+                            "Typescript",
+                            "Firebase",
+                            "Styled-Components",
+                            "Next.js",
+                            "Redux",
+                            "SASS",
+                        ]}
+                        project="fitnessApp"
+                    />
                 </MainDiv>
             </Element>
         </>

@@ -23,7 +23,7 @@ const FeaturedBlogposts = (props: Props) => {
                 <BlogPostDiv>
                     <BlogPost blogpost='spinaker' />
                     <BlogPost blogpost='commonEurope' />
-                    {isDesktopw && <BlogPost blogpost='spinaker'/>}
+                    {isDesktopw && <BlogPost blogpost='third'/>}
                 </BlogPostDiv>
                 <BlogCTA>
                 {t('featuredBlogpostsMore')}

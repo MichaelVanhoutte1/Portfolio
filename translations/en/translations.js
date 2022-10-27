@@ -8,7 +8,7 @@ export const englishTranslations = {
     //hero
     heroTitle: "Hi, I'm Michael | Software Engineer",
     heroCTA: "Know more",
-    
+
     //homepage aboutMe
     homepageAboutMeTitle: "My skills",
     homepageAboutMeSubtitle: "I love building stuff",
@@ -67,6 +67,11 @@ export const englishTranslations = {
     featuredBlogpostsCTA: "Read the full post",
     featuredBlogpostsMore: "More blog posts",
 
+    //blogposts
+    blogpostGoalTitle: `Introduction and Project Goal`,
+    blogpostStackTitle: `Project course`,
+    blogpostResultTitle: `Result`,
+
     //spinaker blogpost
     spinakerTitle: `Spinaker project Katowice`,
     spinakerIntro: `In early february I caught wind of an opportunity to go to Poland with some other student from my College to participate in a project called Spinaker. 
@@ -88,6 +93,7 @@ export const englishTranslations = {
     spinakerRecap: `A recap about an international project hosted in the economical heart of Poland, Katowice. 
         I was selected to be part of the software engineering team together with 7 other students of my university.`,
     spinakerSmallRecap: `A recap about an international project hosted in the economical heart of Poland, Katowice.`,
+    spinakerDate: `April 27, 2022`,
     spinakerLogoSrc: "/images/katowiceUniversityLogo.jpg",
     spinakerLogoAlt: "University Katowice Logo",
     spinakerOutroSrc: "/images/katowiceUniversity.jpg",
@@ -125,6 +131,7 @@ export const englishTranslations = {
     commonEuropeRecap: `A recap about the Common Europe Congress 2022 hosted in Alicante, Spain. Where I was selected with 20 other students from all over Europe to participate in the congress. 
     The congress was held from the 13th to the 16th of June 2022.`,
     commonEuropeSmallRecap: `A recap about the Common Europe Congress 2022 hosted in Alicante, Spain.`,
+    commonEuropeDate: `June 25, 2022`,
     commonEuropeLogoSrc: "/images/commonEuropeLogo.jpg",
     commonEuropeLogoAlt: "Common Europe Logo",
     commonEuropeOutroSrc: "/images/commonEuropeGroup.jpg",
@@ -132,12 +139,50 @@ export const englishTranslations = {
     commonEuropeIntroSrc: "/images/commonEuropeEntrance.jpg",
     commonEuropeIntroAlt: "The entrance of the congress",
 
+    //third blogpost
+    thirdTitle: `Common Europe Congress 2022`,
+    thirdIntro: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+    looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum 
+    comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
+    during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
+    exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`,
+    thirdGoal: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+    a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical 
+    literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. Thi
+    s book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in thei
+    r exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`,
+    thirdCourse: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClint
+    ock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classi
+    cal literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. 
+    This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in the
+    ir exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`,
+    thirdResult: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McCli
+    ntock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in cl
+    assical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 4
+    5 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`,
+    thirdRecap: `A recap about the Common Europe Congress 2022 hosted in Alicante, Spain. Where I was selected with 20 other students from all over Europe to participate in the congress. 
+    The congress was held from the 13th to the 16th of June 2022.`,
+    thirdSmallRecap: `Third post yet to be written. Will probably about CV on the cloud. We'll see i guess.`,
+    thirdDate: `June 25, 2022`,
+    thirdLogoSrc: "/images/commonEuropeLogo.jpg",
+    thirdLogoAlt: "Common Europe Logo",
+    thirdOutroSrc: "/images/commonEuropeGroup.jpg",
+    thirdOutroAlt: "All of the participating students together",
+    thirdIntroSrc: "/images/commonEuropeEntrance.jpg",
+    thirdIntroAlt: "The entrance of the congress",
+
     //projects
     projectsTitle: `Projects`,
     projectCTA: `View Project`,
-    projectGoal: `Introduction and Project Goal`,
-    projectsCourse: `Project course`,
-    projectResult: `Result`,
+    projectGoalTitle: `Project Purpose and Goal`,
+    projectStackTitle: `Web Stack and Explanation`,
+    projectFurtherTitle: `Further work`,
 
     //portfolio project
     portfolioTitle: `Portfolio website`,
@@ -145,6 +190,27 @@ export const englishTranslations = {
     portfolioSummary: `I built this website to showcase my work and skills, and to allow people to have a better insight into who I am.`,
     portfolioSrc: `https://picsum.photos/400/400`,
     portfolioAlt: `Random Image`,
+    portfolioIntro: `As a software engineer it's very important to be able to properly present yourself and show that you are capable in <span>creating complex web solutions.</span>
+    What better way is there than to create a website designed specifically for that purpose. I developed this website to showcase my skills and previous projects,
+    so that it might help my future employer to get a <span>better understanding of who I am and what I can do.</span>`,
+    portfolioGoal: `This website was intended to be a simple personal project where I display some of the projects which I have developed and show who I am as a person.
+    Later on I decided to add a blog section to the website where I could write about <span>my experiences as a software engineer</span> and share some of the knowledge I have gained over the years.
+    I also decided to add translations to the website so that it would be accessible to a wider audience. <br/><br/>
+    
+    In general I wanted to <span>add as much useful functionality as possible to further learn
+    about different technologies</span> that I was using.`,
+    portfolioStack: `For this project I wanted to go with a framework that would allow me to create <span>a website that is fast and SEO friendly</span>. 
+    Next.js is a great framework for that purpose. Next.js has SSR (Server Side Rendering) which allows your website to be rendered on the server side instead of on the client side.
+    This makes it so that <span>when a user visits your website the content is already there</span> and the user doesn't have to wait for the content to be loaded. I added styled-components to the project
+    to make it easier to style the website. I also added a few other libraries to the project to make it easier to create certain components. For example I used react-helmet-async
+    to <span>add meta tags and page titles to the website to optimise my SEO and SEA.</span> I chose these technologies not only for the advantages they bring but also because 
+    <span>I wanted to learn more about them.</span>`,
+    portfolioFurther: `I think for the time being I don't have any plans to add any new features to this website. I might add a few more projects to the website and maybe add a few more blog posts.
+    I'm still considering <span>adding a few more languages to the website</span> but I'm not sure if I will do that. I might also add a few more pages to the website to make it more interesting.`,
+    portfolioOutroSrc: "https://picsum.photos/1000/550",
+    portfolioOutroAlt: "All of the participating students together",
+    portfolioIntroSrc: "https://picsum.photos/1000/550",
+    portfolioIntroAlt: "altstuff",
 
     //fitness app project
     fitnessAppTitle: `Fitness app`,

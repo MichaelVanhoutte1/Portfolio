@@ -9,11 +9,12 @@ import "../../../translations/i18n";
 
 interface Props {
     project: string;
+    stackTags: string[];
 }
 
 const ProjectComponent = (props: Props) => {
     const { t } = useTranslation();
-    const { project } = props;
+    const { project, stackTags } = props;
     return (
         <>
             <MainDiv>
@@ -22,20 +23,12 @@ const ProjectComponent = (props: Props) => {
                     <Title isProjectTitle content={t(project + "Title")} />
                     <BoxLabels
                         isProjectLabelDiv
-                        labelArray={[
-                            "React",
-                            "Typescript",
-                            "Firebase",
-                            "Styled-Components",
-                            "Next.js",
-                            "Redux",
-                            "SASS",
-                        ]}
+                        labelArray={stackTags}
                     />
                     <Paragraph
                         content={t(project + "Summary")}
                     />
-                    <Button href="/project" isProjectButton content={t("projectCTA")} />
+                    <Button href={'/project/' + project} isProjectButton content={t("projectCTA")} />
                 </ContentDiv>
                 <Image src={t(project + "Src")} alt={t(project + "Alt")} />
             </MainDiv>
