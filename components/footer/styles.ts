@@ -65,6 +65,7 @@ export const LinkText = styled.p`
     font-size: 1.1rem;
     margin: 0.5rem 0 0 0;
     cursor: pointer;
+    width: fit-content;
     transition: filter 0.2s ease-in-out;
     &:hover {
         filter: brightness(80%);

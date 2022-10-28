@@ -21,6 +21,7 @@ const BlogPost = (props: Props) => {
                     <Title isFeaturedBlogPostTitle content={t(blogpost + 'Title')} />
                     <Image
                         isBlogPostPicture
+                        blogpost={blogpost}
                         src={t(blogpost + 'LogoSrc')}
                         alt={t(blogpost + 'LogoAlt')}
                     />

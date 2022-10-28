@@ -17,5 +17,10 @@ export const BlogLink = styled.p`
     font-weight: 500;
     color: ${colors.secondary};
     margin: 3rem 0;
+    width: fit-content;
     cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+    &:hover {
+        filter: brightness(80%);
+    }
 `;

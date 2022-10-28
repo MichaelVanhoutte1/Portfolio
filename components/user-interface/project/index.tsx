@@ -30,7 +30,7 @@ const ProjectComponent = (props: Props) => {
                     />
                     <Button href={'/project/' + project} isProjectButton content={t("projectCTA")} />
                 </ContentDiv>
-                <Image src={t(project + "Src")} alt={t(project + "Alt")} />
+                <Image isProjectClickbait project={project} src={t(project + "Src")} alt={t(project + "Alt")} />
             </MainDiv>
         </>
     );
