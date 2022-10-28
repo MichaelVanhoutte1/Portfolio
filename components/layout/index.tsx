@@ -14,7 +14,7 @@ const LayoutComponent = ({ children }: LayoutProps) => {
 
     useEffect(() => {
         setIsHomepage(router.pathname === "/" ? true : false)
-    })
+    },[router.pathname])
     
     return (
         <>

@@ -16,7 +16,7 @@ const NavbarComponent = () => {
 
     useEffect(() => {
         setIsHomepage(router.pathname === "/" ? true : false);
-    });
+    },[router.pathname]);
 
     return (
         <>

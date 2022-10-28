@@ -10,12 +10,12 @@ interface Props {}
 
 const FeaturedBlogposts = (props: Props) => {
     const { t } = useTranslation();
-    const [ isDesktopw, setisDesktopw ] = useState(false);
-    if (typeof window !== "undefined") {
-        useEffect(() => {
-            setisDesktopw(window.innerWidth > 992);
-        });
-    }
+    const [ isDesktop, setisDesktop ] = useState(false);
+    useEffect(() => {
+            if (typeof window !== "undefined") {
+            setisDesktop(window.innerWidth > 992);
+        }
+        },[]);
     return (
         <>
             <MainDiv>
@@ -23,7 +23,7 @@ const FeaturedBlogposts = (props: Props) => {
                 <BlogPostDiv>
                     <BlogPost blogpost='spinaker' />
                     <BlogPost blogpost='commonEurope' />
-                    {isDesktopw && <BlogPost blogpost='third'/>}
+                    {isDesktop && <BlogPost blogpost='third'/>}
                 </BlogPostDiv>
                 <BlogCTA>
                 {t('featuredBlogpostsMore')}
