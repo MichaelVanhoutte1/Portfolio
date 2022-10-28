@@ -12,10 +12,11 @@ import {
     LinksDiv,
     LinkColumn,
     LinkText,
-    LinkContent
+    LinkContent,
 } from "./styles";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
+import i18n from "i18next";
 
 const FooterComponent = () => {
     const { t } = useTranslation();
@@ -24,33 +25,39 @@ const FooterComponent = () => {
             <FooterDiv>
                 <ContentDiv>
                     <CopyrightDiv>
-                    <Link href="/#about"><Name>Michael</Name></Link>
-                    <Link href="/#about"><Name>Vanhoutte</Name></Link>
-                        <Copyright>{t('footerBuiltBy')}</Copyright>
+                        <Link href="/#about">
+                            <Name>Michael</Name>
+                        </Link>
+                        <Link href="/#about">
+                            <Name>Vanhoutte</Name>
+                        </Link>
+                        <Copyright>
+                            {t("footerBuiltBy")}
+                        </Copyright>
                     </CopyrightDiv>
                     <LinksDiv>
-                        <Text>{t('footerLinks')}</Text>
+                        <Text>{t("footerLinks")}</Text>
                         <LinkContent>
                             <LinkColumn>
                                 <Link href="/about">
-                                    <LinkText>{t('footerAbout')}</LinkText>
+                                    <LinkText>{t("footerAbout")}</LinkText>
                                 </Link>
                                 <Link href="/#projects">
-                                    <LinkText>{t('footerProjects')}</LinkText>
+                                    <LinkText>{t("footerProjects")}</LinkText>
                                 </Link>
                             </LinkColumn>
                             <LinkColumn>
                                 <Link href="/blog">
-                                    <LinkText>{t('footerBlog')}</LinkText>
+                                    <LinkText>{t("footerBlog")}</LinkText>
                                 </Link>
                                 <Link href="/#contact">
-                                    <LinkText>{t('footerContact')}</LinkText>
+                                    <LinkText>{t("footerContact")}</LinkText>
                                 </Link>
                             </LinkColumn>
                         </LinkContent>
                     </LinksDiv>
                     <SocialsDiv>
-                        <Text>{t('footerFollowMe')}</Text>
+                        <Text>{t("footerFollowMe")}</Text>
                         <SocialIconsDiv>
                             <SocialIcon
                                 link="https://github.com/MichaelVanhoutte1"

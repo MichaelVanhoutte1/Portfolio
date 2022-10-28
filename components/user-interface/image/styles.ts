@@ -19,10 +19,11 @@ export const Picture = styled.img`
         max-height: 550px;
         align-self: center;
         padding:0;
-        margin:0;
+        margin:0;w
     }
     &.blogPostPicture {
         width: 230px;
+        height: 230px;
         padding:0;
         margin:0;
         border: 1px solid ${colors.primary};

@@ -47,6 +47,24 @@ export const NameDiv = styled.div`
     padding-top: 1.3rem;
 `;
 
+export const LanguagePopup = styled.div`
+    background-color: ${colors.primaryText};
+    width: 3.3rem;
+    height: 3.6rem;
+    position: absolute;
+    right: 1.3rem;
+    border-radius: 0.5rem;
+    top: 3rem;
+    visibility: hidden;
+    &.active {
+        visibility: visible;
+    }
+    @media (min-width: ${breakpoints.md}) {
+        width: 4rem;
+        height: 4rem;
+    }
+`;
+
 export const Name = styled.p`
     font-size: 1.1rem;
     font-weight: 500;

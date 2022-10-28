@@ -9,13 +9,13 @@ i18n.use(LanguageDetector)
     .use(initReactI18next)
     .init({
         resources: {
-            en: {
+            EN: {
                 translation: englishTranslations,
             },
-            nl: {
+            NL: {
                 translation: dutchTranslations,
             },
         },
     });
 
-i18n.changeLanguage("en");
+i18n.changeLanguage("EN");
