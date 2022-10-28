@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Image = styled.img`
     margin: 0 0.5rem;
     cursor: pointer;
+    transition: filter 0.2s ease-in-out;
     filter: brightness(80%);
     &.mailIcon {
         position: relative;

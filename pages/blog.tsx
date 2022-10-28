@@ -38,6 +38,13 @@ const Blog: NextPage = () => {
                     <Title isBlogPostDate content={t('spinakerDate')} />
                     <Paragraph isAboutMe isLargeParagraph content={t('spinakerRecap')} />
                 </BlogPost>
+                <BlogPost>
+                    <Link href="/blogpost/third">
+                        <BlogTitle>{t('thirdTitle')}</BlogTitle>
+                    </Link>
+                    <Title isBlogPostDate content={t('thirdDate')} />
+                    <Paragraph isAboutMe isLargeParagraph content={t('thirdRecap')} />
+                </BlogPost>
             </MainDiv>
         </>
     );

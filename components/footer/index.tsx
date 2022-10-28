@@ -13,10 +13,10 @@ import {
     LinkColumn,
     LinkText,
     LinkContent,
+    NameDiv
 } from "./styles";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
-import i18n from "i18next";
 
 const FooterComponent = () => {
     const { t } = useTranslation();
@@ -25,15 +25,15 @@ const FooterComponent = () => {
             <FooterDiv>
                 <ContentDiv>
                     <CopyrightDiv>
-                        <Link href="/#about">
-                            <Name>Michael</Name>
-                        </Link>
-                        <Link href="/#about">
-                            <Name>Vanhoutte</Name>
-                        </Link>
-                        <Copyright>
-                            {t("footerBuiltBy")}
-                        </Copyright>
+                        <NameDiv>
+                            <Link href="/#about">
+                                <Name>Michael</Name>
+                            </Link>
+                            <Link href="/#about">
+                                <Name>Vanhoutte</Name>
+                            </Link>
+                        </NameDiv>
+                        <Copyright>{t("footerBuiltBy")}</Copyright>
                     </CopyrightDiv>
                     <LinksDiv>
                         <Text>{t("footerLinks")}</Text>

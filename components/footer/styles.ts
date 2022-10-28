@@ -2,12 +2,23 @@ import styled from "styled-components";
 import { breakpoints, colors } from "../../styles/variables.styled";
 
 export const CopyrightDiv = styled.div``;
+
+export const NameDiv = styled.div`
+    filter: brightness(80%);
+    width: fit-content;
+    transition: filter 0.2s ease-in-out;
+    &:hover {
+        filter: brightness(100%);
+    }
+`;
+
 export const Name = styled.h2`
     font-size: 1.5rem;
     font-weight: 700;
     cursor: pointer;
+
     width: fit-content;
-    :first-of-type {
+    &:first-of-type {
         margin-top: 2.5rem;
     }
 `;
@@ -32,7 +43,7 @@ export const SocialIconsDiv = styled.div`
 export const LinksDiv = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 2rem 0; 
+    margin: 2rem 0;
 `;
 
 export const LinkColumn = styled.div`
@@ -44,7 +55,7 @@ export const LinkColumn = styled.div`
 export const LinkContent = styled.div`
     display: flex;
     align-items: left;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     flex-direction: row;
 `;
 
@@ -54,6 +65,10 @@ export const LinkText = styled.p`
     font-size: 1.1rem;
     margin: 0.5rem 0 0 0;
     cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+    &:hover {
+        filter: brightness(80%);
+    }
 `;
 
 export const FooterDiv = styled.div`

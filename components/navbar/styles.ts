@@ -62,6 +62,7 @@ export const LanguagePopup = styled.div`
     @media (min-width: ${breakpoints.md}) {
         width: 4rem;
         height: 4rem;
+        top: 3.5rem;
     }
 `;
 
