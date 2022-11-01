@@ -5,11 +5,6 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
-    async rewrites() {
-        return {
-            afterFiles: [{ source: "/:path*", destination: "/_404/:path*" }],
-        };
-    },
 };
 
 module.exports = nextConfig;

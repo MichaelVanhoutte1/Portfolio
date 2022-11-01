@@ -3,8 +3,9 @@ import Layout from "../components/layout";
 import { HelmetProvider } from "react-helmet-async";
 import "../styles/reset.scss";
 import "../styles/app.scss";
-import { getInitialProps, I18nextProvider, useSSR } from "react-i18next";
+import {  I18nextProvider } from "react-i18next";
 import i18next from "i18next";
+
 
 function MyApp({ Component, pageProps }: AppProps) {
     const helmetContext = {};
