@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "../user-interface/link";
 import SocialIcon from "../user-interface/social-icon";
 import {
     Text,
@@ -13,10 +13,9 @@ import {
     LinkColumn,
     LinkText,
     LinkContent,
-    NameDiv
+    NameDiv,
 } from "./styles";
 import { useTranslation } from "react-i18next";
-import "../../translations/i18n";
 
 const FooterComponent = () => {
     const { t } = useTranslation();

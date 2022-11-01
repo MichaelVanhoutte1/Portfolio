@@ -6,7 +6,6 @@ import { ContentDiv, MainDiv, ButtonDiv, AboutDiv } from "./styles";
 import Paragraph from "../user-interface/paragraph";
 import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
-import "../../translations/i18n";
 
 const AboutComponent = () => {
     const { t } = useTranslation();

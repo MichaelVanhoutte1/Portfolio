@@ -1,6 +1,6 @@
 import { Picture } from "./styles";
 import cs from "classnames";
-import Link from "next/link";
+import Link from "../link";
 
 interface Props {
     src: string;

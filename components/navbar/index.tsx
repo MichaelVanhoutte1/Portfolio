@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "../user-interface/link";
 import { Button, NavbarDiv, ContentDiv, Name, NameDiv, LanguagePopup } from "./styles";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/router";
@@ -6,7 +6,7 @@ import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import "../../translations/i18n";
+
 import LanguageToggler from "../user-interface/language-toggle";
 import LanguageItem from "../user-interface/language-item";
 
@@ -19,20 +19,33 @@ const NavbarComponent = () => {
 
     useEffect(() => {
         setIsHomepage(router.pathname === "/" ? true : false);
-    },[router.pathname]);
+    }, [router.pathname]);
 
     return (
         <>
             <NavbarDiv className={cs({ notHomepage: !isHomepage })}>
-                <LanguageToggler isLanguageToggleActive={isLanguageToggleActive} toggleLanguagePopup={setIsLanguageToggleActive} />
+                <LanguageToggler
+                    isLanguageToggleActive={isLanguageToggleActive}
+                    toggleLanguagePopup={setIsLanguageToggleActive}
+                />
                 <NameDiv>
                     <Link href="/">
                         <Name>Michael Vanhoutte</Name>
                     </Link>
                 </NameDiv>
                 <LanguagePopup className={cs({ active: isLanguageToggleActive })}>
-                    <LanguageItem toggleLanguagePopup={setIsLanguageToggleActive} src="/images/icons/nl.svg" alt="Dutch" languageCode="NL"/>
-                    <LanguageItem toggleLanguagePopup={setIsLanguageToggleActive} src="/images/icons/gb.svg" alt="English" languageCode="EN"/>
+                    <LanguageItem
+                        toggleLanguagePopup={setIsLanguageToggleActive}
+                        src="/images/icons/nl.svg"
+                        alt="Dutch"
+                        languageCode="NL"
+                    />
+                    <LanguageItem
+                        toggleLanguagePopup={setIsLanguageToggleActive}
+                        src="/images/icons/gb.svg"
+                        alt="English"
+                        languageCode="EN"
+                    />
                 </LanguagePopup>
                 <BurgerMenu isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive} />
                 <ContentDiv

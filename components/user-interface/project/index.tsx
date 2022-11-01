@@ -5,7 +5,6 @@ import Title from "../title";
 import Image from "../image";
 import { ContentDiv, MainDiv } from "./styles";
 import { useTranslation } from "react-i18next";
-import "../../../translations/i18n";
 
 interface Props {
     project: string;
@@ -21,16 +20,20 @@ const ProjectComponent = (props: Props) => {
                 <ContentDiv>
                     <Title isProjectSubtitle content={t(project + "Type")} />
                     <Title isProjectTitle content={t(project + "Title")} />
-                    <BoxLabels
-                        isProjectLabelDiv
-                        labelArray={stackTags}
+                    <BoxLabels isProjectLabelDiv labelArray={stackTags} />
+                    <Paragraph content={t(project + "Summary")} />
+                    <Button
+                        href={"/project/" + project}
+                        isProjectButton
+                        content={t("projectCTA")}
                     />
-                    <Paragraph
-                        content={t(project + "Summary")}
-                    />
-                    <Button href={'/project/' + project} isProjectButton content={t("projectCTA")} />
                 </ContentDiv>
-                <Image isProjectClickbait project={project} src={t(project + "Src")} alt={t(project + "Alt")} />
+                <Image
+                    isProjectClickbait
+                    project={project}
+                    src={t(project + "Src")}
+                    alt={t(project + "Alt")}
+                />
             </MainDiv>
         </>
     );

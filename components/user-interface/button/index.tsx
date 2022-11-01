@@ -1,6 +1,6 @@
 import { Button } from "./styles";
 import cs from "classnames";
-import Link from "next/link";
+import Link from "../link";
 
 interface Props {
     content: string;
@@ -15,7 +15,7 @@ const ButtonComponent = (props: Props) => {
     return (
         <>
             {isResumeButton ? (
-                <a target="_blank" rel="noreferrer" href="CV-Michael-Vanhoutte.pdf" >
+                <a target="_blank" rel="noreferrer" href="CV-Michael-Vanhoutte.pdf">
                     <Button className={cs({ projectButton: isProjectButton })}>{content}</Button>
                 </a>
             ) : (
