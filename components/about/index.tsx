@@ -6,6 +6,7 @@ import { ContentDiv, MainDiv, ButtonDiv, AboutDiv } from "./styles";
 import Paragraph from "../user-interface/paragraph";
 import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
+import { Fade } from "react-awesome-reveal";
 import "../../translations/i18n";
 
 const AboutComponent = () => {
@@ -13,46 +14,51 @@ const AboutComponent = () => {
 
     return (
         <>
-            <Element name="about">
-                <MainDiv>
-                    <Title noBottomMargin isMainTitle content={t("homepageAboutMeTitle")} />
-                    <AboutDiv>
-                        <Image isAboutPicture src="images/about.jpg" alt="sdf" />
-                        <ContentDiv>
-                            <BoxLabels
-                                labelArray={[
-                                    "Javascript",
-                                    "Typescript",
-                                    "React",
-                                    "Redux",
-                                    "Next.js",
-                                    "Styled-Components",
-                                    "HTML",
-                                    "CSS",
-                                    "SASS",
-                                    "Git",
-                                    "Gatsby",
-                                    "GraphQL",
-                                    "Ember",
-                                    "Firebase",
-                                    "Jira",
-                                    "SQL",
-                                    "REST",
-                                ]}
-                            />
-                            <Title isAboutSubtitle content={t("homepageAboutMeSubtitle")} />
-                            <Paragraph isAboutMe content={t("homepageAboutMeSummary")} />
-                            <ButtonDiv>
-                                <Button
-                                    href="/about"
-                                    content={t("homepageAboutMeReadMoreButton")}
+            <Fade triggerOnce>
+                <Element name="about">
+                    <MainDiv>
+                        <Title noBottomMargin isMainTitle content={t("homepageAboutMeTitle")} />
+                        <AboutDiv>
+                            <Image isAboutPicture src="images/about.jpg" alt="sdf" />
+                            <ContentDiv>
+                                <BoxLabels
+                                    labelArray={[
+                                        "Javascript",
+                                        "Typescript",
+                                        "React",
+                                        "Redux",
+                                        "Next.js",
+                                        "Styled-Components",
+                                        "HTML",
+                                        "CSS",
+                                        "SASS",
+                                        "Git",
+                                        "Gatsby",
+                                        "GraphQL",
+                                        "Ember",
+                                        "Firebase",
+                                        "Jira",
+                                        "SQL",
+                                        "REST",
+                                    ]}
                                 />
-                                <Button isResumeButton content={t("homepageAboutMeResumeButton")} />
-                            </ButtonDiv>
-                        </ContentDiv>
-                    </AboutDiv>
-                </MainDiv>
-            </Element>
+                                <Title isAboutSubtitle content={t("homepageAboutMeSubtitle")} />
+                                <Paragraph isAboutMe content={t("homepageAboutMeSummary")} />
+                                <ButtonDiv>
+                                    <Button
+                                        href="/about"
+                                        content={t("homepageAboutMeReadMoreButton")}
+                                    />
+                                    <Button
+                                        isResumeButton
+                                        content={t("homepageAboutMeResumeButton")}
+                                    />
+                                </ButtonDiv>
+                            </ContentDiv>
+                        </AboutDiv>
+                    </MainDiv>
+                </Element>
+            </Fade>
         </>
     );
 };

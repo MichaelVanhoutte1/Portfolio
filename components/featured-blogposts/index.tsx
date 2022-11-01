@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
 import Link from "next/link";
+import { Fade } from "react-awesome-reveal";
 
 interface Props {}
 
@@ -18,22 +19,30 @@ const FeaturedBlogposts = (props: Props) => {
     }, []);
     return (
         <>
-            <MainDiv>
-                <Title isMainTitle content={t("featuredBlogpostsTitle")} />
-                <BlogPostDiv>
-                    <BlogPost blogpost="spinaker" />
-                    <BlogPost blogpost="commonEurope" />
-                    {isDesktop && <BlogPost disabled blogpost="third" />}
-                </BlogPostDiv>
-                <BlogCTA>
-                    <Link href="/blog">
-                        <div>
-                        {t("featuredBlogpostsMore")}
-                        <img loading="lazy" src="/images/icons/right-arrow.svg" alt="rightarrow" height="15px" width="30px" />
-                        </div>
-                    </Link>
-                </BlogCTA>
-            </MainDiv>
+            <Fade triggerOnce>
+                <MainDiv>
+                    <Title isMainTitle content={t("featuredBlogpostsTitle")} />
+                    <BlogPostDiv>
+                        <BlogPost blogpost="spinaker" />
+                        <BlogPost blogpost="commonEurope" />
+                        {isDesktop && <BlogPost disabled blogpost="third" />}
+                    </BlogPostDiv>
+                    <BlogCTA>
+                        <Link href="/blog">
+                            <div>
+                                {t("featuredBlogpostsMore")}
+                                <img
+                                    loading="lazy"
+                                    src="/images/icons/right-arrow.svg"
+                                    alt="rightarrow"
+                                    height="15px"
+                                    width="30px"
+                                />
+                            </div>
+                        </Link>
+                    </BlogCTA>
+                </MainDiv>
+            </Fade>
         </>
     );
 };

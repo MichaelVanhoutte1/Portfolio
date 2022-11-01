@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import About from "../components/about";
 import Contact from "../components/contact";
 import FeaturedBlogposts from "../components/featured-blogposts";
-import Hero from "../components/hero";
 import Projects from "../components/projects";
 import SEO from "../components/seo";
 

@@ -6,6 +6,7 @@ import SocialIcon from "../components/user-interface/social-icon";
 import Title from "../components/user-interface/title";
 import { ContentDiv, MainDiv, PageTitle, SocialIconsDiv, Text } from "../styles/pages/about.styled";
 import { useTranslation } from "react-i18next";
+import { Fade } from "react-awesome-reveal";
 import "../translations/i18n";
 
 const About: NextPage = () => {
@@ -20,54 +21,56 @@ const About: NextPage = () => {
                 type="website"
             />
             <MainDiv>
-                <PageTitle>{t("aboutMeTitle")}</PageTitle>
-                <Text>
-                    {t("aboutMeSubtitle")}
-                    <a target="_blank" rel="noreferrer" href="CV-Michael-Vanhoutte.pdf">
-                        CV
-                    </a>
-                    ?
-                </Text>
-                <ContentDiv>
-                    <Title isAboutSubtitle content={t("aboutMeQuickStoryTitle")} />
-                    <Paragraph isAboutMe isLargeParagraph content={t("aboutMeQuickStory")} />
-                </ContentDiv>
-                <ContentDiv>
-                    <Title isAboutSubtitle content={t("aboutMeAsDeveloperTitle")} />
-                    <Paragraph isAboutMe isLargeParagraph content={t("aboutMeAsDeveloper")} />
-                </ContentDiv>
-                <ContentDiv>
-                    <Title isAboutSubtitle content={t("aboutMeAsPersonTitle")} />
-                    <Paragraph isAboutMe isLargeParagraph content={t("aboutMeAsPerson")} />
-                </ContentDiv>
-                <ContentDiv>
-                    <Title isAboutSubtitle content={t("aboutMeAsColleagueTitle")} />
-                    <Paragraph isAboutMe isLargeParagraph content={t("aboutMeAsColleague")} />
-                </ContentDiv>
-                <Title content={t("contactTitle")} />
-                <Text>{t("contactSubtitle")}</Text>
-                <SocialIconsDiv>
-                    <SocialIcon
-                        fillOnHover
-                        link="https://github.com/MichaelVanhoutte1"
-                        src="/images/icons/github.svg"
-                        alt="github"
-                    />
-                    <SocialIcon
-                        fillOnHover
-                        link="https://www.linkedin.com/in/michael-vanhoutte/"
-                        src="/images/icons/linkedin.svg"
-                        alt="linkedin"
-                    />
-                    <SocialIcon
-                        fillOnHover
-                        isMailIcon
-                        link="mailto:contact@mvanhoutte.com"
-                        src="/images/icons/email.svg"
-                        alt="email"
-                    />
-                </SocialIconsDiv>
-                <Button href="mailto:contact@mvanhoutte.com" content={t("contactCTA")} />
+                <Fade triggerOnce>
+                    <PageTitle>{t("aboutMeTitle")}</PageTitle>
+                    <Text>
+                        {t("aboutMeSubtitle")}
+                        <a target="_blank" rel="noreferrer" href="CV-Michael-Vanhoutte.pdf">
+                            CV
+                        </a>
+                        ?
+                    </Text>
+                    <ContentDiv>
+                        <Title isAboutSubtitle content={t("aboutMeQuickStoryTitle")} />
+                        <Paragraph isAboutMe isLargeParagraph content={t("aboutMeQuickStory")} />
+                    </ContentDiv>
+                    <ContentDiv>
+                        <Title isAboutSubtitle content={t("aboutMeAsDeveloperTitle")} />
+                        <Paragraph isAboutMe isLargeParagraph content={t("aboutMeAsDeveloper")} />
+                    </ContentDiv>
+                    <ContentDiv>
+                        <Title isAboutSubtitle content={t("aboutMeAsPersonTitle")} />
+                        <Paragraph isAboutMe isLargeParagraph content={t("aboutMeAsPerson")} />
+                    </ContentDiv>
+                    <ContentDiv>
+                        <Title isAboutSubtitle content={t("aboutMeAsColleagueTitle")} />
+                        <Paragraph isAboutMe isLargeParagraph content={t("aboutMeAsColleague")} />
+                    </ContentDiv>
+                    <Title content={t("contactTitle")} />
+                    <Text>{t("contactSubtitle")}</Text>
+                    <SocialIconsDiv>
+                        <SocialIcon
+                            fillOnHover
+                            link="https://github.com/MichaelVanhoutte1"
+                            src="/images/icons/github.svg"
+                            alt="github"
+                        />
+                        <SocialIcon
+                            fillOnHover
+                            link="https://www.linkedin.com/in/michael-vanhoutte/"
+                            src="/images/icons/linkedin.svg"
+                            alt="linkedin"
+                        />
+                        <SocialIcon
+                            fillOnHover
+                            isMailIcon
+                            link="mailto:contact@mvanhoutte.com"
+                            src="/images/icons/email.svg"
+                            alt="email"
+                        />
+                    </SocialIconsDiv>
+                    <Button href="mailto:contact@mvanhoutte.com" content={t("contactCTA")} />
+                </Fade>
             </MainDiv>
         </>
     );

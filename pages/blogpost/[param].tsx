@@ -6,12 +6,13 @@ import Title from "../../components/user-interface/title";
 import SEO from "../../components/seo";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
+import { Fade } from "react-awesome-reveal";
 
 const BlogPost: NextPage = () => {
     const { t } = useTranslation();
-    const router = useRouter()
-    const { param } = router.query
+    const router = useRouter();
+    const { param } = router.query;
 
     return (
         <>
@@ -21,19 +22,39 @@ const BlogPost: NextPage = () => {
                 name="Michael Vanhoutte"
                 type="website"
             />
-            <MainDiv>
-                <Title content={t(param + "Title")} />
-                <Title isBlogPostDate content={t(param + "Date")}/>
-                <Paragraph isAboutMe isWithMargin isLargeParagraph content={t(param + "Intro")} />
-                <Image isProjectPicture src={t(param + "IntroSrc")} alt={t(param + "IntroAlt")} />
-                <Title content={t("blogpostGoalTitle")} />
-                <Paragraph isAboutMe isLargeParagraph content={t(param + "Goal")} />
-                <Title content={t("blogpostCourseTitle")} />
-                <Paragraph isAboutMe isLargeParagraph content={t(param + "Course")} />
-                <Title content={t("blogpostResultTitle")} />
-                <Paragraph isAboutMe isLargeParagraph isWithMargin content={t(param + "Result")} />
-                <Image isProjectPicture src={t(param + "OutroSrc")} alt={t(param + "OutroAlt")} />
-            </MainDiv>
+            <Fade triggerOnce>
+                <MainDiv>
+                    <Title content={t(param + "Title")} />
+                    <Title isBlogPostDate content={t(param + "Date")} />
+                    <Paragraph
+                        isAboutMe
+                        isWithMargin
+                        isLargeParagraph
+                        content={t(param + "Intro")}
+                    />
+                    <Image
+                        isProjectPicture
+                        src={t(param + "IntroSrc")}
+                        alt={t(param + "IntroAlt")}
+                    />
+                    <Title content={t("blogpostGoalTitle")} />
+                    <Paragraph isAboutMe isLargeParagraph content={t(param + "Goal")} />
+                    <Title content={t("blogpostCourseTitle")} />
+                    <Paragraph isAboutMe isLargeParagraph content={t(param + "Course")} />
+                    <Title content={t("blogpostResultTitle")} />
+                    <Paragraph
+                        isAboutMe
+                        isLargeParagraph
+                        isWithMargin
+                        content={t(param + "Result")}
+                    />
+                    <Image
+                        isProjectPicture
+                        src={t(param + "OutroSrc")}
+                        alt={t(param + "OutroAlt")}
+                    />
+                </MainDiv>
+            </Fade>
         </>
     );
 };

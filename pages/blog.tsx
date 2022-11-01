@@ -5,6 +5,7 @@ import Title from "../components/user-interface/title";
 import SEO from "../components/seo";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { Fade } from "react-awesome-reveal";
 import "../translations/i18n";
 
 const Blog: NextPage = () => {
@@ -23,27 +24,29 @@ const Blog: NextPage = () => {
                 name="Michael Vanhoutte"
                 type="website"
             />
-            <MainDiv>
-                <BlogPost>
-                    <Link href="/blogpost/commonEurope">
-                        <BlogTitle>{t('commonEuropeTitle')}</BlogTitle>
-                    </Link>
-                    <Title isBlogPostDate content={t('commonEuropeDate')} />
-                    <Paragraph isAboutMe isLargeParagraph content={t('commonEuropeRecap')} />
-                </BlogPost>
-                <BlogPost>
-                    <Link href="/blogpost/spinaker">
-                        <BlogTitle>{t('spinakerTitle')}</BlogTitle>
-                    </Link>
-                    <Title isBlogPostDate content={t('spinakerDate')} />
-                    <Paragraph isAboutMe isLargeParagraph content={t('spinakerRecap')} />
-                </BlogPost>
-                <BlogPost>
-                        <BlogTitle className="disabled">{t('thirdTitle')}</BlogTitle>
-                    <Title isBlogPostDate content={t('featuredBlogpostsDisabled')} />
-                    <Paragraph isAboutMe isLargeParagraph content={t('thirdRecap')} />
-                </BlogPost>
-            </MainDiv>
+            <Fade triggerOnce>
+                <MainDiv>
+                    <BlogPost>
+                        <Link href="/blogpost/commonEurope">
+                            <BlogTitle>{t("commonEuropeTitle")}</BlogTitle>
+                        </Link>
+                        <Title isBlogPostDate content={t("commonEuropeDate")} />
+                        <Paragraph isAboutMe isLargeParagraph content={t("commonEuropeRecap")} />
+                    </BlogPost>
+                    <BlogPost>
+                        <Link href="/blogpost/spinaker">
+                            <BlogTitle>{t("spinakerTitle")}</BlogTitle>
+                        </Link>
+                        <Title isBlogPostDate content={t("spinakerDate")} />
+                        <Paragraph isAboutMe isLargeParagraph content={t("spinakerRecap")} />
+                    </BlogPost>
+                    <BlogPost>
+                        <BlogTitle className="disabled">{t("thirdTitle")}</BlogTitle>
+                        <Title isBlogPostDate content={t("featuredBlogpostsDisabled")} />
+                        <Paragraph isAboutMe isLargeParagraph content={t("thirdRecap")} />
+                    </BlogPost>
+                </MainDiv>
+            </Fade>
         </>
     );
 };
