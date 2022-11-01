@@ -2,7 +2,7 @@ import Title from "../user-interface/title";
 import Project from "../user-interface/project";
 import { MainDiv } from "./styles";
 import { Element } from "react-scroll";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 interface Props {}
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-scroll";
 import { HeroSection } from "./styled";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const Header = () => {
     const { t } = useTranslation();

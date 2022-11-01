@@ -3,7 +3,7 @@ import BlogPost from "../user-interface/blogpost";
 import { MainDiv, BlogPostDiv, BlogCTA } from "./styles";
 import SocialIconComponent from "../user-interface/social-icon";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 interface Props {}
 

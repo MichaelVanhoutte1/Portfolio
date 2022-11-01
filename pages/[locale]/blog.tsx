@@ -4,8 +4,7 @@ import { MainDiv, BlogPost, BlogTitle } from "../../styles/pages/blog.styled";
 import Title from "../../components/user-interface/title";
 import SEO from "../../components/seo";
 import Link from "../../components/user-interface/link";
-import { useTranslation } from "react-i18next";
-
+import { useTranslation } from "next-i18next";
 import { getStaticPaths, makeStaticProps } from "../../lib/getStatic";
 
 const getStaticProps = makeStaticProps(["common"]);

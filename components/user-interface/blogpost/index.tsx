@@ -3,7 +3,7 @@ import Title from "../title";
 import Image from "../image";
 import { ContentDiv, MainDiv, BlogLink } from "./styles";
 import Link from "../link";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 interface Props {
     blogpost: string;

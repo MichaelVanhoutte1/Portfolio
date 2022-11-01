@@ -5,7 +5,7 @@ import Image from "../user-interface/image";
 import { ContentDiv, MainDiv, ButtonDiv, AboutDiv } from "./styles";
 import Paragraph from "../user-interface/paragraph";
 import { Element } from "react-scroll";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const AboutComponent = () => {
     const { t } = useTranslation();

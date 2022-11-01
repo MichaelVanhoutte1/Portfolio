@@ -11,7 +11,7 @@ import {
     SocialIconsDiv,
     Text,
 } from "../../styles/pages/about.styled";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 import { getStaticPaths, makeStaticProps } from "../../lib/getStatic";
 

@@ -4,7 +4,7 @@ import Paragraph from "../paragraph";
 import Title from "../title";
 import Image from "../image";
 import { ContentDiv, MainDiv } from "./styles";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 interface Props {
     project: string;

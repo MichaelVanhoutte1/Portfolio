@@ -5,7 +5,7 @@ import Paragraph from "../../../components/user-interface/paragraph";
 import { MainDiv } from "../../../styles/pages/project.styled";
 import Title from "../../../components/user-interface/title";
 import SEO from "../../../components/seo";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 import { useRouter } from "next/router";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";

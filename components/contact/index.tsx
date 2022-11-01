@@ -3,7 +3,7 @@ import Button from "../user-interface/button";
 import EnveloppeAnimation from "../user-interface/enveloppe-animation";
 import Title from "../user-interface/title";
 import { ContactDiv } from "./styles";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 const ContactComponent = () => {
     const { t } = useTranslation();

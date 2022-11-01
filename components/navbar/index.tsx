@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 import LanguageToggler from "../user-interface/language-toggle";
 import LanguageItem from "../user-interface/language-item";
