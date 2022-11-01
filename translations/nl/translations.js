@@ -65,6 +65,7 @@ export const dutchTranslations = {
     //featured blogposts
     featuredBlogpostsTitle: "In de kijker",
     featuredBlogpostsCTA: "Lees het volledige artikel",
+    featuredBlogpostsDisabled: "Binnenkort te lezen",
     featuredBlogpostsMore: "Meer blog artikels",
 
     //blogposts

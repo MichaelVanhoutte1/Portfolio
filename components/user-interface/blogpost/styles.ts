@@ -23,4 +23,11 @@ export const BlogLink = styled.p`
     &:hover {
         filter: brightness(80%);
     }
+    &.disabled{
+        color: ${colors.disabled};
+        cursor: default;
+        &:hover {
+            filter: brightness(100%);
+        }
+    }
 `;

@@ -65,6 +65,7 @@ export const englishTranslations = {
     //featured blogposts
     featuredBlogpostsTitle: "Featured",
     featuredBlogpostsCTA: "Read the full post",
+    featuredBlogpostsDisabled: "Coming soon",
     featuredBlogpostsMore: "More blog posts",
 
     //blogposts

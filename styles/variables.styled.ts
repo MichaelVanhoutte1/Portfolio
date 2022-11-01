@@ -12,4 +12,5 @@ export const colors = {
     primaryText: `#fff`,
     lightgray: `rgb(199, 199, 199)`,
     secondary: `#FF6625`,
+    disabled: `darkgray`,
 }

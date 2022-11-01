@@ -8,30 +8,33 @@ import "../../../translations/i18n";
 
 interface Props {
     blogpost: string;
+    disabled?: boolean;
 }
 
 const BlogPost = (props: Props) => {
     const { t } = useTranslation();
-    const { blogpost } = props;
+    const { blogpost, disabled } = props;
 
     return (
         <>
             <MainDiv>
                 <ContentDiv>
-                    <Title isFeaturedBlogPostTitle content={t(blogpost + 'Title')} />
+                    <Title isFeaturedBlogPostTitle content={t(blogpost + "Title")} />
                     <Image
+                        disabled={disabled}
                         isBlogPostPicture
                         blogpost={blogpost}
-                        src={t(blogpost + 'LogoSrc')}
-                        alt={t(blogpost + 'LogoAlt')}
+                        src={t(blogpost + "LogoSrc")}
+                        alt={t(blogpost + "LogoAlt")}
                     />
-                    <Paragraph
-                        isSmallParagraph
-                        content={t(blogpost + 'SmallRecap')}
-                    />
-                    <Link href={"/blogpost/" + blogpost}>
-                        <BlogLink>{t('featuredBlogpostsCTA')}</BlogLink>
-                    </Link>
+                    <Paragraph isSmallParagraph content={t(blogpost + "SmallRecap")} />
+                    {disabled ? (
+                        <BlogLink className="disabled ">{t("featuredBlogpostsDisabled")}</BlogLink>
+                    ) : (
+                        <Link href={"/blogpost/" + blogpost}>
+                            <BlogLink>{t("featuredBlogpostsCTA")}</BlogLink>
+                        </Link>
+                    )}
                 </ContentDiv>
             </MainDiv>
         </>

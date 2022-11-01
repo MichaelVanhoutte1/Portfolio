@@ -11,6 +11,7 @@ interface Props {
     isProjectPicture?: boolean;
     isBlogPostPicture?: boolean;
     isProjectClickbait?: boolean;
+    disabled?: boolean;
 }
 
 const ImageComponent = (props: Props) => {
@@ -23,10 +24,11 @@ const ImageComponent = (props: Props) => {
         isProjectClickbait,
         blogpost,
         project,
+        disabled
     } = props;
     return (
         <>
-            {isProjectClickbait || isBlogPostPicture ? (
+            {isProjectClickbait && !disabled || isBlogPostPicture && !disabled  ? (
                 <Link href={isProjectClickbait ? "/project/" + project : "/blogpost/" + blogpost}>
                     <Picture
                         loading="lazy"
@@ -42,8 +44,11 @@ const ImageComponent = (props: Props) => {
                 <Picture
                     loading="lazy"
                     className={cs({
+                        disabled: disabled,
                         aboutPicture: isAboutPicture,
                         projectPicture: isProjectPicture,
+                        projectClickbait: isProjectClickbait,
+                        blogPostPicture: isBlogPostPicture,
                     })}
                     src={src}
                     alt={alt}

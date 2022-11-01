@@ -33,10 +33,11 @@ export const Button = styled.button`
         text-decoration: none;
         color: ${colors.primaryText};
     }
-    &.disabled{
+    &.disabled {
+        cursor: default;
         &::after {
             content: "";
-            background-color: darkgrey;
+            background-color: ${colors.disabled};
             width: 100%;
             position: absolute;
             z-index: -1;
@@ -46,8 +47,8 @@ export const Button = styled.button`
             transition: 0.3s;
         }
         &:hover::after {
-            top: 0px;
-            left: 0px;
+            top: -10px;
+            left: -10px;
         }
     }
 `;

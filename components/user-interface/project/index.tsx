@@ -31,7 +31,7 @@ const ProjectComponent = (props: Props) => {
                     />
                     <Button disabled={disabled} href={'/project/' + project} isProjectButton content={t( disabled ? "projectDisabled" : "projectCTA")} />
                 </ContentDiv>
-                <Image isProjectClickbait project={project} src={t(project + "Src")} alt={t(project + "Alt")} />
+                <Image disabled={disabled} isProjectClickbait project={project} src={t(project + "Src")} alt={t(project + "Alt")} />
             </MainDiv>
         </>
     );

@@ -48,4 +48,13 @@ export const Picture = styled.img`
             box-shadow: 20px 20px 10px ${colors.lightgray};
         }
     }
+    &.disabled {
+        cursor: default;
+        &:hover {
+            filter: brightness(100%);
+            position: relative;
+            top: 0;
+            box-shadow: none;
+        }
+    }
 `;

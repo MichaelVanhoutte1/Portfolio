@@ -23,7 +23,7 @@ const FeaturedBlogposts = (props: Props) => {
                 <BlogPostDiv>
                     <BlogPost blogpost="spinaker" />
                     <BlogPost blogpost="commonEurope" />
-                    {isDesktop && <BlogPost blogpost="third" />}
+                    {isDesktop && <BlogPost disabled blogpost="third" />}
                 </BlogPostDiv>
                 <BlogCTA>
                     <Link href="/blog">
