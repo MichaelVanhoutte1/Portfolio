@@ -69,7 +69,7 @@ export const englishTranslations = {
 
     //blogposts
     blogpostGoalTitle: `Introduction and Project Goal`,
-    blogpostStackTitle: `Project course`,
+    blogpostCourseTitle: `Project course`,
     blogpostResultTitle: `Result`,
 
     //spinaker blogpost
@@ -103,31 +103,28 @@ export const englishTranslations = {
 
     //common europe blogpost
     commonEuropeTitle: `Common Europe Congress 2022`,
-    commonEuropeIntro: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
-    looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum 
-    comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
-    during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-    exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`,
-    commonEuropeGoal: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-    a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical 
-    literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. Thi
-    s book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in thei
-    r exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`,
-    commonEuropeCourse: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClint
-    ock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classi
-    cal literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. 
-    This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in the
-    ir exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`,
-    commonEuropeResult: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McCli
-    ntock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in cl
-    assical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 4
-    5 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`,
+    commonEuropeIntro: `I’ve always had a deep interest for IT and everything
+    within it. When I first heard about the IBM congress in Alicante I was very excited to learn about
+    everything it had to offer. In the education i already had, we don’t learn about infrastructure, databases,
+    and power systems in the same way that companies do. That made this an amazing learning
+    opportunity to better my knowledge in these subjects.`,
+    commonEuropeGoal: `Before attending such an event, I had a thorough look at everything it had to offer. The main goal was to learn as much as possible in usefull subjects.
+    I took a particular interest in three different sessions. The first one was about the Data centric - Moving Business Logic into the Database. 
+    I was very interested in this subject because it made me think outside of the box. Normally you would think application-centered and not database-centered. Or atleast not in the same way.
+    
+    The second subject I took interest in was about Kafka and Node.js. I had a basic understanding of Node.js but I wanted to learn more about it.
+    I hadn't heard about Kafka yet and was very excited to hear that it helped with integrating event streaming platforms with Javascript.
+    
+    The last subject was about DevSecOps. I didn't have much knowledge about this subject but I was very interested in it. I wanted to learn more about it and how it could help me in the future.
+    The DevSecOps was specifically on IBM systems, which i've never been able to interact with before. That definitely made it more interesting.`,
+    commonEuropeCourse: `When we arrived at the congress, we were greeted by the IBM staff. They were very friendly and made us feel welcome. We were given a tour of the congress and were shown where everything was.
+    We were also given a schedule of all the sessions that were going to take place. We were able to choose which sessions we wanted to attend. We were also given a badge that 
+    we could use to scan in and out of the sessions. This was very useful because it allowed us to keep track of the sessions we attended and the ones we didn't. 
+    I attended a total of 3 sessions. All of them were very interesting and I learned a lot from them. I was able to take a lot of notes and I was able to ask questions to the speakers.
+    I also participated in some leisure activities of the congress, such as golfing. I was able to meet a lot of new people and make some new friends. We finished
+    the congress with a nice dinner and a party.`,
+    commonEuropeResult: `I was able to learn alot at this congress, not only about IBM infrastructure and systems, but also about the Spanish culture and the city of Alicante.
+    The congress allowed me to meet new people and put a foot in the door of IBM. I hope to be able to work with IBM systems sometime in the future.`,
     commonEuropeRecap: `A recap about the Common Europe Congress 2022 hosted in Alicante, Spain. Where I was selected with 20 other students from all over Europe to participate in the congress. 
     The congress was held from the 13th to the 16th of June 2022.`,
     commonEuropeSmallRecap: `A recap about the Common Europe Congress 2022 hosted in Alicante, Spain.`,

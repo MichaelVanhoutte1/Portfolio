@@ -27,7 +27,7 @@ const ImageComponent = (props: Props) => {
     return (
         <>
             {isProjectClickbait || isBlogPostPicture ? (
-                <Link href={isProjectClickbait ? "/projects/" + project : "/blogpost/" + blogpost}>
+                <Link href={isProjectClickbait ? "/project/" + project : "/blogpost/" + blogpost}>
                     <Picture
                         loading="lazy"
                         className={cs({
