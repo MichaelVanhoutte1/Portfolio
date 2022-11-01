@@ -1,12 +1,7 @@
-import { GetStaticProps } from "next";
+export const Custom404 = () => <div></div>;
 
-export const getStaticProps: GetStaticProps = async () => {
-    return {
-        redirect: {
-            destination: "/",
-            permanent: true,
-        },
-    };
+export const getServerSideProps = () => {
+    return { redirect: { destination: "/", permanent: false } };
 };
 
-export default getStaticProps;
+export default Custom404;
