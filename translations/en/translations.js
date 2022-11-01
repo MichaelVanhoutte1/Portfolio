@@ -97,9 +97,9 @@ export const englishTranslations = {
     spinakerDate: `April 27, 2022`,
     spinakerLogoSrc: "/images/katowiceUniversityLogo.jpg",
     spinakerLogoAlt: "University Katowice Logo",
-    spinakerOutroSrc: "/images/katowiceUniversity.jpg",
+    spinakerOutroSrc: "/images/spinaker.jpg",
     spinakerOutroAlt: "All of the participating students together",
-    spinakerIntroSrc: "/images/spinaker.jpg",
+    spinakerIntroSrc: "/images/katowiceUniversity.jpg",
     spinakerIntroAlt: "The University of Economics in Katowice",
 
     //common europe blogpost
@@ -186,7 +186,7 @@ export const englishTranslations = {
     portfolioTitle: `Portfolio website`,
     portfolioType: `PERSONAL PROJECT`,
     portfolioSummary: `I built this website to showcase my work and skills, and to allow people to have a better insight into who I am.`,
-    portfolioSrc: `https://picsum.photos/400/400`,
+    portfolioSrc: `/images/portfolio.jpg`,
     portfolioAlt: `Random Image`,
     portfolioIntro: `As a software engineer it's very important to be able to properly present yourself and show that you are capable in <span>creating complex web solutions.</span>
     What better way is there than to create a website designed specifically for that purpose. I developed this website to showcase my skills and previous projects,
@@ -214,7 +214,7 @@ export const englishTranslations = {
     fitnessAppTitle: `Fitness app`,
     fitnessAppType: `PERSONAL PROJECT`,
     fitnessAppSummary: `This app helps you keep track of your fitness goals and progress. It also allows you to create your own workouts and exercises.`,
-    fitnessAppSrc: `https://picsum.photos/400/400`,
+    fitnessAppSrc: `/images/comingSoon.jpg`,
     fitnessAppAlt: `Random Image`,
 
     //footer

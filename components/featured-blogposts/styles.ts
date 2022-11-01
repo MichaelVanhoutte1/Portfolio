@@ -30,6 +30,6 @@ export const BlogCTA = styled.div`
         filter: brightness(80%);
     }
     @media (min-width: ${breakpoints.lg}) {
-        margin: 3.5rem 0 0 auto;
+        margin: 1rem 0 2rem auto;
     }
 `;

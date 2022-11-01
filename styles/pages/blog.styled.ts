@@ -17,4 +17,15 @@ export const BlogTitle = styled.h1`
     font-weight: 500;
     cursor: pointer;
     color: ${colors.secondary};
+    transition: filter 0.2s ease-in-out;
+    &:hover {
+        filter: brightness(80%);
+    }
+    &.disabled{
+        color: ${colors.disabled};
+        cursor: default;
+        &:hover {
+            filter: brightness(100%);
+        }
+    }
 `;

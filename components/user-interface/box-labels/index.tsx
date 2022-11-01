@@ -12,7 +12,7 @@ const BoxLabelsComponent = (props: Props) => {
         <>
             <LabelDiv className={cs({ projectLabelDiv: isProjectLabelDiv })}>
                 {labelArray.map((label) => (
-                    <BoxLabel key={'1'}>{label}</BoxLabel>
+                    <BoxLabel key={label}>{label}</BoxLabel>
                 ))}
             </LabelDiv>
         </>

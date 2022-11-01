@@ -72,6 +72,7 @@ export const dutchTranslations = {
     blogpostGoalTitle: `Inleiding en doel van het project`,
     blogpostStackTitle: `Project koers`,
     blogpostResultTitle: `Resultaat`,
+    blogpostCourseTitle: `Verloop`,
 
     //spinaker blogpost
     spinakerTitle: `Spinaker project Katowice`,
@@ -104,28 +105,30 @@ export const dutchTranslations = {
 
     //common europe blogpost
     commonEuropeTitle: `Common Europe Congress 2022`,
-    commonEuropeIntro: `Ik heb altijd een diepe interesse gehad voor IT en alles
-    daarbinnen. Toen ik voor het eerst hoorde over het IBM congres in Alicante was ik erg enthousiast om te leren over
+    commonEuropeIntro: `Ik heb altijd een <span> diepe interesse gehad voor IT</span> en alles
+    eromheen. Toen ik voor het eerst hoorde over het IBM congres in Alicante was ik erg enthousiast om te leren over
     alles wat het te bieden had. In de opleiding die ik al had, leren we niet over infrastructuur, databases,
-    en power systemen op dezelfde manier als bedrijven dat doen. Dat maakte dit een geweldige leermogelijkheid
+    en power systemen op dezelfde manier als bedrijven dat doen. Dat maakte dit een <span>geweldige leermogelijkheid</span>
     om mijn kennis over deze onderwerpen te verbeteren.`,
-    commonEuropeGoal: `Voordat ik een dergelijk evenement bijwoonde, had ik alles wat het te bieden had grondig bekeken. Het belangrijkste doel was om zoveel mogelijk nuttige onderwerpen te leren.
+    commonEuropeGoal: `Voordat ik een dergelijk evenement bijwoonde, had ik alles wat het te bieden had grondig bekeken. <span>Het belangrijkste doel was om zo veel mogelijk te leren over nuttige onderwerpen.</span>
     Ik was vooral geïnteresseerd in drie verschillende sessies. De eerste ging over Data centric - Moving Business Logic into the Database. 
-    Ik was erg geïnteresseerd in dit onderwerp omdat het me buiten de gebaande paden deed denken. Normaal gesproken zou je applicatie-gecentreerd denken en niet database-gecentreerd. Of in ieder geval niet op dezelfde manier.
+    Ik was erg geïnteresseerd in dit onderwerp omdat het me <span>buiten de gebaande paden deed denken.</span> Normaal gesproken zou je applicatie-gecentreerd denken en niet database-gecentreerd. 
+    Of in ieder geval niet op dezelfde manier.<br/><br/>
     
-    Het tweede onderwerp waarin ik geïnteresseerd was, ging over Kafka en Node.js. Ik had een basiskennis van Node.js, maar ik wilde er meer over leren.
-    Ik had nog niet van Kafka gehoord en was erg enthousiast om te horen dat het hielp bij het integreren van event streaming platforms met Javascript.
+    Het tweede onderwerp waarin ik geïnteresseerd was, ging over <span>Kafka en Node.js.</span> Ik had een basiskennis van Node.js, maar ik wilde er meer over leren.
+    Ik had nog niet van Kafka gehoord en was erg enthousiast om te horen dat het hielp bij het integreren van event streaming platforms met Javascript.<br/><br/>
     
-    Het laatste onderwerp ging over DevSecOps. Ik had niet veel kennis over dit onderwerp, maar ik was er erg in geïnteresseerd. Ik wilde er meer over leren en hoe het me in de toekomst zou kunnen helpen.
+    Het laatste onderwerp ging over <span>DevSecOps.</span> Ik had niet veel kennis over dit onderwerp, maar ik was er erg in geïnteresseerd. <span>Ik wilde er meer over leren om te zien waar dit me in de toekomst kan helpen.</span>
     De DevSecOps was specifiek op IBM systemen, waar ik nog nooit eerder mee te maken heb gehad. Dat maakte het zeker interessanter.`,
-    commonEuropeCourse: `Toen we op het congres aankwamen, werden we begroet door het personeel van IBM. Ze waren erg vriendelijk en gaven ons een welkom gevoel. We kregen een rondleiding door het congres en kregen te zien waar alles was.
+    commonEuropeCourse: `Toen we op het congres aankwamen, werden we begroet door het personeel van IBM. Ze waren erg vriendelijk en gaven ons een welkom gevoel. We kregen een rondleiding door het congres 
+    en kregen te zien waar alles was.
     We kregen ook een schema van alle sessies die zouden plaatsvinden. We konden kiezen welke sessies we wilden bijwonen. We kregen ook een badge waarmee 
-    waarmee we in en uit de sessies konden scannen. Dit was erg handig omdat we zo konden bijhouden welke sessies we wel en welke we niet bijwoonden. 
+    waarmee we in en uit de sessies konden scannen. Dit was erg handig omdat we zo konden bijhouden welke sessies we wel en welke we niet bijwoonden. <br/><br/>
 
-    Ik heb in totaal 3 sessies bijgewoond. Ze waren allemaal erg interessant en ik heb er veel van geleerd. Ik kon veel aantekeningen maken en vragen stellen aan de sprekers.
-    Ik heb ook deelgenomen aan enkele vrijetijdsactiviteiten van het congres, zoals golfen. Ik heb veel nieuwe mensen ontmoet en nieuwe vrienden gemaakt. We eindigden
+    Ik heb in totaal <span>3 sessies bijgewoond.</span> Ze waren allemaal erg interessant en ik heb er veel van geleerd. Ik kon veel aantekeningen maken en vragen stellen aan de sprekers.
+    Ik heb ook deelgenomen aan enkele vrijetijdsactiviteiten van het congres, zoals golfen. Ik heb <span>veel nieuwe mensen ontmoet en nieuwe vrienden gemaakt.</span> We eindigden
     het congres met een leuk diner en een feest.`,
-    commonEuropeResult: `Ik heb op dit congres veel kunnen leren, niet alleen over IBM infrastructuur en systemen, maar ook over de Spaanse cultuur en de stad Alicante.
+    commonEuropeResult: `Ik heb op dit congres <span>veel kunnen leren, niet alleen over IBM infrastructuur en systemen, maar ook over de Spaanse cultuur en de stad Alicante.</span>
     Door het congres heb ik nieuwe mensen ontmoet en een voet tussen de deur van IBM kunnen zetten. Ik hoop in de toekomst ooit met IBM-systemen te kunnen werken.`,
     
     commonEuropeRecap: `Een recapitulatie over het Common Europe Congress 2022 in Alicante, Spanje. Waar ik met 20 andere studenten uit heel Europa was geselecteerd om deel te nemen aan het congres. 
@@ -188,7 +191,7 @@ export const dutchTranslations = {
     portfolioTitle: `Portfolio website`,
     portfolioType: `PERSOONLIJK PROJECT`,
     portfolioSummary: `Ik heb deze website gebouwd om mijn werk en vaardigheden te laten zien, en om mensen een beter inzicht te geven in wie ik ben.`,
-    portfolioSrc: `https://picsum.photos/400/400`,
+    portfolioSrc: `/images/portfolio.jpg`,
     portfolioAlt: `Random Image`,
     portfolioIntro: `Als software engineer is het erg belangrijk om jezelf goed te kunnen presenteren en te laten zien dat je in staat bent om <span>complexe weboplossingen te creëren.</span>
     Welke betere manier is er dan om een website te maken die speciaal voor dat doel is ontworpen. Ik heb deze website ontwikkeld om mijn vaardigheden en eerdere projecten te laten zien,
@@ -216,7 +219,7 @@ export const dutchTranslations = {
     fitnessAppTitle: `Fitness app`,
     fitnessAppType: `PERSOONLIJK PROJECT`,
     fitnessAppSummary: `Deze app helpt je om je fitnessdoelen en vooruitgang bij te houden. Je kunt er ook je eigen trainingen en oefeningen mee maken.`,
-    fitnessAppSrc: `https://picsum.photos/400/400`,
+    fitnessAppSrc: `/images/comingSoon.jpg`,
     fitnessAppAlt: `Random Image`,
 
     //footer
