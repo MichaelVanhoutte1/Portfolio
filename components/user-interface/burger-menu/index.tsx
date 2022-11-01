@@ -10,7 +10,7 @@ const BurgerMenuComponent = (props: Props) => {
 
     return (
         <>
-            <BurgerMenu onClick={() => toggleMenuFunction(!isMenuActive)} src="/images/icons/hamburger-menu.svg" alt="burgermenu"/>
+            <BurgerMenu loading="lazy" onClick={() => toggleMenuFunction(!isMenuActive)} src="/images/icons/hamburger-menu.svg" alt="burgermenu"/>
         </>
     );
 };

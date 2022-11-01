@@ -15,7 +15,7 @@ const LanguageItem = (props: Props) => {
         <>
             <LanguageDiv onClick={() => {i18n.changeLanguage(languageCode); toggleLanguagePopup(false);}}>
                 <LanguageText>{languageCode}</LanguageText>
-                <LanguageIcon src={src} alt={alt} />
+                <LanguageIcon loading="lazy" src={src} alt={alt} />
             </LanguageDiv>
         </>
     );

@@ -10,7 +10,7 @@ const LanguageToggler = (props: Props) => {
 
     return (
         <>
-            <LanguageIcon onClick={() => toggleLanguagePopup(!isLanguageToggleActive)} src="/images/icons/language.svg" alt="languageToggle"/>
+            <LanguageIcon loading="lazy" onClick={() => toggleLanguagePopup(!isLanguageToggleActive)} src="/images/icons/language.svg" alt="languageToggle"/>
         </>
     );
 };
