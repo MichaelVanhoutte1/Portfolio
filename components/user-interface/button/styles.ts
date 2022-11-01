@@ -33,4 +33,21 @@ export const Button = styled.button`
         text-decoration: none;
         color: ${colors.primaryText};
     }
+    &.disabled{
+        &::after {
+            content: "";
+            background-color: darkgrey;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            top: -10px;
+            left: -10px;
+            transition: 0.3s;
+        }
+        &:hover::after {
+            top: 0px;
+            left: 0px;
+        }
+    }
 `;

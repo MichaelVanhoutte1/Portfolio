@@ -181,6 +181,7 @@ export const dutchTranslations = {
     projectGoalTitle: `Doel van het project`,
     projectStackTitle: `Uitleg van de web stack`,
     projectFurtherTitle: `Toekomstig werk`,
+    projectDisabled: "Binnenkort",
 
     //portfolio project
     portfolioTitle: `Portfolio website`,

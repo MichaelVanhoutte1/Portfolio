@@ -179,6 +179,7 @@ export const englishTranslations = {
     projectGoalTitle: `Project Purpose and Goal`,
     projectStackTitle: `Web Stack and Explanation`,
     projectFurtherTitle: `Further work`,
+    projectDisabled: "Coming soon",
 
     //portfolio project
     portfolioTitle: `Portfolio website`,

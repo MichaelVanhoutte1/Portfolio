@@ -7,10 +7,11 @@ interface Props {
     isProjectButton?: boolean;
     href?: string;
     isResumeButton?: boolean;
+    disabled?: boolean;
 }
 
 const ButtonComponent = (props: Props) => {
-    const { content, isProjectButton, href, isResumeButton } = props;
+    const { content, isProjectButton, href, isResumeButton, disabled } = props;
 
     return (
         <>
@@ -20,7 +21,7 @@ const ButtonComponent = (props: Props) => {
                 </a>
             ) : (
                 <Link href={href!}>
-                    <Button className={cs({ projectButton: isProjectButton })}>{content}</Button>
+                    <Button disabled={disabled} className={cs({ projectButton: isProjectButton, disabled: disabled })}>{content}</Button>
                 </Link>
             )}
         </>

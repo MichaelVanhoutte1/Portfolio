@@ -10,11 +10,12 @@ import "../../../translations/i18n";
 interface Props {
     project: string;
     stackTags: string[];
+    disabled?: boolean;
 }
 
 const ProjectComponent = (props: Props) => {
     const { t } = useTranslation();
-    const { project, stackTags } = props;
+    const { project, stackTags, disabled } = props;
     return (
         <>
             <MainDiv>
@@ -28,7 +29,7 @@ const ProjectComponent = (props: Props) => {
                     <Paragraph
                         content={t(project + "Summary")}
                     />
-                    <Button href={'/project/' + project} isProjectButton content={t("projectCTA")} />
+                    <Button disabled={disabled} href={'/project/' + project} isProjectButton content={t( disabled ? "projectDisabled" : "projectCTA")} />
                 </ContentDiv>
                 <Image isProjectClickbait project={project} src={t(project + "Src")} alt={t(project + "Alt")} />
             </MainDiv>

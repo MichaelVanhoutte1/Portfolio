@@ -29,7 +29,7 @@ const BlogPost = (props: Props) => {
                         isSmallParagraph
                         content={t(blogpost + 'SmallRecap')}
                     />
-                    <Link href="/blogpost">
+                    <Link href={"/blogpost/" + blogpost}>
                         <BlogLink>{t('featuredBlogpostsCTA')}</BlogLink>
                     </Link>
                 </ContentDiv>

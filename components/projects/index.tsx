@@ -28,6 +28,7 @@ const ProjectsComponent = (props: Props) => {
                         project="portfolio"
                     />
                     <Project
+                        disabled
                         stackTags={[
                             "React",
                             "Typescript",
