@@ -20,27 +20,15 @@ const Header = () => {
     return (
         <HeroSection>
             <>
-                <Fade
-                    direction={isDesktop ? "left" : "up"}
-                    duration={1000}
-                    delay={250}
-                >
-                    <h1 className="hero-title">
-                    {t("heroTitle")}
-                    </h1>
+                <Fade direction={isDesktop ? "left" : "up"} duration={1000} delay={250}>
+                    <h1 className="hero-title">{t("heroTitle")}</h1>
                 </Fade>
-                <Fade
-                    direction={isDesktop ? "left" : "up"}
-                    duration={1000}
-                    delay={750}
-                >
-                    <p className="hero-cta">
-                        <span className="cta-btn cta-btn--hero">
-                            <Link to="about" smooth duration={1000}>
-                            {t("heroCTA")}
-                            </Link>
-                        </span>
-                    </p>
+                <Fade direction={isDesktop ? "left" : "up"} duration={1000} delay={750}>
+                    <Link to="about" smooth duration={1000}>
+                        <p className="hero-cta">
+                            <span className="cta-btn cta-btn--hero">{t("heroCTA")}</span>
+                        </p>
+                    </Link>
                 </Fade>
             </>
         </HeroSection>

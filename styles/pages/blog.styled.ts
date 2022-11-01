@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import { colors } from "../variables.styled";
+import { breakpoints, colors } from "../variables.styled";
 
 export const MainDiv = styled.div`
     margin: 0 auto 5rem auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     max-width: 1000px;
+    @media (min-width: ${breakpoints.sm}) {
+        min-height: calc(100vh - 19.4rem);
+    }
+    @media (min-width: ${breakpoints.md}) {
+        min-height: calc(100vh - 22.95rem);
+    }
 `;
 
 export const BlogPost = styled.div``;

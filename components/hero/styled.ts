@@ -50,7 +50,7 @@ export const HeroSection = styled.section`
         @media (min-width: ${breakpoints.md}) {
             justify-content: center;
         }
-        & a {
+        & span {
             font-size: 2.4rem;
             @media (max-width: ${breakpoints.sm}) {
                 font-size: 2rem;
