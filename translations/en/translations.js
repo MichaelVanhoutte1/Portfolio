@@ -9,6 +9,10 @@ export const englishTranslations = {
     heroTitle: "Hi, I'm Michael | Software Engineer",
     heroCTA: "Know more",
 
+    //404
+    notFound: "The page you are looking for cannot be found",
+    notFoundCTA: "Go back home",
+
     //homepage aboutMe
     homepageAboutMeTitle: "My skills",
     homepageAboutMeSubtitle: "I love building stuff",

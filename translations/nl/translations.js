@@ -9,6 +9,10 @@ export const dutchTranslations = {
     heroTitle: "Hey, ik ben Michael | Software Engineer",
     heroCTA: "Meer weten",
 
+        //404
+        notFound: "De pagina die je zoekt bestaat niet",
+        notFoundCTA: "Terug naar home",
+
     //homepage aboutMe
     homepageAboutMeTitle: "Mijn vaardigheden",
     homepageAboutMeSubtitle: "Ik hou ervan om dingen te bouwen",
