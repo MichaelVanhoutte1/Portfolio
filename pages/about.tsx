@@ -63,6 +63,12 @@ const About: NextPage = () => {
                         />
                         <SocialIcon
                             fillOnHover
+                            link="https://stackoverflow.com/users/17942665/michael-vanhoutte"
+                            src="/images/icons/stackoverflow-black.svg"
+                            alt="stackoverflow"
+                        />
+                        <SocialIcon
+                            fillOnHover
                             isMailIcon
                             link="mailto:contact@mvanhoutte.com"
                             src="/images/icons/email.svg"

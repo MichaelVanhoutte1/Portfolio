@@ -13,7 +13,7 @@ import {
     LinkColumn,
     LinkText,
     LinkContent,
-    NameDiv
+    NameDiv,
 } from "./styles";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
@@ -68,6 +68,11 @@ const FooterComponent = () => {
                                 link="https://www.linkedin.com/in/michael-vanhoutte/"
                                 src="/images/icons/linkedin.svg"
                                 alt="linkedin"
+                            />
+                            <SocialIcon
+                                link="https://stackoverflow.com/users/17942665/michael-vanhoutte"
+                                src="/images/icons/stackoverflow.svg"
+                                alt="stackoverflow"
                             />
                             <SocialIcon
                                 isMailIcon

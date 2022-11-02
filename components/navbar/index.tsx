@@ -39,27 +39,27 @@ const NavbarComponent = () => {
                     className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}
                 >
                     <Link href="/about">
-                        <Button>{t("navAbout")}</Button>
+                        <Button onClick={() => setIsMenuActive(false)}>{t("navAbout")}</Button>
                     </Link>
                     <Link href="/blog">
-                        <Button>{t("navBlog")}</Button>
+                        <Button onClick={() => setIsMenuActive(false)}>{t("navBlog")}</Button>
                     </Link>
                     {isHomepage ? (
                         <>
                             <ScrollLink to="projects" smooth duration={1000}>
-                                <Button>{t("navProjects")}</Button>
+                                <Button onClick={() => setIsMenuActive(false)}>{t("navProjects")}</Button>
                             </ScrollLink>
                             <ScrollLink to="contact" smooth duration={1000}>
-                                <Button>{t("navContact")}</Button>
+                                <Button onClick={() => setIsMenuActive(false)}>{t("navContact")}</Button>
                             </ScrollLink>
                         </>
                     ) : (
                         <>
                             <Link href="/#projects">
-                                <Button>{t("navProjects")}</Button>
+                                <Button onClick={() => setIsMenuActive(false)}>{t("navProjects")}</Button>
                             </Link>
                             <Link href="/#contact">
-                                <Button>{t("navContact")}</Button>
+                                <Button onClick={() => setIsMenuActive(false)}>{t("navContact")}</Button>
                             </Link>
                         </>
                     )}
