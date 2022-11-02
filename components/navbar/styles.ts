@@ -60,9 +60,8 @@ export const LanguagePopup = styled.div`
         visibility: visible;
     }
     @media (min-width: ${breakpoints.md}) {
-        width: 4rem;
-        height: 4rem;
         top: 3.5rem;
+        height: 3.95rem;
     }
 `;
 

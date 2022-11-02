@@ -18,7 +18,7 @@ function listenForOutsideClicks(
         setListening(true);
         [`click`, `touchstart`].forEach((type) => {
             document.addEventListener(`click`, (evt) => {
-                if (languageRef.current?.contains(evt.target)) return;
+                if (languageRef.current!.contains(evt.target)) return;
                 setIsOpen(false);
             });
         });

@@ -77,7 +77,7 @@ export const FooterDiv = styled.div`
     height: 27rem;
     color: ${colors.primaryText};
     padding: 0 2rem;
-    @media (min-width: ${breakpoints.sm}) {
+    @media (min-width: ${breakpoints.md}) {
         height: 11rem;
     }
 `;
@@ -90,7 +90,7 @@ export const ContentDiv = styled.div`
     color: ${colors.primaryText};
     max-width: clamp(300px, 100%, 1000px);
     margin: 0 auto;
-    @media (min-width: ${breakpoints.sm}) {
+    @media (min-width: ${breakpoints.md}) {
         flex-direction: row;
         height: 11rem;
     }

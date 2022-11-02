@@ -6,9 +6,6 @@ export const MainDiv = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 1000px;
-    @media (min-width: ${breakpoints.sm}) {
-        min-height: calc(100vh - 19.4rem);
-    }
     @media (min-width: ${breakpoints.md}) {
         min-height: calc(100vh - 22.95rem);
     }
