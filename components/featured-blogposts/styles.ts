@@ -26,8 +26,11 @@ export const BlogCTA = styled.div`
     color: ${colors.secondary};
     margin: 0 auto 3rem 0;
     transition: filter 0.2s ease-in-out;
-    &:hover {
-        filter: brightness(80%);
+
+    @media (min-width: ${breakpoints.md}) {
+        &:hover {
+            filter: brightness(80%);
+        }
     }
     @media (min-width: ${breakpoints.lg}) {
         margin: 1rem 0 2rem auto;

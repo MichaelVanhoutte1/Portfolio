@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/variables.styled";
+import { breakpoints, colors } from "../../../styles/variables.styled";
 
 export const Button = styled.button`
     font-size: 20px;
@@ -14,6 +14,12 @@ export const Button = styled.button`
     cursor: pointer;
     position: relative;
     background-color: rgba(0, 0, 0, 0);
+    @media (min-width: ${breakpoints.md}) {
+        &:hover::after {
+            top: 0px;
+            left: 0px;
+        }
+    }
     &::after {
         content: "";
         background-color: ${colors.secondary};
@@ -25,10 +31,6 @@ export const Button = styled.button`
         left: -10px;
         transition: 0.3s;
     }
-    &:hover::after {
-        top: 0px;
-        left: 0px;
-    }
     a {
         text-decoration: none;
         color: ${colors.primaryText};
@@ -36,15 +38,7 @@ export const Button = styled.button`
     &.disabled {
         cursor: default;
         &::after {
-            content: "";
             background-color: ${colors.disabled};
-            width: 100%;
-            position: absolute;
-            z-index: -1;
-            height: 100%;
-            top: -10px;
-            left: -10px;
-            transition: 0.3s;
         }
         &:hover::after {
             top: -10px;

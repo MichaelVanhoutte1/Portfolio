@@ -72,8 +72,10 @@ export const Name = styled.p`
     color: ${colors.primaryText};
     text-decoration: none;
     transition: color 0.5s;
-    &:hover {
-        color: ${colors.secondary};
+    @media (min-width: ${breakpoints.md}) {
+        &:hover {
+            color: ${colors.secondary};
+        }
     }
 `;
 
@@ -95,32 +97,29 @@ export const Button = styled.button`
     z-index: 1;
     @media (min-width: ${breakpoints.md}) {
         margin: 10px 0 10px;
-    }
-    &:hover {
-        color: ${colors.primaryText};
-    }
-    &:after {
-        transition: all 0.5s;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        margin-top: auto;
-        width: 100%;
-        height: 1px;
-        content: ".";
-        color: transparent;
-        background: ${colors.secondary};
-        visibility: none;
-        opacity: 0;
-        z-index: -1;
-    }
-    &:hover:after {
-        opacity: 1;
-        visibility: visible;
-        height: 100%;
+        &:after {
+            transition: all 0.5s;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin-top: auto;
+            width: 100%;
+            height: 1px;
+            content: ".";
+            color: transparent;
+            background: ${colors.secondary};
+            visibility: none;
+            opacity: 0;
+            z-index: -1;
+        }
+        &:hover:after {
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+        }
     }
 
     @-webkit-keyframes fill {

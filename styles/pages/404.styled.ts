@@ -40,9 +40,11 @@ export const CTA = styled.a`
     padding: 0.75rem 1rem;
     margin: 1.5rem auto 0 auto;
     transition: all 0.5s;
-    &:hover {
-        color: ${colors.secondary};
-        border: 2px solid ${colors.secondary};
+    @media (min-width: ${breakpoints.md}) {
+        &:hover {
+            color: ${colors.secondary};
+            border: 2px solid ${colors.secondary};
+        }
     }
 `;
 

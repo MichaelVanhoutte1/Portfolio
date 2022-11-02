@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/variables.styled";
+import { breakpoints, colors } from "../../../styles/variables.styled";
 export const MainDiv = styled.div`
     max-width: 1000px;
 `;
@@ -20,10 +20,13 @@ export const BlogLink = styled.p`
     width: fit-content;
     cursor: pointer;
     transition: filter 0.2s ease-in-out;
-    &:hover {
-        filter: brightness(80%);
+    @media (min-width: ${breakpoints.md}) {
+        &:hover {
+            filter: brightness(80%);
+        }
     }
-    &.disabled{
+
+    &.disabled {
         color: ${colors.disabled};
         cursor: default;
         &:hover {

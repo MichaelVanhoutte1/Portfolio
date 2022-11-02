@@ -14,10 +14,10 @@ export const Title = styled.h1`
         font-weight: 400;
     }
     &.projectSubtitle {
-        font-size: .95rem;
-        letter-spacing: .1rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.1rem;
         margin: 0;
-        font-family: 'Merriweather',sans-serif;
+        font-family: "Merriweather", sans-serif;
     }
     &.emailTitle {
         font-size: 1.5rem;
@@ -29,19 +29,19 @@ export const Title = styled.h1`
         margin: 1rem 0;
         font-weight: 700;
     }
-    &.blogPostDate{
-        font-size: .9rem;
+    &.blogPostDate {
+        font-size: 0.9rem;
         font-weight: 400;
-        letter-spacing: .1rem;
+        letter-spacing: 0.1rem;
         margin: 0 0 1rem 0;
     }
-    &.featuredBlogPostTitle{
+    &.featuredBlogPostTitle {
         max-width: fit-content;
         font-size: 1.5rem;
         font-weight: bold;
         margin-top: 1rem;
         @media (min-width: ${breakpoints.lg}) {
-            margin: 0 0 3rem 0 ;
+            margin: 0 0 3rem 0;
         }
     }
 `;
@@ -57,11 +57,13 @@ export const MainTitle = styled.p`
     -webkit-text-stroke-color: ${colors.primary};
     -moz-text-stroke-color: ${colors.primary};
     color: transparent;
-    transition: .3s;
+    transition: 0.3s;
     text-shadow: -3px -3px ${colors.secondary};
-    &:hover {
-        text-shadow: 0px 0px ${colors.secondary};
-        transition: .3s;
+    @media (min-width: ${breakpoints.md}) {
+        &:hover {
+            text-shadow: 0px 0px ${colors.secondary};
+            transition: 0.3s;
+        }
     }
     &.noBottomMargin {
         margin: 3rem 0;

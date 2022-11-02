@@ -7,8 +7,10 @@ export const NameDiv = styled.div`
     filter: brightness(80%);
     width: fit-content;
     transition: filter 0.2s ease-in-out;
-    &:hover {
-        filter: brightness(100%);
+    @media (min-width: ${breakpoints.md}) {
+        &:hover {
+            filter: brightness(100%);
+        }
     }
 `;
 
@@ -67,8 +69,10 @@ export const LinkText = styled.p`
     cursor: pointer;
     width: fit-content;
     transition: filter 0.2s ease-in-out;
-    &:hover {
-        filter: brightness(80%);
+    @media (min-width: ${breakpoints.md}) {
+        &:hover {
+            filter: brightness(80%);
+        }
     }
 `;
 

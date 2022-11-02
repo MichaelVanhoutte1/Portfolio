@@ -7,7 +7,7 @@ export const LanguageIcon = styled.img`
 
 export const LanguageText = styled.p`
     width: 20px;
-    margin-right: .3rem;
+    margin-right: 0.3rem;
     font-weight: 600;
 `;
 
@@ -17,29 +17,29 @@ export const LanguageDiv = styled.div`
     justify-content: center;
     color: ${colors.primary};
     margin: 0 auto;
-    padding: .4rem;
-    &:nth-child(odd){
-        border-radius: .5rem .5rem 0 0;
+    padding: 0.4rem;
+    &:nth-child(odd) {
+        border-radius: 0.5rem 0.5rem 0 0;
     }
-    &:nth-child(even){
-        border-radius: 0 0 .5rem .5rem;
-    }
-    &:hover {
-        cursor: pointer;
-        background-color: ${colors.secondary};
-        transition: background-color .5s;
-        transition: color .3s;
-        border: none;
-        color: ${colors.primaryText};
+    &:nth-child(even) {
+        border-radius: 0 0 0.5rem 0.5rem;
     }
     @media (min-width: ${breakpoints.md}) {
         margin: 0 auto;
-        padding: .5rem;
-        &:nth-child(odd){
-            border-radius: .5rem .5rem 0 0;
+        padding: 0.5rem;
+        &:nth-child(odd) {
+            border-radius: 0.5rem 0.5rem 0 0;
         }
-        &:nth-child(even){
-            border-radius: 0 0 .5rem .5rem;
+        &:nth-child(even) {
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: ${colors.secondary};
+            transition: background-color 0.5s;
+            transition: color 0.3s;
+            border: none;
+            color: ${colors.primaryText};
         }
     }
 `;

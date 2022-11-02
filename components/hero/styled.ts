@@ -13,12 +13,6 @@ export const HeroSection = styled.section`
         align-items: flex-start;
     }
 
-    // If you want to set a background image on the hero section, uncomment these with yout custom image
-
-    /* background: url("/src/assets/[your-image].png");
-    background-position: center;
-    background-size: cover; */
-
     .hero-title {
         font-size: 2.8rem;
         font-weight: 700;
@@ -49,16 +43,16 @@ export const HeroSection = styled.section`
         transition: all 0.5s;
         @media (min-width: ${breakpoints.md}) {
             justify-content: center;
+            &:hover {
+                color: ${colors.secondary};
+                border: 3px solid ${colors.secondary};
+            }
         }
         & span {
             font-size: 2.4rem;
             @media (max-width: ${breakpoints.sm}) {
                 font-size: 2rem;
             }
-        }
-        &:hover {
-            color: ${colors.secondary};
-            border: 3px solid ${colors.secondary};
         }
     }
 `;

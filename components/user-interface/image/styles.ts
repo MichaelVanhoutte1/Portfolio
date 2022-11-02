@@ -30,22 +30,26 @@ export const Picture = styled.img`
         cursor: pointer;
         transition: box-shadow 0.3s ease-in-out, top 0.3s ease-in-out, filter 0.3s ease-in-out;
         top: 0;
-        &:hover {
-            filter: brightness(92%);
-            position: relative;
-            top: -3px;
-            box-shadow: 20px 20px 10px ${colors.lightgray};
+        @media (min-width: ${breakpoints.md}) {
+            &:hover {
+                filter: brightness(92%);
+                position: relative;
+                top: -3px;
+                box-shadow: 20px 20px 10px ${colors.lightgray};
+            }
         }
     }
     &.projectClickbait {
         transition: box-shadow 0.3s ease-in-out, top 0.3s ease-in-out, filter 0.3s ease-in-out;
         top: 0;
         cursor: pointer;
-        &:hover {
-            filter: brightness(92%);
-            position: relative;
-            top: -3px;
-            box-shadow: 20px 20px 10px ${colors.lightgray};
+        @media (min-width: ${breakpoints.md}) {
+            &:hover {
+                filter: brightness(92%);
+                position: relative;
+                top: -3px;
+                box-shadow: 20px 20px 10px ${colors.lightgray};
+            }
         }
     }
     &.disabled {

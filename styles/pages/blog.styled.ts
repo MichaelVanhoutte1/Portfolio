@@ -20,10 +20,13 @@ export const BlogTitle = styled.h1`
     cursor: pointer;
     color: ${colors.secondary};
     transition: filter 0.2s ease-in-out;
-    &:hover {
-        filter: brightness(80%);
+    @media (min-width: ${breakpoints.md}) {
+        &:hover {
+            filter: brightness(80%);
+        }
     }
-    &.disabled{
+
+    &.disabled {
         color: ${colors.disabled};
         cursor: default;
         &:hover {
