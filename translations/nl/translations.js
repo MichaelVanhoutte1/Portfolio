@@ -9,9 +9,10 @@ export const dutchTranslations = {
     heroTitle: "Hey, ik ben Michael | Software Engineer",
     heroCTA: "Meer weten",
 
-        //404
-        notFound: "De pagina die je zoekt bestaat niet",
-        notFoundCTA: "Terug naar home",
+    //404
+    notFound: "De pagina die je zoekt bestaat niet",
+    notFoundCTA: "Terug naar home",
+    offline: "Pagina kan niet laden, je bent offline",
 
     //homepage aboutMe
     homepageAboutMeTitle: "Mijn vaardigheden",
@@ -134,7 +135,7 @@ export const dutchTranslations = {
     het congres met een leuk diner en een feest.`,
     commonEuropeResult: `Ik heb op dit congres <span>veel kunnen leren, niet alleen over IBM infrastructuur en systemen, maar ook over de Spaanse cultuur en de stad Alicante.</span>
     Door het congres heb ik nieuwe mensen ontmoet en een voet tussen de deur van IBM kunnen zetten. Ik hoop in de toekomst ooit met IBM-systemen te kunnen werken.`,
-    
+
     commonEuropeRecap: `Een recapitulatie over het Common Europe Congress 2022 in Alicante, Spanje. Waar ik met 20 andere studenten uit heel Europa was geselecteerd om deel te nemen aan het congres. 
     Het congres werd gehouden van 13 tot 16 juni 2022.`,
     commonEuropeSmallRecap: `Een recapitulatie over het Common Europe Congress 2022 in Alicante, Spanje.`,
