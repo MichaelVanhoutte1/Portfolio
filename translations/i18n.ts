@@ -18,4 +18,10 @@ i18n.use(LanguageDetector)
         },
     });
 
-i18n.changeLanguage("EN");
+if (typeof window !== "undefined") {
+    if (window.localStorage.getItem("i18nextLng") !== null) {
+        i18n.changeLanguage(window.localStorage.getItem("i18nextLng")!);
+    } else {
+        i18n.changeLanguage("EN");
+    }
+}
