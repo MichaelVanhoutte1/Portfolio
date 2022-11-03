@@ -217,8 +217,8 @@ export const dutchTranslations = {
     Ik overweeg nog steeds om een paar talen aan de website toe te voegen, maar ik weet nog niet zeker of ik dat zal doen. Ik zou ook een paar pagina's aan de website kunnen toevoegen om hem interessanter te maken.`,
     portfolioOutroSrc: "https://picsum.photos/1000/550",
     portfolioOutroAlt: "All of the participating students together",
-    portfolioIntroSrc: "https://picsum.photos/1000/550",
-    portfolioIntroAlt: "altstuff",
+    portfolioIntroSrc: "/images/introduce.jpg",
+    portfolioIntroAlt: "introductie foto met pratende mensen",
 
     //fitness app project
     fitnessAppTitle: `Fitness app`,

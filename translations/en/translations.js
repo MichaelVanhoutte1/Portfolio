@@ -212,8 +212,8 @@ export const englishTranslations = {
     I'm still considering <span>adding a few more languages to the website</span> but I'm not sure if I will do that. I might also add a few more pages to the website to make it more interesting.`,
     portfolioOutroSrc: "https://picsum.photos/1000/550",
     portfolioOutroAlt: "All of the participating students together",
-    portfolioIntroSrc: "https://picsum.photos/1000/550",
-    portfolioIntroAlt: "altstuff",
+    portfolioIntroSrc: "/images/introduce.jpg",
+    portfolioIntroAlt: "introduction picture of talking people",
 
     //fitness app project
     fitnessAppTitle: `Fitness app`,
