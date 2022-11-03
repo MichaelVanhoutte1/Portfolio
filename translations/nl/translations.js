@@ -196,8 +196,8 @@ export const dutchTranslations = {
     portfolioTitle: `Portfolio website`,
     portfolioType: `PERSOONLIJK PROJECT`,
     portfolioSummary: `Ik heb deze website gebouwd om mijn werk en vaardigheden te laten zien, en om mensen een beter inzicht te geven in wie ik ben.`,
-    portfolioSrc: `/images/portfolio.jpg`,
-    portfolioAlt: `Random Image`,
+    portfolioSrc: `/images/portfolioThumbnail.png`,
+    portfolioAlt: `Thumbnail van de portfolio website`,
     portfolioIntro: `Als software engineer is het erg belangrijk om jezelf goed te kunnen presenteren en te laten zien dat je in staat bent om <span>complexe weboplossingen te creëren.</span>
     Welke betere manier is er dan om een website te maken die speciaal voor dat doel is ontworpen. Ik heb deze website ontwikkeld om mijn vaardigheden en eerdere projecten te laten zien,
     zodat mijn toekomstige werkgever een <span>beter beeld krijgt van wie ik ben en wat ik kan.</span>`,
@@ -215,8 +215,8 @@ export const dutchTranslations = {
     ik er <span>meer over wilde leren.</span>`,
     portfolioFurther: `Op het huidige moment heb ik geen plannen om nog grote dingen toe te voegen. Ik zou nog een paar projecten aan de website kunnen toevoegen en misschien nog een paar blogberichten.
     Ik overweeg nog steeds om een paar talen aan de website toe te voegen, maar ik weet nog niet zeker of ik dat zal doen. Ik zou ook een paar pagina's aan de website kunnen toevoegen om hem interessanter te maken.`,
-    portfolioOutroSrc: "https://picsum.photos/1000/550",
-    portfolioOutroAlt: "All of the participating students together",
+    portfolioOutroSrc: "/images/performance.jpg",
+    portfolioOutroAlt: "Google Lighthouse website performantie metrieken",
     portfolioIntroSrc: "/images/introduce.jpg",
     portfolioIntroAlt: "introductie foto met pratende mensen",
 
@@ -224,8 +224,8 @@ export const dutchTranslations = {
     fitnessAppTitle: `Fitness app`,
     fitnessAppType: `PERSOONLIJK PROJECT`,
     fitnessAppSummary: `Deze app helpt je om je fitnessdoelen en vooruitgang bij te houden. Je kunt er ook je eigen trainingen en oefeningen mee maken.`,
-    fitnessAppSrc: `/images/comingSoon.jpg`,
-    fitnessAppAlt: `Random Image`,
+    fitnessAppSrc: `/images/fitnessComingSoon.png`,
+    fitnessAppAlt: `Fitness thumbnail image`,
 
     //footer
     footerFollowMe: `Volg me op`,

@@ -191,8 +191,8 @@ export const englishTranslations = {
     portfolioTitle: `Portfolio website`,
     portfolioType: `PERSONAL PROJECT`,
     portfolioSummary: `I built this website to showcase my work and skills, and to allow people to have a better insight into who I am.`,
-    portfolioSrc: `/images/portfolio.jpg`,
-    portfolioAlt: `Random Image`,
+    portfolioSrc: `/images/portfolioThumbnail.png`,
+    portfolioAlt: `Portfolio website thumbnail`,
     portfolioIntro: `As a software engineer it's very important to be able to properly present yourself and show that you are capable in <span>creating complex web solutions.</span>
     What better way is there than to create a website designed specifically for that purpose. I developed this website to showcase my skills and previous projects,
     so that it might help my future employer to get a <span>better understanding of who I am and what I can do.</span>`,
@@ -210,8 +210,8 @@ export const englishTranslations = {
     <span>I wanted to learn more about them.</span>`,
     portfolioFurther: `I think for the time being I don't have any plans to add any new features to this website. I might add a few more projects to the website and maybe add a few more blog posts.
     I'm still considering <span>adding a few more languages to the website</span> but I'm not sure if I will do that. I might also add a few more pages to the website to make it more interesting.`,
-    portfolioOutroSrc: "https://picsum.photos/1000/550",
-    portfolioOutroAlt: "All of the participating students together",
+    portfolioOutroSrc: "/images/performance.jpg",
+    portfolioOutroAlt: "Google Lighthouse website performance measurements",
     portfolioIntroSrc: "/images/introduce.jpg",
     portfolioIntroAlt: "introduction picture of talking people",
 
@@ -219,8 +219,8 @@ export const englishTranslations = {
     fitnessAppTitle: `Fitness app`,
     fitnessAppType: `PERSONAL PROJECT`,
     fitnessAppSummary: `This app helps you keep track of your fitness goals and progress. It also allows you to create your own workouts and exercises.`,
-    fitnessAppSrc: `/images/comingSoon.jpg`,
-    fitnessAppAlt: `Random Image`,
+    fitnessAppSrc: `/images/fitnessComingSoon.png`,
+    fitnessAppAlt: `Fitness thumbnail image`,
 
     //footer
     footerFollowMe: `Follow me on`,
