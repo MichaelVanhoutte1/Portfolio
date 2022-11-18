@@ -5,9 +5,8 @@ import Image from "../user-interface/image";
 import { ContentDiv, MainDiv, ButtonDiv, AboutDiv } from "./styles";
 import Paragraph from "../user-interface/paragraph";
 import { Element } from "react-scroll";
-import { useTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
-import "../../translations/i18n";
+import { useTranslation } from "next-export-i18n";
 
 const AboutComponent = () => {
     const { t } = useTranslation();

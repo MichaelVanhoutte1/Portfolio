@@ -1,6 +1,7 @@
 import { Button } from "./styles";
 import cs from "classnames";
 import Link from "next/link";
+import { useLanguageQuery } from 'next-export-i18n';
 
 interface Props {
     content: string;
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const ButtonComponent = (props: Props) => {
+    const [query] = useLanguageQuery();
     const { content, isProjectButton, href, isResumeButton, disabled } = props;
 
     return (
@@ -20,7 +22,7 @@ const ButtonComponent = (props: Props) => {
                     <Button className={cs({ projectButton: isProjectButton })}>{content}</Button>
                 </a>
             ) : (
-                <Link href={href!}>
+                <Link href={{ pathname: href!, query: query }}>
                     <Button disabled={disabled} className={cs({ projectButton: isProjectButton, disabled: disabled })}>{content}</Button>
                 </Link>
             )}

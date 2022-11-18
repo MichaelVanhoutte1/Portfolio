@@ -2,9 +2,8 @@ import Title from "../user-interface/title";
 import Project from "../user-interface/project";
 import { MainDiv } from "./styles";
 import { Element } from "react-scroll";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-export-i18n";
 import { Fade } from "react-awesome-reveal";
-import "../../translations/i18n";
 
 interface Props {}
 

@@ -1,5 +1,5 @@
 import { LanguageIcon, LanguageDiv, LanguageText } from "./styles";
-import i18n from "i18next";
+import { LanguageSwitcher } from "next-export-i18n";
 
 interface Props {
     src: string;
@@ -13,9 +13,15 @@ const LanguageItem = (props: Props) => {
 
     return (
         <>
-            <LanguageDiv onClick={() => {i18n.changeLanguage(languageCode); toggleLanguagePopup(false);}}>
-                <LanguageText>{languageCode}</LanguageText>
-                <LanguageIcon loading="lazy" src={src} alt={alt} />
+            <LanguageDiv
+                onClick={() => {
+                    toggleLanguagePopup(false);
+                }}
+            >
+                <LanguageSwitcher lang={languageCode}>
+                        <LanguageText>{languageCode.toLocaleUpperCase()}</LanguageText>
+                        <LanguageIcon loading="lazy" src={src} alt={alt} />
+                </LanguageSwitcher>
             </LanguageDiv>
         </>
     );

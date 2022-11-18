@@ -5,9 +5,8 @@ import Paragraph from "../components/user-interface/paragraph";
 import SocialIcon from "../components/user-interface/social-icon";
 import Title from "../components/user-interface/title";
 import { ContentDiv, MainDiv, PageTitle, SocialIconsDiv, Text } from "../styles/pages/about.styled";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-export-i18n";
 import { Fade } from "react-awesome-reveal";
-import "../translations/i18n";
 
 const About: NextPage = () => {
     const { t } = useTranslation();

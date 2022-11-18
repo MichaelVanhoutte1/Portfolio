@@ -2,15 +2,14 @@ import Title from "../user-interface/title";
 import BlogPost from "../user-interface/blogpost";
 import { MainDiv, BlogPostDiv, BlogCTA } from "./styles";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import "../../translations/i18n";
+import { useTranslation, useLanguageQuery } from "next-export-i18n";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
-interface Props {}
-
-const FeaturedBlogposts = (props: Props) => {
+const FeaturedBlogposts = () => {
     const { t } = useTranslation();
+    const [query] = useLanguageQuery();
+
     const [isDesktop, setisDesktop] = useState(false);
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -28,7 +27,7 @@ const FeaturedBlogposts = (props: Props) => {
                         {isDesktop && <BlogPost disabled blogpost="third" />}
                     </BlogPostDiv>
                     <BlogCTA>
-                        <Link href="/blog">
+                        <Link href={{ pathname: '/blog', query: query }}>
                             <div>
                                 {t("featuredBlogpostsMore")}
                                 <img

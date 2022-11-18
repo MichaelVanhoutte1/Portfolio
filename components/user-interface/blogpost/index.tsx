@@ -3,8 +3,7 @@ import Title from "../title";
 import Image from "../image";
 import { ContentDiv, MainDiv, BlogLink } from "./styles";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import "../../../translations/i18n";
+import { useTranslation, useLanguageQuery } from "next-export-i18n";
 
 interface Props {
     blogpost: string;
@@ -13,6 +12,7 @@ interface Props {
 
 const BlogPost = (props: Props) => {
     const { t } = useTranslation();
+    const [query] = useLanguageQuery();
     const { blogpost, disabled } = props;
 
     return (
@@ -31,7 +31,7 @@ const BlogPost = (props: Props) => {
                     {disabled ? (
                         <BlogLink className="disabled ">{t("featuredBlogpostsDisabled")}</BlogLink>
                     ) : (
-                        <Link href={"/blogpost/" + blogpost}>
+                        <Link href={{ pathname: "/blogpost/" + blogpost, query: query }}>
                             <BlogLink>{t("featuredBlogpostsCTA")}</BlogLink>
                         </Link>
                     )}

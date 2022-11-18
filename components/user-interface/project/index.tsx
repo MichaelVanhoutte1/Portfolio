@@ -4,8 +4,7 @@ import Paragraph from "../paragraph";
 import Title from "../title";
 import Image from "../image";
 import { ContentDiv, MainDiv } from "./styles";
-import { useTranslation } from "react-i18next";
-import "../../../translations/i18n";
+import { useTranslation } from "next-export-i18n";
 
 interface Props {
     project: string;
@@ -22,16 +21,22 @@ const ProjectComponent = (props: Props) => {
                 <ContentDiv>
                     <Title isProjectSubtitle content={t(project + "Type")} />
                     <Title isProjectTitle content={t(project + "Title")} />
-                    <BoxLabels
-                        isProjectLabelDiv
-                        labelArray={stackTags}
+                    <BoxLabels isProjectLabelDiv labelArray={stackTags} />
+                    <Paragraph content={t(project + "Summary")} />
+                    <Button
+                        disabled={disabled}
+                        href={"/project/" + project}
+                        isProjectButton
+                        content={t(disabled ? "projectDisabled" : "projectCTA")}
                     />
-                    <Paragraph
-                        content={t(project + "Summary")}
-                    />
-                    <Button disabled={disabled} href={'/project/' + project} isProjectButton content={t( disabled ? "projectDisabled" : "projectCTA")} />
                 </ContentDiv>
-                <Image disabled={disabled} isProjectClickbait project={project} src={t(project + "Src")} alt={t(project + "Alt")} />
+                <Image
+                    disabled={disabled}
+                    isProjectClickbait
+                    project={project}
+                    src={t(project + "Src")}
+                    alt={t(project + "Alt")}
+                />
             </MainDiv>
         </>
     );

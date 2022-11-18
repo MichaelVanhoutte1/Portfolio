@@ -3,9 +3,8 @@ import Button from "../user-interface/button";
 import EnveloppeAnimation from "../user-interface/enveloppe-animation";
 import Title from "../user-interface/title";
 import { ContactDiv } from "./styles";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-export-i18n";
 import { Fade } from "react-awesome-reveal";
-import "../../translations/i18n";
 
 const ContactComponent = () => {
     const { t } = useTranslation();

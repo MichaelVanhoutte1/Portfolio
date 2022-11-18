@@ -1,6 +1,7 @@
 import { Picture } from "./styles";
 import cs from "classnames";
 import Link from "next/link";
+import { useLanguageQuery } from 'next-export-i18n';
 
 interface Props {
     src: string;
@@ -26,10 +27,11 @@ const ImageComponent = (props: Props) => {
         project,
         disabled
     } = props;
+    const [query] = useLanguageQuery();
     return (
         <>
             {isProjectClickbait && !disabled || isBlogPostPicture && !disabled  ? (
-                <Link href={isProjectClickbait ? "/project/" + project : "/blogpost/" + blogpost}>
+                <Link href={{ pathname: isProjectClickbait ? "/project/" + project : "/blogpost/" + blogpost, query: query }}>
                     <Picture
                         loading="lazy"
                         className={cs({

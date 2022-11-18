@@ -5,13 +5,15 @@ import { useRouter } from "next/router";
 import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import "../../translations/i18n";
+import { useTranslation, useLanguageQuery } from "next-export-i18n";
+
 import LanguageToggler from "../user-interface/language-toggle";
 import LanguageItem from "../user-interface/language-item";
 
 const NavbarComponent = () => {
     const { t } = useTranslation();
+    const [query] = useLanguageQuery();
+
     const router = useRouter();
     const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
     const [isHomepage, setIsHomepage] = useState<boolean>(router.pathname === "/" ? true : false);
@@ -19,47 +21,68 @@ const NavbarComponent = () => {
 
     useEffect(() => {
         setIsHomepage(router.pathname === "/" ? true : false);
-    },[router.pathname]);
+    }, [router.pathname]);
 
     return (
         <>
             <NavbarDiv className={cs({ notHomepage: !isHomepage })}>
-                <LanguageToggler isLanguageToggleActive={isLanguageToggleActive} toggleLanguagePopup={setIsLanguageToggleActive} />
+                <LanguageToggler
+                    isLanguageToggleActive={isLanguageToggleActive}
+                    toggleLanguagePopup={setIsLanguageToggleActive}
+                />
                 <NameDiv>
-                    <Link href="/">
+                    <Link href={{ pathname: "/", query: query }}>
                         <Name>Michael Vanhoutte</Name>
                     </Link>
                 </NameDiv>
                 <LanguagePopup className={cs({ active: isLanguageToggleActive })}>
-                    <LanguageItem toggleLanguagePopup={setIsLanguageToggleActive} src="/images/icons/nl.svg" alt="Dutch" languageCode="NL"/>
-                    <LanguageItem toggleLanguagePopup={setIsLanguageToggleActive} src="/images/icons/gb.svg" alt="English" languageCode="EN"/>
+                    <LanguageItem
+                        toggleLanguagePopup={setIsLanguageToggleActive}
+                        src="/images/icons/nl.svg"
+                        alt="Dutch"
+                        languageCode="nl"
+                    />
+                    <LanguageItem
+                        toggleLanguagePopup={setIsLanguageToggleActive}
+                        src="/images/icons/gb.svg"
+                        alt="English"
+                        languageCode="en"
+                    />
                 </LanguagePopup>
                 <BurgerMenu isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive} />
                 <ContentDiv
                     className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}
                 >
-                    <Link href="/about">
+                    <Link href={{ pathname: "/about", query: query }}>
                         <Button onClick={() => setIsMenuActive(false)}>{t("navAbout")}</Button>
                     </Link>
-                    <Link href="/blog">
+                    <Link href={{ pathname: "/blog", query: query }}>
                         <Button onClick={() => setIsMenuActive(false)}>{t("navBlog")}</Button>
                     </Link>
                     {isHomepage ? (
                         <>
                             <ScrollLink to="projects" smooth duration={1000}>
-                                <Button onClick={() => setIsMenuActive(false)}>{t("navProjects")}</Button>
+                                <Button onClick={() => setIsMenuActive(false)}>
+                                    {t("navProjects")}
+                                </Button>
                             </ScrollLink>
                             <ScrollLink to="contact" smooth duration={1000}>
-                                <Button onClick={() => setIsMenuActive(false)}>{t("navContact")}</Button>
+                                <Button onClick={() => setIsMenuActive(false)}>
+                                    {t("navContact")}
+                                </Button>
                             </ScrollLink>
                         </>
                     ) : (
                         <>
-                            <Link href="/#projects">
-                                <Button onClick={() => setIsMenuActive(false)}>{t("navProjects")}</Button>
+                            <Link href={{ pathname: "/#projects", query: query }}>
+                                <Button onClick={() => setIsMenuActive(false)}>
+                                    {t("navProjects")}
+                                </Button>
                             </Link>
-                            <Link href="/#contact">
-                                <Button onClick={() => setIsMenuActive(false)}>{t("navContact")}</Button>
+                            <Link href={{ pathname: "/#contact", query: query }}>
+                                <Button onClick={() => setIsMenuActive(false)}>
+                                    {t("navContact")}
+                                </Button>
                             </Link>
                         </>
                     )}

@@ -15,21 +15,22 @@ import {
     LinkContent,
     NameDiv,
 } from "./styles";
-import { useTranslation } from "react-i18next";
-import "../../translations/i18n";
+import { useTranslation, useLanguageQuery } from "next-export-i18n";
 
 const FooterComponent = () => {
     const { t } = useTranslation();
+    const [query] = useLanguageQuery();
+
     return (
         <>
             <FooterDiv>
                 <ContentDiv>
                     <CopyrightDiv>
                         <NameDiv>
-                            <Link href="/#about">
+                            <Link href={{ pathname: "/#about", query: query }}>
                                 <Name>Michael</Name>
                             </Link>
-                            <Link href="/#about">
+                            <Link href={{ pathname: "/#about", query: query }}>
                                 <Name>Vanhoutte</Name>
                             </Link>
                         </NameDiv>
@@ -39,18 +40,18 @@ const FooterComponent = () => {
                         <Text>{t("footerLinks")}</Text>
                         <LinkContent>
                             <LinkColumn>
-                                <Link href="/about">
+                                <Link href={{ pathname: "/about", query: query }}>
                                     <LinkText>{t("footerAbout")}</LinkText>
                                 </Link>
-                                <Link href="/#projects">
+                                <Link href={{ pathname: "/#projects", query: query }}>
                                     <LinkText>{t("footerProjects")}</LinkText>
                                 </Link>
                             </LinkColumn>
                             <LinkColumn>
-                                <Link href="/blog">
+                                <Link href={{ pathname: "/blog", query: query }}>
                                     <LinkText>{t("footerBlog")}</LinkText>
                                 </Link>
-                                <Link href="/#contact">
+                                <Link href={{ pathname: "/#contact", query: query }}>
                                     <LinkText>{t("footerContact")}</LinkText>
                                 </Link>
                             </LinkColumn>

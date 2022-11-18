@@ -42,4 +42,7 @@ export const LanguageDiv = styled.div`
             color: ${colors.primaryText};
         }
     }
+    [data-language-switcher="true"] {
+        display: flex;
+    }
 `;

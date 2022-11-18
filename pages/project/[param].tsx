@@ -5,8 +5,8 @@ import Paragraph from "../../components/user-interface/paragraph";
 import { MainDiv } from "../../styles/pages/project.styled";
 import Title from "../../components/user-interface/title";
 import SEO from "../../components/seo";
-import { useTranslation } from "react-i18next";
-import "../../translations/i18n";
+import { useTranslation } from "next-export-i18n";
+
 import { useRouter } from "next/router";
 import { Fade } from "react-awesome-reveal";
 
