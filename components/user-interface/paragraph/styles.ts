@@ -4,6 +4,7 @@ export const Paragraph = styled.p`
     width: clamp(300px, 100%, 800px);
     font-size: 1.5rem;
     line-height: initial;
+    text-align: justify;
     &.aboutMe{
         font-weight: 200;
         font-size: 1.4rem;
@@ -16,6 +17,7 @@ export const Paragraph = styled.p`
         font-weight: 300;
         font-size: 1.3rem;
         margin: 2rem 0 0 0;
+        text-align: left;
     }
     @media (min-width: ${breakpoints.md}) {
         width: clamp(450px, 100%, 800px);

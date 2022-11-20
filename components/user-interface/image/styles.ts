@@ -16,7 +16,7 @@ export const Picture = styled.img`
     }
     &.projectPicture {
         max-width: clamp(300px, 100%, 1000px);
-        max-height: 550px;
+        max-height: fit-content;
         align-self: center;
         padding: 0;
         margin: 0;
