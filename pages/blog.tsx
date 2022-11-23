@@ -22,18 +22,18 @@ const Blog: NextPage = () => {
             <Fade triggerOnce>
                 <MainDiv>
                     <BlogPost>
-                        <Link href={{ pathname: "/blogpost/commonEurope", query: query }}>
-                            <BlogTitle>{t("commonEuropeTitle")}</BlogTitle>
-                        </Link>
-                        <Title isBlogPostDate content={t("commonEuropeDate")} />
-                        <Paragraph isAboutMe isLargeParagraph content={t("commonEuropeRecap")} />
-                    </BlogPost>
-                    <BlogPost>
                         <Link href={{ pathname: "/blogpost/spinaker", query: query }}>
                             <BlogTitle>{t("spinakerTitle")}</BlogTitle>
                         </Link>
                         <Title isBlogPostDate content={t("spinakerDate")} />
                         <Paragraph isAboutMe isLargeParagraph content={t("spinakerRecap")} />
+                    </BlogPost>
+                    <BlogPost>
+                        <Link href={{ pathname: "/blogpost/commonEurope", query: query }}>
+                            <BlogTitle>{t("commonEuropeTitle")}</BlogTitle>
+                        </Link>
+                        <Title isBlogPostDate content={t("commonEuropeDate")} />
+                        <Paragraph isAboutMe isLargeParagraph content={t("commonEuropeRecap")} />
                     </BlogPost>
                     <BlogPost>
                         <BlogTitle className="disabled">{t("thirdTitle")}</BlogTitle>

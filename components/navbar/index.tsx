@@ -59,6 +59,11 @@ const NavbarComponent = () => {
                     <Link href={{ pathname: "/blog", query: query }}>
                         <Button className={router.pathname === '/blog' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>{t("navBlog")}</Button>
                     </Link>
+                    <Link href={{ pathname: "/projects", query: query }}>
+                        <Button className={router.pathname === '/projects' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>
+                            {t("navProjects")}
+                        </Button>
+                    </Link>
                     {isHomepage ? (
                         <>
                             <ScrollLink to="contact" smooth duration={1000}>
@@ -69,11 +74,7 @@ const NavbarComponent = () => {
                         </>
                     ) : (
                         <>
-                            <Link href={{ pathname: "/projects", query: query }}>
-                                <Button className={router.pathname === '/projects' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>
-                                    {t("navProjects")}
-                                </Button>
-                            </Link>
+                            
                             <Link href={{ pathname: "/#contact", query: query }}>
                                 <Button className={router.pathname === '/contact' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>
                                     {t("navContact")}

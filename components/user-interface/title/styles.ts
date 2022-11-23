@@ -10,7 +10,7 @@ export const Title = styled.h1`
     }
     &.projectTitle {
         margin: 1.2rem 0;
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 400;
     }
     &.projectSubtitle {
