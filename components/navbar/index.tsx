@@ -54,18 +54,13 @@ const NavbarComponent = () => {
                     className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}
                 >
                     <Link href={{ pathname: "/about", query: query }}>
-                        <Button onClick={() => setIsMenuActive(false)}>{t("navAbout")}</Button>
+                        <Button className={router.pathname === '/about' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>{t("navAbout")}</Button>
                     </Link>
                     <Link href={{ pathname: "/blog", query: query }}>
-                        <Button onClick={() => setIsMenuActive(false)}>{t("navBlog")}</Button>
+                        <Button className={router.pathname === '/blog' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>{t("navBlog")}</Button>
                     </Link>
                     {isHomepage ? (
                         <>
-                            <ScrollLink to="projects" smooth duration={1000}>
-                                <Button onClick={() => setIsMenuActive(false)}>
-                                    {t("navProjects")}
-                                </Button>
-                            </ScrollLink>
                             <ScrollLink to="contact" smooth duration={1000}>
                                 <Button onClick={() => setIsMenuActive(false)}>
                                     {t("navContact")}
@@ -74,13 +69,13 @@ const NavbarComponent = () => {
                         </>
                     ) : (
                         <>
-                            <Link href={{ pathname: "/#projects", query: query }}>
-                                <Button onClick={() => setIsMenuActive(false)}>
+                            <Link href={{ pathname: "/projects", query: query }}>
+                                <Button className={router.pathname === '/projects' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>
                                     {t("navProjects")}
                                 </Button>
                             </Link>
                             <Link href={{ pathname: "/#contact", query: query }}>
-                                <Button onClick={() => setIsMenuActive(false)}>
+                                <Button className={router.pathname === '/contact' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>
                                     {t("navContact")}
                                 </Button>
                             </Link>

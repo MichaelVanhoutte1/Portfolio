@@ -116,9 +116,17 @@ export const Button = styled.button`
             z-index: -1;
         }
         &:hover:after {
+            display: block;
             opacity: 1;
             visibility: visible;
             height: 100%;
+        }
+        &.isActive {
+            background: ${colors.secondary};
+            transition: color 0.2s ease-in-out;
+            &:hover{
+                color: #cccccc;
+            }
         }
     }
 

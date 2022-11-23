@@ -13,7 +13,7 @@ const ProjectsComponent = (props: Props) => {
         <>
             <Fade triggerOnce>
                 <Element name="projects">
-                    <MainDiv id={"Projects"}>
+                    <MainDiv id={"projects"}>
                         <Title isMainTitle content={t("projectsTitle")} />
                         <Project
                             stackTags={[

@@ -47,7 +47,7 @@ export const Title = styled.h1`
 `;
 
 export const MainTitle = styled.p`
-    font-size: 4rem;
+    font-size: 3.7rem;
     font-weight: bold;
     letter-spacing: 5px;
     width: fit-content;
@@ -60,6 +60,7 @@ export const MainTitle = styled.p`
     transition: 0.3s;
     text-shadow: -3px -3px ${colors.secondary};
     @media (min-width: ${breakpoints.md}) {
+        font-size: 4rem;
         &:hover {
             text-shadow: 0px 0px ${colors.secondary};
             transition: 0.3s;

@@ -27,8 +27,8 @@ const AboutComponent = () => {
                                         "React",
                                         "Redux",
                                         "Next.js",
-                                        "Styled-Components",
                                         "HTML",
+                                        "Styled-Components",
                                         "CSS",
                                         "SASS",
                                         "Git",
@@ -39,6 +39,8 @@ const AboutComponent = () => {
                                         "Jira",
                                         "SQL",
                                         "REST",
+                                        "Docker",
+                                        "Netlify",
                                     ]}
                                 />
                                 <Title isAboutSubtitle content={t("homepageAboutMeSubtitle")} />
