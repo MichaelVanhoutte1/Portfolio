@@ -6,7 +6,7 @@ import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";
 import { useEffect, useState } from "react";
 import { useTranslation, useLanguageQuery } from "next-export-i18n";
-
+import { throttle } from "lodash";
 import LanguageToggler from "../user-interface/language-toggle";
 import LanguageItem from "../user-interface/language-item";
 
@@ -25,18 +25,22 @@ const NavbarComponent = () => {
     }, [router.pathname]);
 
     if (typeof window !== "undefined") {
-        window.onwheel = (e) => {
-            if (e.deltaY >= 0) {
+        let lastScrollTop = window.pageYOffset;
+        window.onscroll = () => {
+            var st = window.pageYOffset;
+            console.log("scrl", lastScrollTop, st);
+            if (st > lastScrollTop) {
                 setIsSticky(false);
-            } else if (isHomepage && window.scrollY < window.innerHeight) {
+            } else if (isHomepage && st < window.innerHeight) {
                 setIsSticky(false);
             } else {
-                if (isHomepage && window.scrollY > window.innerHeight) {
+                if (isHomepage && st < lastScrollTop) {
                     setIsSticky(true);
                 } else if (!isHomepage) {
                     setIsSticky(true);
                 }
             }
+            lastScrollTop = st <= 0 ? 0 : st;
         };
     }
 

@@ -21,7 +21,7 @@ export const NavbarDiv = styled.div`
         width: fill-available;
         top: 0;
         z-index: 1;
-        height: 254.78px;
+        height: 252.39px;
         @media (min-width: ${breakpoints.md}) {
             height: auto;
             background-color: ${colors.primary};
@@ -73,16 +73,11 @@ export const NameDiv = styled.div`
     padding-top: 1.3rem;
     &.sticky {
         position: sticky;
-        padding-top: 1.2rem;
         @media (min-width: ${breakpoints.md}) {
             position: relative;
         }
         &.menuActivated {
             position: relative;
-            padding-top: 1.3rem;
-        }
-        &.notHomepage {
-            padding-top: 1.3rem;
         }
     }
 `;
