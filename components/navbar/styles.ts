@@ -9,6 +9,32 @@ export const NavbarDiv = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    &.sticky {
+        background: linear-gradient(
+            to bottom,
+            ${colors.primary} 0%,
+            ${colors.primary} 21%,
+            transparent 21%,
+            transparent 100%
+        );
+        position: sticky;
+        width: fill-available;
+        top: 0;
+        z-index: 1;
+        height: 254.78px;
+        @media (min-width: ${breakpoints.md}) {
+            height: auto;
+            background-color: ${colors.primary};
+        }
+        &.menuActivated {
+            height: auto;
+            background-color: ${colors.primary};
+        }
+        &.notHomepage {
+            height: auto;
+            background-color: ${colors.primary};
+        }
+    }
 `;
 
 export const ContentDiv = styled.div`
@@ -45,6 +71,20 @@ export const NameDiv = styled.div`
     max-width: (300px, 100%, 1028px);
     justify-content: center;
     padding-top: 1.3rem;
+    &.sticky {
+        position: sticky;
+        padding-top: 1.2rem;
+        @media (min-width: ${breakpoints.md}) {
+            position: relative;
+        }
+        &.menuActivated {
+            position: relative;
+            padding-top: 1.3rem;
+        }
+        &.notHomepage {
+            padding-top: 1.3rem;
+        }
+    }
 `;
 
 export const LanguagePopup = styled.div`
@@ -55,6 +95,7 @@ export const LanguagePopup = styled.div`
     right: 1.3rem;
     border-radius: 0.5rem;
     top: 3rem;
+    z-index: 1;
     visibility: hidden;
     &.active {
         visibility: visible;
@@ -124,7 +165,7 @@ export const Button = styled.button`
         &.isActive {
             background: ${colors.secondary};
             transition: color 0.2s ease-in-out;
-            &:hover{
+            &:hover {
                 color: #cccccc;
             }
         }

@@ -18,21 +18,57 @@ const NavbarComponent = () => {
     const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
     const [isHomepage, setIsHomepage] = useState<boolean>(router.pathname === "/" ? true : false);
     const [isLanguageToggleActive, setIsLanguageToggleActive] = useState<boolean>(false);
+    const [isSticky, setIsSticky] = useState<boolean>(false);
 
     useEffect(() => {
         setIsHomepage(router.pathname === "/" ? true : false);
     }, [router.pathname]);
 
+    if (typeof window !== "undefined") {
+        window.onwheel = (e) => {
+            if (e.deltaY >= 0) {
+                setIsSticky(false);
+            } else if (isHomepage && window.scrollY < window.innerHeight) {
+                setIsSticky(false);
+            } else {
+                if (isHomepage && window.scrollY > window.innerHeight) {
+                    setIsSticky(true);
+                } else if (!isHomepage) {
+                    setIsSticky(true);
+                }
+            }
+        };
+    }
+
     return (
         <>
-            <NavbarDiv className={cs({ notHomepage: !isHomepage })}>
+            <NavbarDiv
+                className={cs({
+                    notHomepage: !isHomepage,
+                    sticky: isSticky,
+                    menuActivated: isMenuActive,
+                })}
+            >
                 <LanguageToggler
                     isLanguageToggleActive={isLanguageToggleActive}
                     toggleLanguagePopup={setIsLanguageToggleActive}
                 />
-                <NameDiv>
+                <NameDiv
+                    className={cs({
+                        sticky: isSticky,
+                        menuActivated: isMenuActive,
+                        notHomepage: !isHomepage,
+                    })}
+                >
                     <Link href={{ pathname: "/", query: query }}>
-                        <Name>Michael Vanhoutte</Name>
+                        <Name
+                            onClick={() => {
+                                setIsMenuActive(false);
+                                setIsSticky(false);
+                            }}
+                        >
+                            Michael Vanhoutte
+                        </Name>
                     </Link>
                 </NameDiv>
                 <LanguagePopup className={cs({ active: isLanguageToggleActive })}>
@@ -54,29 +90,61 @@ const NavbarComponent = () => {
                     className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}
                 >
                     <Link href={{ pathname: "/about", query: query }}>
-                        <Button className={router.pathname === '/about' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>{t("navAbout")}</Button>
+                        <Button
+                            className={router.pathname === "/about" ? "isActive" : ""}
+                            onClick={() => {
+                                setIsMenuActive(false);
+                                setIsSticky(false);
+                            }}
+                        >
+                            {t("navAbout")}
+                        </Button>
                     </Link>
                     <Link href={{ pathname: "/blog", query: query }}>
-                        <Button className={router.pathname === '/blog' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>{t("navBlog")}</Button>
+                        <Button
+                            className={router.pathname === "/blog" ? "isActive" : ""}
+                            onClick={() => {
+                                setIsMenuActive(false);
+                                setIsSticky(false);
+                            }}
+                        >
+                            {t("navBlog")}
+                        </Button>
                     </Link>
                     <Link href={{ pathname: "/projects", query: query }}>
-                        <Button className={router.pathname === '/projects' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>
+                        <Button
+                            className={router.pathname === "/projects" ? "isActive" : ""}
+                            onClick={() => {
+                                setIsMenuActive(false);
+                                setIsSticky(false);
+                            }}
+                        >
                             {t("navProjects")}
                         </Button>
                     </Link>
                     {isHomepage ? (
                         <>
                             <ScrollLink to="contact" smooth duration={1000}>
-                                <Button onClick={() => setIsMenuActive(false)}>
+                                <Button
+                                    onClick={() => {
+                                        setIsMenuActive(false);
+                                        setIsSticky(false);
+                                    }}
+                                >
                                     {t("navContact")}
                                 </Button>
                             </ScrollLink>
                         </>
                     ) : (
                         <>
-                            
                             <Link href={{ pathname: "/#contact", query: query }}>
-                                <Button className={router.pathname === '/contact' ? 'isActive' : ''} onClick={() => setIsMenuActive(false)}>
+                                <Button
+                                    className={router.pathname === "/contact" ? "isActive" : ""}
+                                    onClick={() => {
+                                        setIsMenuActive(false);
+                                        setIsSticky(false);
+                                    }}
+                                >
                                     {t("navContact")}
                                 </Button>
                             </Link>

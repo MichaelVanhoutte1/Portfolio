@@ -27,10 +27,10 @@ const FooterComponent = () => {
                 <ContentDiv>
                     <CopyrightDiv>
                         <NameDiv>
-                            <Link href={{ pathname: "/#about", query: query }}>
+                            <Link href={{ pathname: "/", query: query }}>
                                 <Name>Michael</Name>
                             </Link>
-                            <Link href={{ pathname: "/#about", query: query }}>
+                            <Link href={{ pathname: "/", query: query }}>
                                 <Name>Vanhoutte</Name>
                             </Link>
                         </NameDiv>
@@ -43,7 +43,7 @@ const FooterComponent = () => {
                                 <Link href={{ pathname: "/about", query: query }}>
                                     <LinkText>{t("footerAbout")}</LinkText>
                                 </Link>
-                                <Link href={{ pathname: "/#projects", query: query }}>
+                                <Link href={{ pathname: "/projects", query: query }}>
                                     <LinkText>{t("footerProjects")}</LinkText>
                                 </Link>
                             </LinkColumn>
