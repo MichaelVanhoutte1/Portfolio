@@ -6,7 +6,7 @@ import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";
 import { useEffect, useState } from "react";
 import { useTranslation, useLanguageQuery } from "next-export-i18n";
-import { throttle } from "lodash";
+import { debounce } from "lodash";
 import LanguageToggler from "../user-interface/language-toggle";
 import LanguageItem from "../user-interface/language-item";
 
@@ -19,29 +19,33 @@ const NavbarComponent = () => {
     const [isHomepage, setIsHomepage] = useState<boolean>(router.pathname === "/" ? true : false);
     const [isLanguageToggleActive, setIsLanguageToggleActive] = useState<boolean>(false);
     const [isSticky, setIsSticky] = useState<boolean>(false);
-
+    if (typeof window !== "undefined") {
+        var lastScrollTop = window.pageYOffset;
+    }
     useEffect(() => {
         setIsHomepage(router.pathname === "/" ? true : false);
     }, [router.pathname]);
 
-    if (typeof window !== "undefined") {
-        let lastScrollTop = window.pageYOffset;
-        window.onscroll = () => {
-            var st = window.pageYOffset;
-            console.log("scrl", lastScrollTop, st);
-            if (st > lastScrollTop) {
-                setIsSticky(false);
-            } else if (isHomepage && st < window.innerHeight) {
-                setIsSticky(false);
-            } else {
-                if (isHomepage && st < lastScrollTop) {
-                    setIsSticky(true);
-                } else if (!isHomepage) {
-                    setIsSticky(true);
-                }
+    let scrollFunction = () => {
+        var st = window.pageYOffset;
+        if (st > lastScrollTop) {
+            setIsSticky(false);
+        } else if (isHomepage && st < window.innerHeight) {
+            setIsSticky(false);
+        } else {
+            if (isHomepage && st < lastScrollTop) {
+                setIsSticky(true);
+            } else if (!isHomepage) {
+                setIsSticky(true);
             }
-            lastScrollTop = st <= 0 ? 0 : st;
-        };
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+    };
+
+    scrollFunction = debounce(scrollFunction, 100);
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", scrollFunction);
     }
 
     return (
