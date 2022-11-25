@@ -22,7 +22,9 @@ export const NavbarDiv = styled.div`
         top: 0;
         z-index: 1;
         height: 252.39px;
+        animation: moveInDesktop .35s linear;
         @media (min-width: ${breakpoints.md}) {
+            animation: moveInDesktop .35s linear;
             height: auto;
             background-color: ${colors.primary};
         }
@@ -33,6 +35,22 @@ export const NavbarDiv = styled.div`
         &.notHomepage {
             height: auto;
             background-color: ${colors.primary};
+        }
+        @keyframes moveInDesktop {
+            0% {
+                top: -112px;
+            }
+            100% {
+                top: 0px;
+            }
+        }
+        @keyframes moveInMobile {
+            0% {
+                top: -52px;
+            }
+            100% {
+                top: 0px;
+            }
         }
     }
 `;

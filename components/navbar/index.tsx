@@ -30,7 +30,7 @@ const NavbarComponent = () => {
         var st = window.pageYOffset;
         if (st > lastScrollTop) {
             setIsSticky(false);
-        } else if (isHomepage && st < window.innerHeight) {
+        } else if (isHomepage && st < window.visualViewport!.height) {
             setIsSticky(false);
         } else {
             if (isHomepage && st < lastScrollTop) {
