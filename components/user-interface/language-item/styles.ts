@@ -42,6 +42,14 @@ export const LanguageDiv = styled.div`
             color: ${colors.primaryText};
         }
     }
+    &.activeLanguage {
+        background-color: ${colors.secondary};
+        color: ${colors.primaryText};
+        &:hover {
+            filter: brightness(0.9);
+            transition: filter 0.3s;
+        }
+    }
     [data-language-switcher="true"] {
         display: flex;
     }

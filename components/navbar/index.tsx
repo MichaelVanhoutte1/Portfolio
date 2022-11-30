@@ -145,7 +145,7 @@ const NavbarComponent = () => {
                         </>
                     ) : (
                         <>
-                            <Link href={{ pathname: "/#contact", query: query }}>
+                            <Link href={{ pathname: "#contact", query: query  }}>
                                 <Button
                                     className={router.pathname === "/contact" ? "isActive" : ""}
                                     onClick={() => {
