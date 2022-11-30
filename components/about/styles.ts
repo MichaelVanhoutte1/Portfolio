@@ -35,7 +35,8 @@ export const ButtonDiv = styled.div`
     margin-top: 2rem;
     display: flex;
     justify-content: flex-start;
-    @media (max-width: ${breakpoints.sm}) {
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    button{
+        margin 1rem 2rem 1rem 0;
     }
 `;
