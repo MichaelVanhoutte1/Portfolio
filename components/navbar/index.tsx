@@ -22,20 +22,18 @@ const NavbarComponent = () => {
     if (typeof window !== "undefined") {
         var lastScrollTop = window.pageYOffset;
     }
-    useEffect(() => {
-        setIsHomepage(router.pathname === "/" ? true : false);
-    }, [router.pathname]);
 
     let scrollFunction = () => {
+        console.log("hit");
         var st = window.pageYOffset;
         if (st > lastScrollTop) {
             setIsSticky(false);
-        } else if (isHomepage && st < window.visualViewport!.height) {
+        } else if (location.pathname === "/" && st < window.visualViewport!.height) {
             setIsSticky(false);
         } else {
-            if (isHomepage && st < lastScrollTop) {
+            if (location.pathname === "/" && st < lastScrollTop) {
                 setIsSticky(true);
-            } else if (!isHomepage) {
+            } else if (location.pathname !== "/") {
                 setIsSticky(true);
             }
         }
@@ -145,7 +143,7 @@ const NavbarComponent = () => {
                         </>
                     ) : (
                         <>
-                            <Link href={{ pathname: "#contact", query: query  }}>
+                            <Link href={{ pathname: "#contact", query: query }}>
                                 <Button
                                     className={router.pathname === "/contact" ? "isActive" : ""}
                                     onClick={() => {
