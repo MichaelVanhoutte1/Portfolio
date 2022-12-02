@@ -22,9 +22,9 @@ export const NavbarDiv = styled.div`
         top: 0;
         z-index: 1;
         height: 252.39px;
-        animation: moveInDesktop .35s linear;
+        animation: moveInMobile 0.35s linear;
         @media (min-width: ${breakpoints.md}) {
-            animation: moveInDesktop .35s linear;
+            animation: moveInDesktop 0.35s linear;
             height: auto;
             background-color: ${colors.primary};
         }
@@ -34,7 +34,6 @@ export const NavbarDiv = styled.div`
         }
         &.notHomepage {
             height: auto;
-            background-color: ${colors.primary};
         }
         @keyframes moveInDesktop {
             0% {
@@ -50,6 +49,49 @@ export const NavbarDiv = styled.div`
             }
             100% {
                 top: 0px;
+            }
+        }
+    }
+    &.noSticky {
+        background: linear-gradient(
+            to bottom,
+            ${colors.primary} 0%,
+            ${colors.primary} 21%,
+            transparent 21%,
+            transparent 100%
+        );
+        position: sticky;
+        width: fill-available;
+        top: -112px;
+        z-index: 1;
+        height: 252.39px;
+        animation: moveOutMobile 0.35s linear;
+        @media (min-width: ${breakpoints.md}) {
+            animation: moveOutDesktop 0.35s linear;
+            height: auto;
+            background-color: ${colors.primary};
+        }
+        &.menuActivated {
+            height: auto;
+            background-color: ${colors.primary};
+        }
+        &.notHomepage {
+            height: auto;
+        }
+        @keyframes moveOutDesktop {
+            0% {
+                top: 0px;
+            }
+            100% {
+                top: -112px;
+            }
+        }
+        @keyframes moveOutMobile {
+            0% {
+                top: 0px;
+            }
+            100% {
+                top: -52px;
             }
         }
     }
@@ -70,12 +112,10 @@ export const ContentDiv = styled.div`
         visibility: visible;
     }
     &.notHomepage {
-        height: 0;
         @media (min-width: ${breakpoints.md}) {
             height: auto;
         }
         &.menuActivated {
-            height: 12.5rem;
             @media (min-width: ${breakpoints.md}) {
                 height: auto;
             }

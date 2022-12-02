@@ -19,22 +19,40 @@ const NavbarComponent = () => {
     const [isHomepage, setIsHomepage] = useState<boolean>(router.pathname === "/" ? true : false);
     const [isLanguageToggleActive, setIsLanguageToggleActive] = useState<boolean>(false);
     const [isSticky, setIsSticky] = useState<boolean>(false);
+    const [noSticky, setNoSticky] = useState<boolean>(false);
     if (typeof window !== "undefined") {
         var lastScrollTop = window.pageYOffset;
     }
 
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setIsHomepage(location.pathname === "/" ? true : false);
+        }
+    }, [router.pathname]);
+
     let scrollFunction = () => {
-        console.log("hit");
         var st = window.pageYOffset;
         if (st > lastScrollTop) {
             setIsSticky(false);
+            if (location.pathname === "/" && st < window.visualViewport!.height) {
+                setNoSticky(false);
+            } else {
+                console.log(st, lastScrollTop);
+                if (isMenuActive) {
+                    setIsMenuActive(false);
+                }
+                setNoSticky(true);
+            }
         } else if (location.pathname === "/" && st < window.visualViewport!.height) {
             setIsSticky(false);
+            setNoSticky(false);
         } else {
             if (location.pathname === "/" && st < lastScrollTop) {
                 setIsSticky(true);
+                setNoSticky(false);
             } else if (location.pathname !== "/") {
                 setIsSticky(true);
+                setNoSticky(false);
             }
         }
         lastScrollTop = st <= 0 ? 0 : st;
@@ -52,6 +70,7 @@ const NavbarComponent = () => {
                 className={cs({
                     notHomepage: !isHomepage,
                     sticky: isSticky,
+                    noSticky: noSticky,
                     menuActivated: isMenuActive,
                 })}
             >
