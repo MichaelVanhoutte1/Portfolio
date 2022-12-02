@@ -11,8 +11,11 @@ export const Image = styled.img`
         top: 4px;
     }
     &.heroIcon {
-        filter: brightness(80%);
+        filter: brightness(100%);
         height: 32px;
+        &:hover {
+            filter: brightness(80%);
+        }
     }
     @media (min-width: ${breakpoints.md}) {
         &:hover {
