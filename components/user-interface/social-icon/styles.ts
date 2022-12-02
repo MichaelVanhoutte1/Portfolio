@@ -10,6 +10,10 @@ export const Image = styled.img`
         position: relative;
         top: 4px;
     }
+    &.heroIcon {
+        filter: brightness(80%);
+        height: 32px;
+    }
     @media (min-width: ${breakpoints.md}) {
         &:hover {
             filter: brightness(100%);

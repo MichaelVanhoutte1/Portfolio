@@ -63,7 +63,7 @@ const About: NextPage = () => {
                         <SocialIcon
                             fillOnHover
                             link="https://stackoverflow.com/users/17942665/michael-vanhoutte"
-                            src="/images/icons/stackoverflow-black.svg"
+                            src="/images/icons/stackoverflow.svg"
                             alt="stackoverflow"
                         />
                         <SocialIcon

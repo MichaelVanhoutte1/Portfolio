@@ -4,6 +4,7 @@ export const HeroSection = styled.section`
     height: 100vh;
     display: flex;
     padding: 0 2rem;
+    margin-top: -2rem;
     flex-direction: column;
     align-items: center;
     background: ${colors.primary};
@@ -16,7 +17,7 @@ export const HeroSection = styled.section`
     .hero-title {
         font-size: 2.8rem;
         font-weight: 700;
-        margin-bottom: 3.2rem;
+        margin-bottom: 1rem;
         margin-top: 10vh;
         text-align: left;
         @media (min-width: ${breakpoints.sm}) {
@@ -31,7 +32,7 @@ export const HeroSection = styled.section`
             font-size: 4rem;
         }
         @media (min-width: ${breakpoints.xl}) {
-            font-size: 5.6rem;
+            font-size: 5rem;
         }
     }
 
@@ -55,4 +56,10 @@ export const HeroSection = styled.section`
             }
         }
     }
+`;
+
+export const SocialIconsDiv = styled.div`
+    display: flex;
+    align-items: center;
+    margin: 0 0 3.2rem 0;
 `;
