@@ -170,14 +170,24 @@ export const LanguagePopup = styled.div`
     right: 1.3rem;
     border-radius: 0.5rem;
     top: 3rem;
-    z-index: 1;
+    z-index: 2;
     visibility: hidden;
     &.active {
         visibility: visible;
     }
     @media (min-width: ${breakpoints.md}) {
+        top: 1.3rem;
+        height: 2rem;
+        display: flex;
+        right: 4rem;
+        width: auto;
+    }
+    @media (min-width: ${breakpoints.xl}) {
         top: 3.5rem;
         height: 3.95rem;
+        width: 3.3rem;
+        right: 1.3rem;
+        display: block;
     }
 `;
 

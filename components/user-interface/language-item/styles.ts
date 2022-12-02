@@ -28,10 +28,10 @@ export const LanguageDiv = styled.div`
         margin: 0 auto;
         padding: 0.5rem;
         &:nth-child(odd) {
-            border-radius: 0.5rem 0.5rem 0 0;
+            border-radius: 0.5rem 0 0.5rem 0;
         }
         &:nth-child(even) {
-            border-radius: 0 0 0.5rem 0.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
         }
         &:hover {
             cursor: pointer;
@@ -40,6 +40,14 @@ export const LanguageDiv = styled.div`
             transition: color 0.3s;
             border: none;
             color: ${colors.primaryText};
+        }
+    }
+    @media (min-width: ${breakpoints.xl}) {
+        &:nth-child(odd) {
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+        &:nth-child(even) {
+            border-radius: 0 0 0.5rem 0.5rem;
         }
     }
     &.activeLanguage {

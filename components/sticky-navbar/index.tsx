@@ -44,8 +44,8 @@ const StickyNavbarComponent = () => {
                     setIsMenuActive(false);
                 }
                 if (document.getElementsByClassName("sticky").length > 0) {
-                    console.log("hit", isSticky);
                     setNoSticky(true);
+                    setIsLanguageToggleActive(false);
                 }
             }
         } else if (
