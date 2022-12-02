@@ -1,4 +1,5 @@
 import Navbar from "../navbar";
+import StickyNavbar from "../sticky-navbar";
 import Footer from "../footer";
 import Hero from "../hero";
 import { useRouter } from "next/router";
@@ -19,6 +20,7 @@ const LayoutComponent = ({ children }: LayoutProps) => {
     return (
         <>
             <Navbar />
+            <StickyNavbar />
             {isHomepage && <Hero /> }
             <main>{children}</main>
             <Footer />

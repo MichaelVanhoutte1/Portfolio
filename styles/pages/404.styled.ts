@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { breakpoints, colors } from "../variables.styled";
 
 export const MainDiv = styled.div`
-    margin: auto;
     width: clamp(300px, 100%, 1000px);
+    margin-top: -13rem;
     @media (min-width: ${breakpoints.md}) {
+        margin: auto;
         min-height: calc(100vh - 17.95rem);
     }
 `;

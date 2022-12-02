@@ -6,10 +6,11 @@ import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";
 import { useEffect, useState } from "react";
 import { useTranslation, useLanguageQuery } from "next-export-i18n";
+import { debounce } from "lodash";
 import LanguageToggler from "../user-interface/language-toggle";
 import LanguageItem from "../user-interface/language-item";
 
-const NavbarComponent = () => {
+const StickyNavbarComponent = () => {
     const { t } = useTranslation();
     const [query] = useLanguageQuery();
 
@@ -17,6 +18,11 @@ const NavbarComponent = () => {
     const [isMenuActive, setIsMenuActive] = useState<boolean>(false);
     const [isHomepage, setIsHomepage] = useState<boolean>(router.pathname === "/" ? true : false);
     const [isLanguageToggleActive, setIsLanguageToggleActive] = useState<boolean>(false);
+    const [isSticky, setIsSticky] = useState<boolean>(false);
+    const [noSticky, setNoSticky] = useState<boolean>(false);
+    if (typeof window !== "undefined") {
+        var lastScrollTop = window.pageYOffset;
+    }
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -24,13 +30,55 @@ const NavbarComponent = () => {
         }
     }, [router.pathname]);
 
+    let scrollFunction = () => {
+        var st = window.pageYOffset;
+        if (st > lastScrollTop) {
+            setIsSticky(false);
+            if (
+                (location.pathname === "/" && st < window.visualViewport!.height + 200) ||
+                st < 100
+            ) {
+                setNoSticky(false);
+            } else {
+                if (isMenuActive) {
+                    setIsMenuActive(false);
+                }
+                if (document.getElementsByClassName("sticky").length > 0) {
+                    console.log("hit", isSticky);
+                    setNoSticky(true);
+                }
+            }
+        } else if (
+            (location.pathname === "/" && st < window.visualViewport!.height + 200) ||
+            st < 100
+        ) {
+            setIsSticky(false);
+            setNoSticky(false);
+        } else {
+            if (location.pathname === "/" && st < lastScrollTop) {
+                setIsSticky(true);
+                setNoSticky(false);
+            } else if (location.pathname !== "/") {
+                setIsSticky(true);
+                setNoSticky(false);
+            }
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+    };
 
+    scrollFunction = debounce(scrollFunction, 100);
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", scrollFunction);
+    }
 
     return (
         <>
             <NavbarDiv
                 className={cs({
                     notHomepage: !isHomepage,
+                    sticky: isSticky,
+                    noSticky: noSticky,
                     menuActivated: isMenuActive,
                 })}
             >
@@ -40,6 +88,7 @@ const NavbarComponent = () => {
                 />
                 <NameDiv
                     className={cs({
+                        sticky: isSticky,
                         menuActivated: isMenuActive,
                         notHomepage: !isHomepage,
                     })}
@@ -48,6 +97,7 @@ const NavbarComponent = () => {
                         <Name
                             onClick={() => {
                                 setIsMenuActive(false);
+                                setIsSticky(false);
                             }}
                         >
                             Michael Vanhoutte
@@ -70,13 +120,19 @@ const NavbarComponent = () => {
                 </LanguagePopup>
                 <BurgerMenu isMenuActive={isMenuActive} toggleMenuFunction={setIsMenuActive} />
                 <ContentDiv
-                    className={cs({ menuActivated: isMenuActive, notHomepage: !isHomepage })}
+                    className={cs({
+                        menuActivated: isMenuActive,
+                        notHomepage: !isHomepage,
+                        sticky: isSticky,
+                        noSticky: noSticky,
+                    })}
                 >
                     <Link href={{ pathname: "/about", query: query }}>
                         <Button
                             className={router.pathname === "/about" ? "isActive" : ""}
                             onClick={() => {
                                 setIsMenuActive(false);
+                                setIsSticky(false);
                             }}
                         >
                             {t("navAbout")}
@@ -87,6 +143,7 @@ const NavbarComponent = () => {
                             className={router.pathname === "/blog" ? "isActive" : ""}
                             onClick={() => {
                                 setIsMenuActive(false);
+                                setIsSticky(false);
                             }}
                         >
                             {t("navBlog")}
@@ -97,6 +154,7 @@ const NavbarComponent = () => {
                             className={router.pathname === "/projects" ? "isActive" : ""}
                             onClick={() => {
                                 setIsMenuActive(false);
+                                setIsSticky(false);
                             }}
                         >
                             {t("navProjects")}
@@ -108,6 +166,7 @@ const NavbarComponent = () => {
                                 <Button
                                     onClick={() => {
                                         setIsMenuActive(false);
+                                        setIsSticky(false);
                                     }}
                                 >
                                     {t("navContact")}
@@ -121,6 +180,7 @@ const NavbarComponent = () => {
                                     className={router.pathname === "/contact" ? "isActive" : ""}
                                     onClick={() => {
                                         setIsMenuActive(false);
+                                        setIsSticky(false);
                                     }}
                                 >
                                     {t("navContact")}
@@ -134,4 +194,4 @@ const NavbarComponent = () => {
     );
 };
 
-export default NavbarComponent;
+export default StickyNavbarComponent;

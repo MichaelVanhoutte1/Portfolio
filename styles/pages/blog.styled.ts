@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { breakpoints, colors } from "../variables.styled";
 
 export const MainDiv = styled.div`
-    margin: 0 auto 5rem auto;
+    margin: -13rem auto 5rem auto;
     display: flex;
     flex-direction: column;
     max-width: 1000px;
     @media (min-width: ${breakpoints.md}) {
+        margin: 0 auto 5rem auto;
         min-height: calc(100vh - 22.95rem);
     }
 `;

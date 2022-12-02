@@ -3,12 +3,30 @@ import { breakpoints, colors } from "../../styles/variables.styled";
 
 export const NavbarDiv = styled.div`
     display: flex;
-    background: ${colors.primary};
+    background: linear-gradient(
+        to bottom,
+        ${colors.primary} 0%,
+        ${colors.primary} 21%,
+        transparent 21%,
+        transparent 100%
+    );
     padding: 0 2rem;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    position: fixed;
+    width: fill-available;
+    top: 0;
+    z-index: 1;
+    visibility: hidden;
     &.notHomepage {
+        z-index: 1;
+        &.menuActivated {
+            height: auto;
+            background-color: ${colors.primary};
+        }
+    }
+    &.sticky {
         background: linear-gradient(
             to bottom,
             ${colors.primary} 0%,
@@ -16,13 +34,84 @@ export const NavbarDiv = styled.div`
             transparent 21%,
             transparent 100%
         );
-        &.menuActivated {
-            margin-bottom: 14.5rem;
+        visibility: visible;
+        position: fixed;
+        width: fill-available;
+        top: 0;
+        z-index: 1;
+        height: 252.39px;
+        animation: moveInMobile 0.35s linear;
+        @media (min-width: ${breakpoints.md}) {
+            animation: moveInDesktop 0.35s linear;
             height: auto;
             background-color: ${colors.primary};
         }
-        @media (min-width: ${breakpoints.md}) {
+        &.menuActivated {
+            height: auto;
             background-color: ${colors.primary};
+        }
+        &.notHomepage {
+            height: auto;
+        }
+        @keyframes moveInDesktop {
+            0% {
+                top: -112px;
+            }
+            100% {
+                top: 0px;
+            }
+        }
+        @keyframes moveInMobile {
+            0% {
+                top: -52px;
+            }
+            100% {
+                top: 0px;
+            }
+        }
+    }
+    &.noSticky {
+        background: linear-gradient(
+            to bottom,
+            ${colors.primary} 0%,
+            ${colors.primary} 21%,
+            transparent 21%,
+            transparent 100%
+        );
+        position: fixed;
+        visibility: visible;
+        width: fill-available;
+        top: -112px;
+        z-index: 1;
+        height: 252.39px;
+        animation: moveOutMobile 0.35s linear;
+        @media (min-width: ${breakpoints.md}) {
+            animation: moveOutDesktop 0.35s linear;
+            height: auto;
+            background-color: ${colors.primary};
+        }
+        &.menuActivated {
+            height: auto;
+            background-color: ${colors.primary};
+        }
+        &.notHomepage {
+            height: auto;
+        }
+        @keyframes moveOutDesktop {
+            0% {
+                top: 0px;
+            }
+            100% {
+                top: -112px;
+            }
+        }
+        @keyframes moveOutMobile {
+            0% {
+                top: 0px;
+            }
+            100% {
+                top: -52px;
+            }
         }
     }
 `;
@@ -36,7 +125,10 @@ export const ContentDiv = styled.div`
         display: flex;
         justify-content: space-between;
         width: 100%;
-        visibility: visible;
+        &.sticky,
+        &.noSticky {
+            visibility: visible;
+        }
     }
     &.menuActivated {
         visibility: visible;
@@ -59,6 +151,15 @@ export const NameDiv = styled.div`
     max-width: (300px, 100%, 1028px);
     justify-content: center;
     padding-top: 1.3rem;
+    &.sticky {
+        position: sticky;
+        @media (min-width: ${breakpoints.md}) {
+            position: relative;
+        }
+        &.menuActivated {
+            position: relative;
+        }
+    }
 `;
 
 export const LanguagePopup = styled.div`
