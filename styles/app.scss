@@ -2,6 +2,11 @@ $primary: #082032;
 $primaryText: #fff;
 $secondary: #ff6625;
 
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
+
 body {
     font-family: system-ui;
 }
