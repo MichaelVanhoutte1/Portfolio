@@ -51,7 +51,7 @@ const FooterComponent = () => {
                                 <Link href={{ pathname: "/blog", query: query }}>
                                     <LinkText>{t("footerBlog")}</LinkText>
                                 </Link>
-                                <Link href={{ pathname: "/#contact", query: query }}>
+                                <Link href={{ pathname: "/contact", query: query }}>
                                     <LinkText>{t("footerContact")}</LinkText>
                                 </Link>
                             </LinkColumn>
