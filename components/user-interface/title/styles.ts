@@ -44,6 +44,35 @@ export const Title = styled.h1`
             margin: 0 0 3rem 0;
         }
     }
+    &.contactTitle {
+        font-weight: 800;
+        font-size: 3.8rem;
+        text-align: center;
+        margin: 0 0 1rem 0;
+        color: ${colors.primary};
+        @media (min-width: ${breakpoints.md}) {
+            font-size: 5rem;
+            margin: 0 0 4rem 0;
+        }
+        @media (min-width: ${breakpoints.lg}) {
+            font-size: 5.6rem;
+        }
+    }
+    &.contactSubtitle {
+        font-weight: 400;
+        font-size: 2.8rem;
+        text-align: center;
+        margin: 0 0 3rem 0;
+        line-height: 3.5rem;
+        color: ${colors.primary};
+        @media (min-width: ${breakpoints.md}) {
+            font-size: 3.5rem;
+            margin: 0 0 4rem 0;
+        }
+        @media (min-width: ${breakpoints.lg}) {
+            font-size: 4rem;
+        }
+    }
 `;
 
 export const MainTitle = styled.p`

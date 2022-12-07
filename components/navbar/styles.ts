@@ -37,6 +37,7 @@ export const ContentDiv = styled.div`
         justify-content: space-between;
         width: 100%;
         visibility: visible;
+        margin-top: 1rem;
     }
     &.menuActivated {
         visibility: visible;
@@ -120,6 +121,10 @@ export const Button = styled.button`
     border-bottom: 5px solid ${colors.secondary};
     position: relative;
     z-index: 1;
+    &.isActive {
+        background: ${colors.secondary};
+        transition: color 0.2s ease-in-out;
+    }
     @media (min-width: ${breakpoints.md}) {
         margin: 10px 0 10px;
         &:after {
@@ -147,8 +152,6 @@ export const Button = styled.button`
             height: 100%;
         }
         &.isActive {
-            background: ${colors.secondary};
-            transition: color 0.2s ease-in-out;
             &:hover {
                 color: #cccccc;
             }

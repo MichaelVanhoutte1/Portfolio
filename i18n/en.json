@@ -27,8 +27,9 @@
     "aboutMeAsPerson": "I'm a very <span>social and resourceful person</span>. I love to meet new people and learn about their lives. I love taking a problem and breaking it into smaller bits to find a solution. I'm always open to new experiences and I'm always looking for new challenges.<br/><br/><span>I'm very disciplined by nature and I love to keep myself busy.</span> Time is precious and I try to make the most of it. That's why I always try to invest it wisely on things such as exploring the world, learning new skills and languages and spending time with people close to me.",
     "aboutMeAsColleagueTitle": "As a colleague",
     "aboutMeAsColleague": "<span>I'm a team player</span>, I feel comfortable interacting with both the <span>technically oriented</span> people as well as the <span>artistically oriented</span> ones. I will always try to go the extra mile to help my team.<br/><br/>My communication skills are excellent. I'm always open to feedback and I'm always willing to listen to other people's opinions. These experiences have made me feel comfortable at <span>conveying ideas and explaining my thought process in a way everybody can understand.</span><br/><br/> My experience working for smaller companies have given me exposure to all the different aspects of a project. <span>I've been involved in the design, development and deployment of multiple projects.</span> I've also been lucky enough to be involved in the business side of things, which has given me a better understanding of how a company works.<br/><br/>I'm always <span>excited to learn new things and meet new people</span>, so be sure to reach out if you want to get to know me better or work together.",
-    "contactTitle": "Let's have a chat",
+    "contactTitle": "Let's chat!",
     "contactSubtitle": "I'd love to hear from you",
+    "contactMailText": "Email me at contact@mvanhoutte.com",
     "contactCTA": "Get in touch",
 
     "featuredBlogpostsTitle": "Featured",

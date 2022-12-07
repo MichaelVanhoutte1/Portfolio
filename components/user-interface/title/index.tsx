@@ -13,6 +13,8 @@ interface Props {
     isBlogPostDate?: boolean;
     isBlogPostTitle?: boolean;
     isFeaturedBlogPostTitle?: boolean;
+    isContactTitle?: boolean;
+    isContactSubtitle?: boolean;
 }
 
 const TitleComponent = (props: Props) => {
@@ -27,7 +29,9 @@ const TitleComponent = (props: Props) => {
         noBottomMargin,
         isBlogPostDate,
         isBlogPostTitle,
-        isFeaturedBlogPostTitle
+        isFeaturedBlogPostTitle,
+        isContactTitle,
+        isContactSubtitle
     } = props;
     return (
         <>
@@ -43,7 +47,9 @@ const TitleComponent = (props: Props) => {
                         stackInfoTitle: isStackInfoTitle,
                         blogPostDate: isBlogPostDate,
                         blogPostTitle: isBlogPostTitle,
-                        featuredBlogPostTitle: isFeaturedBlogPostTitle
+                        featuredBlogPostTitle: isFeaturedBlogPostTitle,
+                        contactSubtitle: isContactSubtitle,
+                        contactTitle: isContactTitle,
                     })}
                 >
                     {content}

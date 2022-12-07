@@ -6,13 +6,19 @@ import { ContactDiv } from "./styles";
 import { useTranslation } from "next-export-i18n";
 import { Fade } from "react-awesome-reveal";
 
-const ContactComponent = () => {
+interface Props {
+    withTitle?: boolean;
+}
+
+const ContactComponent = (props: Props) => {
     const { t } = useTranslation();
+    const { withTitle } = props;
+
     return (
         <Fade triggerOnce>
             <Element name="contact">
                 <ContactDiv id={"contact"}>
-                    <Title isMainTitle content={t("contactTitle")} />
+                {withTitle && <Title isMainTitle content={t("contactTitle")} />}
                     <EnveloppeAnimation />
                     <Title isEmailTitle content="contact@mvanhoutte.com" />
                     <Button

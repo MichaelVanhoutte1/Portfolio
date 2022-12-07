@@ -160,22 +160,8 @@ const StickyNavbarComponent = () => {
                             {t("navProjects")}
                         </Button>
                     </Link>
-                    {isHomepage ? (
                         <>
-                            <ScrollLink to="contact" smooth duration={1000}>
-                                <Button
-                                    onClick={() => {
-                                        setIsMenuActive(false);
-                                        setIsSticky(false);
-                                    }}
-                                >
-                                    {t("navContact")}
-                                </Button>
-                            </ScrollLink>
-                        </>
-                    ) : (
-                        <>
-                            <Link href={{ pathname: "#contact", query: query }}>
+                            <Link href={{ pathname: "contact", query: query }}>
                                 <Button
                                     className={router.pathname === "/contact" ? "isActive" : ""}
                                     onClick={() => {
@@ -187,7 +173,6 @@ const StickyNavbarComponent = () => {
                                 </Button>
                             </Link>
                         </>
-                    )}
                 </ContentDiv>
             </NavbarDiv>
         </>

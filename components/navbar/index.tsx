@@ -102,21 +102,8 @@ const NavbarComponent = () => {
                             {t("navProjects")}
                         </Button>
                     </Link>
-                    {isHomepage ? (
                         <>
-                            <ScrollLink to="contact" smooth duration={1000}>
-                                <Button
-                                    onClick={() => {
-                                        setIsMenuActive(false);
-                                    }}
-                                >
-                                    {t("navContact")}
-                                </Button>
-                            </ScrollLink>
-                        </>
-                    ) : (
-                        <>
-                            <Link href={{ pathname: "#contact", query: query }}>
+                            <Link href={{ pathname: "contact", query: query }}>
                                 <Button
                                     className={router.pathname === "/contact" ? "isActive" : ""}
                                     onClick={() => {
@@ -127,7 +114,6 @@ const NavbarComponent = () => {
                                 </Button>
                             </Link>
                         </>
-                    )}
                 </ContentDiv>
             </NavbarDiv>
         </>

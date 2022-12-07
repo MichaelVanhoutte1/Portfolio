@@ -5,7 +5,7 @@ import { useTranslation, useLanguageQuery } from "next-export-i18n";
 import { Fade } from "react-awesome-reveal";
 import Project from "../components/user-interface/project";
 
-const Blog: NextPage = () => {
+const Projects: NextPage = () => {
     const { t } = useTranslation();
     const [query] = useLanguageQuery();
 
@@ -51,4 +51,4 @@ const Blog: NextPage = () => {
     );
 };
 
-export default Blog;
+export default Projects;
