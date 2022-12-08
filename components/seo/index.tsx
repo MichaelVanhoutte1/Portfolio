@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import i18n from "../../i18n";
 
 interface Props {
     title: string;
@@ -10,9 +11,11 @@ interface Props {
 
 export default function SEO(props: Props) {
     const { title, description, name, type } = props;
+    console.log(i18n);
 
     return (
         <Helmet>
+            <html lang="en" />
             <meta name="application-name" content="Michael Vanhoutte | Portfolio" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -29,16 +32,34 @@ export default function SEO(props: Props) {
             <meta name="theme-color" content="#000000" />
 
             <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" />
-            <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-touch-icon.png" />
+            <link
+                rel="apple-touch-icon"
+                sizes="152x152"
+                href="/images/icons/apple-touch-icon.png"
+            />
             <link
                 rel="apple-touch-icon"
                 sizes="180x180"
                 href="/images/icons/apple-touch-icon.png"
             />
-            <link rel="apple-touch-icon" sizes="167x167" href="/images/icons/apple-touch-icon.png" />
+            <link
+                rel="apple-touch-icon"
+                sizes="167x167"
+                href="/images/icons/apple-touch-icon.png"
+            />
 
-            <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
-            <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="32x32"
+                href="/images/icons/favicon-32x32.png"
+            />
+            <link
+                rel="icon"
+                type="image/png"
+                sizes="16x16"
+                href="/images/icons/favicon-16x16.png"
+            />
             <link rel="manifest" href="/manifest.json" />
             <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#5bbad5" />
             <link rel="shortcut icon" href="/favicon.ico" />
@@ -66,10 +87,7 @@ export default function SEO(props: Props) {
             <meta name="twitter:description" content={description} />
             <meta name="twitter:url" content="https://mvanhoutte.com" />
             <meta name="twitter:card" content="summary" />
-            <meta
-                name="twitter:image"
-                content="https://yourdomain.com/images/icons/192.png"
-            />
+            <meta name="twitter:image" content="https://yourdomain.com/images/icons/192.png" />
             {/* End Twitter tags */}
         </Helmet>
     );
