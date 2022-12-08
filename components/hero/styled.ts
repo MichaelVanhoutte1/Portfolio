@@ -56,6 +56,10 @@ export const HeroSection = styled.section`
             }
         }
     }
+    a {
+        text-decoration: none;
+        color: ${colors.primaryText};
+    }
 `;
 
 export const SocialIconsDiv = styled.div`

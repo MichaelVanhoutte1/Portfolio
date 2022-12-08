@@ -54,7 +54,7 @@ const Header = () => {
                 </Fade>
 
                 <Fade direction={isDesktop ? "left" : "up"} duration={1000} delay={750}>
-                    <Link to="about" rel="nofollow" smooth duration={1000}>
+                    <Link to="about" href="javascript:;" rel="nofollow" smooth duration={1000}>
                         <p className="hero-cta">
                             <span className="cta-btn cta-btn--hero">{t("heroCTA")}</span>
                         </p>
