@@ -1,9 +1,15 @@
+import Link from "next/link";
 import Title from "../title";
-import { LiveDiv, StackDiv, StackInfoDiv, TypeDiv, ListItem } from "./styles";
+import { LiveDiv, StackDiv, StackInfoDiv, TypeDiv, ListItem, ProjectLink } from "./styles";
 
-interface Props {}
+interface Props {
+    siteUrl: string;
+    codeUrl: string;
+}
 
 const StackInfoComponent = (props: Props) => {
+    const { siteUrl, codeUrl } = props;
+
     return (
         <>
             <StackInfoDiv>
@@ -22,9 +28,19 @@ const StackInfoComponent = (props: Props) => {
                         <ListItem>Netlify</ListItem>
                     </ul>
                 </StackDiv>
+                {codeUrl !== "" && (
+                    <LiveDiv>
+                        <Title isStackInfoTitle content="Code" />
+                        <Link href={codeUrl}>
+                            <ProjectLink>Github</ProjectLink>
+                        </Link>
+                    </LiveDiv>
+                )}
                 <LiveDiv>
                     <Title isStackInfoTitle content="Live" />
-                    <p>Site</p>
+                    <Link href={siteUrl}>
+                        <ProjectLink>Site</ProjectLink>
+                    </Link>
                 </LiveDiv>
             </StackInfoDiv>
         </>

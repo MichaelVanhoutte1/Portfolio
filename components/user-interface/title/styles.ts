@@ -42,6 +42,8 @@ export const Title = styled.h1`
         margin-top: 1rem;
         @media (min-width: ${breakpoints.lg}) {
             margin: 0 0 3rem 0;
+            width: 250px;
+            height: 3rem;
         }
     }
     &.contactTitle {

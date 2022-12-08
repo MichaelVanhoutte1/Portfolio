@@ -40,7 +40,7 @@ const FooterComponent = () => {
                         <Text>{t("footerLinks")}</Text>
                         <LinkContent>
                             <LinkColumn>
-                                <Link href={{ pathname: "/about", query: query }}>
+                                <Link prefetch href={{ pathname: "/about", query: query }}>
                                     <LinkText>{t("footerAbout")}</LinkText>
                                 </Link>
                                 <Link href={{ pathname: "/projects", query: query }}>

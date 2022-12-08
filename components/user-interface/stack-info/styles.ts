@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../../../styles/variables.styled";
+import { breakpoints, colors } from "../../../styles/variables.styled";
 
 export const StackInfoDiv = styled.div`
     display: flex;
@@ -8,7 +8,7 @@ export const StackInfoDiv = styled.div`
     @media (min-width: ${breakpoints.sm}) {
         flex-direction: row;
         justify-content: space-between;
-        max-width: 800px;
+        margin-top: 1rem;
     }
 `;
 
@@ -31,4 +31,19 @@ export const LiveDiv = styled.div`
 
 export const ListItem = styled.li`
     line-height: 1.75;
+    
+`;
+
+export const ProjectLink = styled.p`
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: ${colors.secondary};
+    width: fit-content;
+    cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+    @media (min-width: ${breakpoints.md}) {
+        &:hover {
+            filter: brightness(80%);
+        }
+    }
 `;

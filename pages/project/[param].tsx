@@ -27,7 +27,7 @@ const Project: NextPage = () => {
                 <MainDiv>
                     <Title content={t(param + "Title")} />
                     <Paragraph isAboutMe isLargeParagraph content={t(param + "Intro")} />
-                    <StackInfoComponent />
+                    <StackInfoComponent siteUrl={t(param + "SiteUrl")} codeUrl={t(param + "CodeUrl")}/>
                     <Image
                         isProjectPicture
                         src={t(param + "IntroSrc")}
