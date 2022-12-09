@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button, NavbarDiv, ContentDiv, Name, NameDiv, LanguagePopup } from "./styles";
-import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/router";
 import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";

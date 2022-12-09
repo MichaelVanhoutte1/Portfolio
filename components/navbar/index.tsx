@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button, NavbarDiv, ContentDiv, Name, NameDiv, LanguagePopup } from "./styles";
-import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/router";
 import cs from "classnames";
 import BurgerMenu from "../user-interface/burger-menu";
@@ -23,8 +22,6 @@ const NavbarComponent = () => {
             setIsHomepage(location.pathname === "/" ? true : false);
         }
     }, [router.pathname]);
-
-
 
     return (
         <>
@@ -102,18 +99,18 @@ const NavbarComponent = () => {
                             {t("navProjects")}
                         </Button>
                     </Link>
-                        <>
-                            <Link href={{ pathname: "contact", query: query }}>
-                                <Button
-                                    className={router.pathname === "/contact" ? "isActive" : ""}
-                                    onClick={() => {
-                                        setIsMenuActive(false);
-                                    }}
-                                >
-                                    {t("navContact")}
-                                </Button>
-                            </Link>
-                        </>
+                    <>
+                        <Link href={{ pathname: "contact", query: query }}>
+                            <Button
+                                className={router.pathname === "/contact" ? "isActive" : ""}
+                                onClick={() => {
+                                    setIsMenuActive(false);
+                                }}
+                            >
+                                {t("navContact")}
+                            </Button>
+                        </Link>
+                    </>
                 </ContentDiv>
             </NavbarDiv>
         </>
