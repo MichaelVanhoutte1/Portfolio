@@ -19,8 +19,10 @@ export const Text = styled.p`
 `;
 
 export const PageTitle = styled.h1`
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin: 2rem 0;
+    @media (min-width: ${breakpoints.md}) {
+        font-size: 4rem;
 `;
 
 export const ContentDiv = styled.div``;
