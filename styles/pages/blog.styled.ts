@@ -8,7 +8,7 @@ export const MainDiv = styled.div`
     max-width: 1000px;
     @media (min-width: ${breakpoints.md}) {
         margin: 0 auto 5rem auto;
-        min-height: calc(100vh - 22.95rem);
+        min-height: calc(100vh - 23.95rem);
     }
 `;
 
