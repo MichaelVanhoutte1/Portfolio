@@ -7,7 +7,7 @@ This project is a personal website for me, designed to showcase my projects and 
 ```
 git clone git@github.com:MichaelVanhoutte1/portfolio.git portfolio
 
-cd collab
+cd portfolio
 ```
 <h4>2. Install the dependencies and start the local server.</h4>
 
