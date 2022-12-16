@@ -36,9 +36,11 @@ const Blog: NextPage = () => {
                         <Paragraph isAboutMe isLargeParagraph content={t("commonEuropeRecap")} />
                     </BlogPost>
                     <BlogPost>
-                        <BlogTitle className="disabled">{t("thirdTitle")}</BlogTitle>
-                        <Title isBlogPostDate content={t("featuredBlogpostsDisabled")} />
-                        <Paragraph isAboutMe isLargeParagraph content={t("thirdRecap")} />
+                        <Link href={{ pathname: "/blogpost/cloudResume", query: query }}>
+                            <BlogTitle>{t("cloudResumeTitle")}</BlogTitle>
+                        </Link>
+                        <Title isBlogPostDate content={t("cloudResumeDate")} />
+                        <Paragraph isAboutMe isLargeParagraph content={t("cloudResumeRecap")} />
                     </BlogPost>
                 </MainDiv>
             </Fade>

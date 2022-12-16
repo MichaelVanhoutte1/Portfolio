@@ -24,10 +24,10 @@ const FeaturedBlogposts = () => {
                     <BlogPostDiv>
                         <BlogPost blogpost="spinaker" />
                         <BlogPost blogpost="commonEurope" />
-                        {isDesktop && <BlogPost disabled blogpost="third" />}
+                        {isDesktop && <BlogPost blogpost="cloudResume" />}
                     </BlogPostDiv>
                     <BlogCTA>
-                        <Link href={{ pathname: '/blog', query: query }}>
+                        <Link href={{ pathname: "/blog", query: query }}>
                             <div>
                                 {t("featuredBlogpostsMore")}
                                 <img

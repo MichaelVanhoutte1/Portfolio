@@ -26,33 +26,39 @@ const BlogPost: NextPage = () => {
                 <MainDiv>
                     <Title content={t(param + "Title")} />
                     <Title isBlogPostDate content={t(param + "Date")} />
-                    <Paragraph
-                        isAboutMe
-                        isWithMargin
-                        isLargeParagraph
-                        content={t(param + "Intro")}
-                    />
-                    <Image
-                        isProjectPicture
-                        src={t(param + "IntroSrc")}
-                        alt={t(param + "IntroAlt")}
-                    />
-                    <Title content={t("blogpostGoalTitle")} />
-                    <Paragraph isAboutMe isLargeParagraph content={t(param + "Goal")} />
-                    <Title content={t("blogpostCourseTitle")} />
-                    <Paragraph isAboutMe isLargeParagraph content={t(param + "Course")} />
-                    <Title content={t("blogpostResultTitle")} />
-                    <Paragraph
-                        isAboutMe
-                        isLargeParagraph
-                        isWithMargin
-                        content={t(param + "Result")}
-                    />
-                    <Image
-                        isProjectPicture
-                        src={t(param + "OutroSrc")}
-                        alt={t(param + "OutroAlt")}
-                    />
+                    {param === "cloudResume" ? (
+                        <Paragraph isAboutMe content={t(param + "Content")} />
+                    ) : (
+                        <>
+                            <Paragraph
+                                isAboutMe
+                                isWithMargin
+                                isLargeParagraph
+                                content={t(param + "Intro")}
+                            />
+                            <Image
+                                isProjectPicture
+                                src={t(param + "IntroSrc")}
+                                alt={t(param + "IntroAlt")}
+                            />
+                            <Title content={t("blogpostGoalTitle")} />
+                            <Paragraph isAboutMe isLargeParagraph content={t(param + "Goal")} />
+                            <Title content={t("blogpostCourseTitle")} />
+                            <Paragraph isAboutMe isLargeParagraph content={t(param + "Course")} />
+                            <Title content={t("blogpostResultTitle")} />
+                            <Paragraph
+                                isAboutMe
+                                isLargeParagraph
+                                isWithMargin
+                                content={t(param + "Result")}
+                            />
+                            <Image
+                                isProjectPicture
+                                src={t(param + "OutroSrc")}
+                                alt={t(param + "OutroAlt")}
+                            />
+                        </>
+                    )}
                 </MainDiv>
             </Fade>
         </>
