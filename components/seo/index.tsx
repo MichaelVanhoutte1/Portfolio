@@ -11,8 +11,6 @@ interface Props {
 
 export default function SEO(props: Props) {
     const { title, description, name, type } = props;
-    console.log(i18n);
-
     return (
         <Helmet>
             <html lang="en" />
