@@ -30,7 +30,7 @@ const AboutComponent = () => {
                                         "HTML",
                                         "Styled-Components",
                                         "CSS",
-                                        "SASS",
+                                        "SaSS",
                                         "Git",
                                         "Gatsby",
                                         "GraphQL",

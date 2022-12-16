@@ -24,7 +24,7 @@ const StackInfoComponent = (props: Props) => {
                         <ListItem>React</ListItem>
                         <ListItem>Nextjs</ListItem>
                         <ListItem>styled-components</ListItem>
-                        <ListItem>SASS</ListItem>
+                        <ListItem>SaSS</ListItem>
                         <ListItem>Netlify</ListItem>
                     </ul>
                 </StackDiv>

@@ -23,7 +23,7 @@ const ProjectsComponent = (props: Props) => {
                                 "Styled-Components",
                                 "Next.js",
                                 "Redux",
-                                "SASS",
+                                "SaSS",
                                 "Netlify",
                             ]}
                             project="portfolio"
@@ -37,7 +37,7 @@ const ProjectsComponent = (props: Props) => {
                                 "Styled-Components",
                                 "Next.js",
                                 "Redux",
-                                "SASS",
+                                "SaSS",
                             ]}
                             project="fitnessApp"
                         />

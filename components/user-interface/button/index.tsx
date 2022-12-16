@@ -18,7 +18,7 @@ const ButtonComponent = (props: Props) => {
     return (
         <>
             {isResumeButton ? (
-                <a target="_blank" rel="noreferrer" href="CV-Michael-Vanhoutte.pdf" >
+                <a target="_blank" rel="noreferrer" href="https://mvanhoutte.cloud" >
                     <Button className={cs({ projectButton: isProjectButton })}>{content}</Button>
                 </a>
             ) : (

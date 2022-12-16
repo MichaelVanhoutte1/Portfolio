@@ -24,7 +24,7 @@ const About: NextPage = () => {
                     <PageTitle>{t("aboutMeTitle")}</PageTitle>
                     <Text>
                         {t("aboutMeSubtitle")}
-                        <a target="_blank" rel="noreferrer" href="CV-Michael-Vanhoutte.pdf">
+                        <a target="_blank" rel="noreferrer" href="https://mvanhoutte.cloud">
                             CV
                         </a>
                         ?

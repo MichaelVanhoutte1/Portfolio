@@ -27,7 +27,7 @@ const Projects: NextPage = () => {
                             "Styled-Components",
                             "Next.js",
                             "Redux",
-                            "SASS",
+                            "SaSS",
                             "Netlify",
                         ]}
                         project="portfolio"
@@ -41,7 +41,7 @@ const Projects: NextPage = () => {
                             "Styled-Components",
                             "Next.js",
                             "Redux",
-                            "SASS",
+                            "SaSS",
                         ]}
                         project="fitnessApp"
                     />
