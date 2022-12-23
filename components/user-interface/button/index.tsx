@@ -18,9 +18,9 @@ const ButtonComponent = (props: Props) => {
     return (
         <>
             {isResumeButton ? (
-                <a target="_blank" rel="noreferrer" href="https://mvanhoutte.cloud" >
+                <Link target="_blank" rel="noreferrer" href={{pathname: "https://www.mvanhoutte.cloud", query: query }} >
                     <Button className={cs({ projectButton: isProjectButton })}>{content}</Button>
-                </a>
+                </Link>
             ) : (
                 <Link href={{ pathname: href!, query: query }}>
                     <Button disabled={disabled} className={cs({ projectButton: isProjectButton, disabled: disabled })}>{content}</Button>

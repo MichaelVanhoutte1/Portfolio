@@ -5,11 +5,13 @@ import Paragraph from "../components/user-interface/paragraph";
 import SocialIcon from "../components/user-interface/social-icon";
 import Title from "../components/user-interface/title";
 import { ContentDiv, MainDiv, PageTitle, SocialIconsDiv, Text } from "../styles/pages/about.styled";
-import { useTranslation } from "next-export-i18n";
+import { useLanguageQuery, useTranslation } from "next-export-i18n";
 import { Fade } from "react-awesome-reveal";
+import Link from "next/link";
 
 const About: NextPage = () => {
     const { t } = useTranslation();
+    const [query] = useLanguageQuery();
 
     return (
         <>
@@ -24,9 +26,9 @@ const About: NextPage = () => {
                     <PageTitle>{t("aboutMeTitle")}</PageTitle>
                     <Text>
                         {t("aboutMeSubtitle")}
-                        <a target="_blank" rel="noreferrer" href="https://mvanhoutte.cloud">
+                        <Link target="_blank" rel="noreferrer" href={{pathname: "https://www.mvanhoutte.cloud", query: query }}>
                             CV
-                        </a>
+                        </Link>
                         ?
                     </Text>
                     <ContentDiv>
