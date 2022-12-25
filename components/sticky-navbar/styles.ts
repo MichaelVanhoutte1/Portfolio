@@ -151,7 +151,7 @@ export const NameDiv = styled.div`
     background-color: ${colors.primary};
     max-width: (300px, 100%, 1028px);
     justify-content: center;
-    padding-top: 1.3rem;
+    padding-top: 1.5rem;
     &.sticky {
         position: sticky;
         @media (min-width: ${breakpoints.md}) {
@@ -159,7 +159,11 @@ export const NameDiv = styled.div`
         }
         &.menuActivated {
             position: relative;
+            padding-top: 1.3rem;
         }
+    }
+    &.notHomepage {
+        padding-top: 1.3rem;
     }
 `;
 
