@@ -92,7 +92,7 @@ export const LanguagePopup = styled.div`
 `;
 
 export const Name = styled.p`
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 500;
     cursor: pointer;
     color: ${colors.primaryText};
