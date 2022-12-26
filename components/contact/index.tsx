@@ -1,4 +1,3 @@
-import { Element } from "react-scroll";
 import Button from "../user-interface/button";
 import EnveloppeAnimation from "../user-interface/enveloppe-animation";
 import Title from "../user-interface/title";
@@ -16,18 +15,16 @@ const ContactComponent = (props: Props) => {
 
     return (
         <Fade triggerOnce>
-            <Element name="contact">
-                <ContactDiv id={"contact"}>
+            <ContactDiv id={"contact"}>
                 {withTitle && <Title isMainTitle content={t("contactTitle")} />}
-                    <EnveloppeAnimation />
-                    <Title isEmailTitle content="contact@mvanhoutte.com" />
-                    <Button
-                        href="mailto:contact@mvanhoutte.com"
-                        isProjectButton
-                        content={t("contactCTA")}
-                    />
-                </ContactDiv>
-            </Element>
+                <EnveloppeAnimation />
+                <Title isEmailTitle content="contact@mvanhoutte.com" />
+                <Button
+                    href="mailto:contact@mvanhoutte.com"
+                    isProjectButton
+                    content={t("contactCTA")}
+                />
+            </ContactDiv>
         </Fade>
     );
 };

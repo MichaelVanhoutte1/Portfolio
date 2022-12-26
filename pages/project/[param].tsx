@@ -26,34 +26,27 @@ const Project: NextPage = () => {
             <Fade triggerOnce>
                 <MainDiv>
                     <Title content={t(param + "Title")} />
-                    <Paragraph isAboutMe isLargeParagraph content={t(param + "Intro")} />
-                    <StackInfoComponent siteUrl={t(param + "SiteUrl")} codeUrl={t(param + "CodeUrl")}/>
+                    <Paragraph isLargeParagraph content={t(param + "Intro")} />
+                    <StackInfoComponent
+                        siteUrl={t(param + "SiteUrl")}
+                        codeUrl={t(param + "CodeUrl")}
+                    />
                     <Image
                         isProjectPicture
                         src={t(param + "IntroSrc")}
                         alt={t(param + "IntroAlt")}
                     />
                     <Title content={t("projectGoalTitle")} />
-                    <Paragraph isAboutMe isLargeParagraph content={t(param + "Goal")} />
+                    <Paragraph isLargeParagraph content={t(param + "Goal")} />
                     <Title content={t("projectStackTitle")} />
-                    <Paragraph
-                        isAboutMe
-                        isWithMargin
-                        isLargeParagraph
-                        content={t(param + "Stack")}
-                    />
+                    <Paragraph isWithMargin isLargeParagraph content={t(param + "Stack")} />
                     <Image
                         isProjectPicture
                         src={t(param + "OutroSrc")}
                         alt={t(param + "OutroAlt")}
                     />
                     <Title content={t("projectFurtherTitle")} />
-                    <Paragraph
-                        isAboutMe
-                        isLargeParagraph
-                        isWithMargin
-                        content={t(param + "Further")}
-                    />
+                    <Paragraph isLargeParagraph isWithMargin content={t(param + "Further")} />
                 </MainDiv>
             </Fade>
         </>

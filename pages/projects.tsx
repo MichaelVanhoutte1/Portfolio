@@ -1,14 +1,10 @@
 import type { NextPage } from "next";
 import { MainDiv } from "../styles/pages/projects.styled";
 import SEO from "../components/seo";
-import { useTranslation, useLanguageQuery } from "next-export-i18n";
 import { Fade } from "react-awesome-reveal";
 import Project from "../components/user-interface/project";
 
 const Projects: NextPage = () => {
-    const { t } = useTranslation();
-    const [query] = useLanguageQuery();
-
     return (
         <>
             <SEO

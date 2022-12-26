@@ -1,7 +1,7 @@
 import { Picture } from "./styles";
 import cs from "classnames";
 import Link from "next/link";
-import { useLanguageQuery } from 'next-export-i18n';
+import { useLanguageQuery } from "next-export-i18n";
 
 interface Props {
     src: string;
@@ -16,6 +16,7 @@ interface Props {
 }
 
 const ImageComponent = (props: Props) => {
+    const [query] = useLanguageQuery();
     const {
         src,
         alt,
@@ -25,33 +26,44 @@ const ImageComponent = (props: Props) => {
         isProjectClickbait,
         blogpost,
         project,
-        disabled
+        disabled,
     } = props;
-    const [query] = useLanguageQuery();
+    let imageClass: string = "";
+
+    switch (true) {
+        case isAboutPicture:
+            imageClass = "aboutPicture";
+            break;
+        case isProjectPicture:
+            imageClass = "projectPicture";
+            break;
+        case isBlogPostPicture:
+            imageClass = "blogPostPicture";
+            break;
+        case isProjectClickbait:
+            imageClass = "projectClickbait";
+            break;
+        default:
+            break;
+    }
+
     return (
         <>
-            {isProjectClickbait && !disabled || isBlogPostPicture && !disabled  ? (
-                <Link href={{ pathname: isProjectClickbait ? "/project/" + project : "/blogpost/" + blogpost, query: query }}>
-                    <Picture
-                        loading="lazy"
-                        className={cs({
-                            projectClickbait: isProjectClickbait,
-                            blogPostPicture: isBlogPostPicture,
-                        })}
-                        src={src}
-                        alt={alt}
-                    />
+            {(isProjectClickbait && !disabled) || (isBlogPostPicture && !disabled) ? (
+                <Link
+                    href={{
+                        pathname: isProjectClickbait
+                            ? "/project/" + project
+                            : "/blogpost/" + blogpost,
+                        query: query,
+                    }}
+                >
+                    <Picture loading="lazy" className={imageClass} src={src} alt={alt} />
                 </Link>
             ) : (
                 <Picture
                     loading="lazy"
-                    className={cs({
-                        disabled: disabled,
-                        aboutPicture: isAboutPicture,
-                        projectPicture: isProjectPicture,
-                        projectClickbait: isProjectClickbait,
-                        blogPostPicture: isBlogPostPicture,
-                    })}
+                    className={cs({ disabled: disabled }, imageClass)}
                     src={src}
                     alt={alt}
                 />

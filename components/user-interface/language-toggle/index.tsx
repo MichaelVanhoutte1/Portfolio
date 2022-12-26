@@ -1,4 +1,4 @@
-import { Ref, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { LanguageIcon } from "./styles";
 
 interface Props {

@@ -159,19 +159,19 @@ const StickyNavbarComponent = () => {
                             {t("navProjects")}
                         </Button>
                     </Link>
-                        <>
-                            <Link href={{ pathname: "contact", query: query }}>
-                                <Button
-                                    className={router.pathname === "/contact" ? "isActive" : ""}
-                                    onClick={() => {
-                                        setIsMenuActive(false);
-                                        setIsSticky(false);
-                                    }}
-                                >
-                                    {t("navContact")}
-                                </Button>
-                            </Link>
-                        </>
+                    <>
+                        <Link href={{ pathname: "contact", query: query }}>
+                            <Button
+                                className={router.pathname === "/contact" ? "isActive" : ""}
+                                onClick={() => {
+                                    setIsMenuActive(false);
+                                    setIsSticky(false);
+                                }}
+                            >
+                                {t("navContact")}
+                            </Button>
+                        </Link>
+                    </>
                 </ContentDiv>
             </NavbarDiv>
         </>

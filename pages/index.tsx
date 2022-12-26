@@ -17,7 +17,7 @@ const Home: NextPage = () => {
             <About />
             <FeaturedBlogposts />
             <Projects />
-            <Contact withTitle/>
+            <Contact withTitle />
         </>
     );
 };

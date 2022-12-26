@@ -19,9 +19,9 @@ const Contact: NextPage = () => {
             />
             <Fade triggerOnce>
                 <MainDiv>
-                    <Title isContactTitle content={t("contactTitle")}/>
-                    <Title isContactSubtitle content={t("contactSubtitle")}/>
-                    <ContactComponent/>
+                    <Title isContactTitle content={t("contactTitle")} />
+                    <Title isContactSubtitle content={t("contactSubtitle")} />
+                    <ContactComponent />
                 </MainDiv>
             </Fade>
         </>

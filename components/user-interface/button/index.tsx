@@ -1,7 +1,7 @@
 import { Button } from "./styles";
 import cs from "classnames";
 import Link from "next/link";
-import { useLanguageQuery } from 'next-export-i18n';
+import { useLanguageQuery } from "next-export-i18n";
 
 interface Props {
     content: string;
@@ -18,12 +18,21 @@ const ButtonComponent = (props: Props) => {
     return (
         <>
             {isResumeButton ? (
-                <Link target="_blank" rel="noreferrer" href={{pathname: "https://www.mvanhoutte.cloud", query: query }} >
+                <Link
+                    target="_blank"
+                    rel="noreferrer"
+                    href={{ pathname: "https://www.mvanhoutte.cloud", query: query }}
+                >
                     <Button className={cs({ projectButton: isProjectButton })}>{content}</Button>
                 </Link>
             ) : (
                 <Link href={{ pathname: href!, query: query }}>
-                    <Button disabled={disabled} className={cs({ projectButton: isProjectButton, disabled: disabled })}>{content}</Button>
+                    <Button
+                        disabled={disabled}
+                        className={cs({ projectButton: isProjectButton, disabled: disabled })}
+                    >
+                        {content}
+                    </Button>
                 </Link>
             )}
         </>

@@ -19,7 +19,7 @@ export const MainDiv = styled.div`
     strong {
         font-weight: 600;
     }
-    a{
+    a {
         color: ${colors.secondary};
         font-weight: 600;
         text-decoration: none;

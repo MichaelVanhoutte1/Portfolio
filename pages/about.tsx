@@ -26,26 +26,30 @@ const About: NextPage = () => {
                     <PageTitle>{t("aboutMeTitle")}</PageTitle>
                     <Text>
                         {t("aboutMeSubtitle")}
-                        <Link target="_blank" rel="noreferrer" href={{pathname: "https://www.mvanhoutte.cloud", query: query }}>
+                        <Link
+                            target="_blank"
+                            rel="noreferrer"
+                            href={{ pathname: "https://www.mvanhoutte.cloud", query: query }}
+                        >
                             CV
                         </Link>
                         ?
                     </Text>
                     <ContentDiv>
                         <Title isAboutSubtitle content={t("aboutMeQuickStoryTitle")} />
-                        <Paragraph isAboutMe isLargeParagraph content={t("aboutMeQuickStory")} />
+                        <Paragraph isLargeParagraph content={t("aboutMeQuickStory")} />
                     </ContentDiv>
                     <ContentDiv>
                         <Title isAboutSubtitle content={t("aboutMeAsDeveloperTitle")} />
-                        <Paragraph isAboutMe isLargeParagraph content={t("aboutMeAsDeveloper")} />
+                        <Paragraph isLargeParagraph content={t("aboutMeAsDeveloper")} />
                     </ContentDiv>
                     <ContentDiv>
                         <Title isAboutSubtitle content={t("aboutMeAsPersonTitle")} />
-                        <Paragraph isAboutMe isLargeParagraph content={t("aboutMeAsPerson")} />
+                        <Paragraph isLargeParagraph content={t("aboutMeAsPerson")} />
                     </ContentDiv>
                     <ContentDiv>
                         <Title isAboutSubtitle content={t("aboutMeAsColleagueTitle")} />
-                        <Paragraph isAboutMe isLargeParagraph content={t("aboutMeAsColleague")} />
+                        <Paragraph isLargeParagraph content={t("aboutMeAsColleague")} />
                     </ContentDiv>
                     <Title content={t("contactTitle")} />
                     <Text>{t("contactSubtitle")}</Text>

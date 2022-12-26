@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import i18n from "../../i18n";
 
 interface Props {
     title: string;

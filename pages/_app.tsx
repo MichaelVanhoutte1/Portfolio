@@ -9,11 +9,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <>
-                <HelmetProvider context={helmetContext}>
-                    <Layout>
-                        <Component {...pageProps} />
-                    </Layout>
-                </HelmetProvider>
+            <HelmetProvider context={helmetContext}>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </HelmetProvider>
         </>
     );
 }

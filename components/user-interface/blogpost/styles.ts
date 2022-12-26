@@ -10,8 +10,6 @@ export const ContentDiv = styled.div`
     justify-content: space-between;
 `;
 
-export const ButtonDiv = styled.div``;
-
 export const BlogLink = styled.p`
     font-size: 1.2rem;
     font-weight: 500;

@@ -11,17 +11,17 @@ interface LayoutProps {
 
 const LayoutComponent = ({ children }: LayoutProps) => {
     const router = useRouter();
-    const [ isHomepage , setIsHomepage ] = useState<boolean>(router.pathname === "/" ? true : false)
+    const [isHomepage, setIsHomepage] = useState<boolean>(router.pathname === "/" ? true : false);
 
     useEffect(() => {
-        setIsHomepage(router.pathname === "/" ? true : false)
-    },[router.pathname])
-    
+        setIsHomepage(router.pathname === "/" ? true : false);
+    }, [router.pathname]);
+
     return (
         <>
             <Navbar />
             <StickyNavbar />
-            {isHomepage && <Hero /> }
+            {isHomepage && <Hero />}
             <main>{children}</main>
             <Footer />
         </>

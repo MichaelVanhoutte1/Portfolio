@@ -26,21 +26,21 @@ const Blog: NextPage = () => {
                             <BlogTitle>{t("spinakerTitle")}</BlogTitle>
                         </Link>
                         <Title isBlogPostDate content={t("spinakerDate")} />
-                        <Paragraph isAboutMe isLargeParagraph content={t("spinakerRecap")} />
+                        <Paragraph isLargeParagraph content={t("spinakerRecap")} />
                     </BlogPost>
                     <BlogPost>
                         <Link href={{ pathname: "/blogpost/commonEurope", query: query }}>
                             <BlogTitle>{t("commonEuropeTitle")}</BlogTitle>
                         </Link>
                         <Title isBlogPostDate content={t("commonEuropeDate")} />
-                        <Paragraph isAboutMe isLargeParagraph content={t("commonEuropeRecap")} />
+                        <Paragraph isLargeParagraph content={t("commonEuropeRecap")} />
                     </BlogPost>
                     <BlogPost>
                         <Link href={{ pathname: "/blogpost/cloudResume", query: query }}>
                             <BlogTitle>{t("cloudResumeTitle")}</BlogTitle>
                         </Link>
                         <Title isBlogPostDate content={t("cloudResumeDate")} />
-                        <Paragraph isAboutMe isLargeParagraph content={t("cloudResumeRecap")} />
+                        <Paragraph isLargeParagraph content={t("cloudResumeRecap")} />
                     </BlogPost>
                 </MainDiv>
             </Fade>

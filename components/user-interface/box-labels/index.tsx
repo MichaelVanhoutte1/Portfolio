@@ -1,5 +1,5 @@
 import { BoxLabel, LabelDiv } from "./styles";
-import cs from 'classnames'
+import cs from "classnames";
 
 interface Props {
     labelArray: string[];

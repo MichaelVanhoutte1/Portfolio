@@ -11,18 +11,28 @@ interface Props {
 
 const ParagraphComponent = (props: Props) => {
     const { content, isWithMargin, isLargeParagraph, isSmallParagraph, isAboutMe } = props;
+    let paragraphClass: string = "";
+
+    switch (true) {
+        case isLargeParagraph:
+            paragraphClass = "largeParagraph";
+            break;
+        case isSmallParagraph:
+            paragraphClass = "smallParagraph";
+            break;
+        case isAboutMe:
+            paragraphClass = "aboutMe";
+            break;
+        default:
+            break;
+    }
+
     return (
         <>
             <Paragraph
                 dangerouslySetInnerHTML={{ __html: content }}
-                className={cs({
-                    withMargin: isWithMargin,
-                    largeParagraph: isLargeParagraph,
-                    smallParagraph: isSmallParagraph,
-                    aboutMe: isAboutMe,
-                })}
-            >
-            </Paragraph>
+                className={cs({ withMargin: isWithMargin }, paragraphClass)}
+            ></Paragraph>
         </>
     );
 };

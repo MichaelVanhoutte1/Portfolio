@@ -13,4 +13,4 @@ export const colors = {
     lightgray: `rgb(199, 199, 199)`,
     secondary: `#FF6625`,
     disabled: `#bdbdbd`,
-}
+};

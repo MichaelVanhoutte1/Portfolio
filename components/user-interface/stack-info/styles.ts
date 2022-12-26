@@ -31,7 +31,6 @@ export const LiveDiv = styled.div`
 
 export const ListItem = styled.li`
     line-height: 1.75;
-    
 `;
 
 export const ProjectLink = styled.p`
